@@ -1,3 +1,44 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+    font-family: 'HankenGrotesk';
+    src: url('HankenGrotesk.ttf') format('truetype');
+   }
+   
+   
+   body {
+       font-family: Roboto;
+   }
+   
+   .projectCard {
+       width: calc(50% - 30px);
+       border: 1px solid transparent;
+   }
+   
+   .projectCard:hover {
+       box-shadow: 0px 0px 16px -2px lightgray;
+       cursor: pointer;
+       border: 1px solid lightgray;
+   }
+   
+   .projects-container {
+       display: flex;
+       flex-direction: row;
+       flex-wrap: wrap;
+       gap: 60px;
+   }
+   
+   
+   .margins {
+       padding: 80px 80px 80px 104px;
+   }
+   
+   .intro-section{
+       font-size: 64px;
+   }
+   
+   .intro-text {
+       margin: 24px 0px;
+   }
