@@ -3,14 +3,16 @@ let projects = [
   {
     name: "Insights Builder",
     company: "Foursquare",
-    image: "dormdesign1.png",
+    image: "insights.png",
     imageClass:"single"
 },
 {
   name: "Projects Portal",
   company: "Foursquare",
-  image: "dormdesign1.png",
-  imageClass:"single"
+  image: "projects3.png",
+  secondImage:"projects1.png",
+  imageClass:"double",
+  secondImageClass:"double-bg"
 },
 {
   name: "Lookout",
@@ -23,7 +25,7 @@ let projects = [
 {
   name: "Banyan",
   company: "Fathom",
-  image: "dormdesign1.png",
+  image: "banyan.png",
   imageClass:"single"
 }
 
