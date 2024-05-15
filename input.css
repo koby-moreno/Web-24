@@ -9,7 +9,7 @@
 
    @font-face {
     font-family: 'Modelo';
-    src: url('../Modelo/Modelo-Regular.otf') format('truetype');
+    src: url('Modelo/Modelo-Regular.otf') format('truetype');
    }
    
    .mono {

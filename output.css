@@ -640,10 +640,6 @@ video {
   row-gap: 2rem;
 }
 
-.gap-y-12 {
-  row-gap: 3rem;
-}
-
 .overflow-hidden {
   overflow: hidden;
 }
@@ -696,29 +692,12 @@ video {
   line-height: 1.75rem;
 }
 
-.text-2xl {
-  font-size: 1.5rem;
-  line-height: 2rem;
-}
-
-.font-medium {
-  font-weight: 500;
-}
-
 .font-light {
   font-weight: 300;
 }
 
-.font-normal {
-  font-weight: 400;
-}
-
-.leading-5 {
-  line-height: 1.25rem;
-}
-
-.leading-7 {
-  line-height: 1.75rem;
+.font-medium {
+  font-weight: 500;
 }
 
 .leading-8 {
@@ -770,7 +749,7 @@ video {
 @font-face {
   font-family: 'Modelo';
 
-  src: url('../Modelo/Modelo-Regular.otf') format('truetype');
+  src: url('Modelo/Modelo-Regular.otf') format('truetype');
 }
 
 .mono {
