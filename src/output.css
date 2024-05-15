@@ -562,6 +562,14 @@ video {
   position: relative;
 }
 
+.bottom-4 {
+  bottom: 1rem;
+}
+
+.left-4 {
+  left: 1rem;
+}
+
 .right-16 {
   right: 4rem;
 }
@@ -578,8 +586,20 @@ video {
   display: flex;
 }
 
+.h-10 {
+  height: 2.5rem;
+}
+
 .h-80 {
   height: 20rem;
+}
+
+.w-10 {
+  width: 2.5rem;
+}
+
+.flex-col {
+  flex-direction: column;
 }
 
 .items-center {
@@ -597,6 +617,10 @@ video {
 .gap-x-2 {
   -moz-column-gap: 0.5rem;
        column-gap: 0.5rem;
+}
+
+.gap-y-2 {
+  row-gap: 0.5rem;
 }
 
 .overflow-hidden {
@@ -636,6 +660,16 @@ video {
   padding-bottom: 0.5rem;
 }
 
+.text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+.text-3xl {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+}
+
 .text-base {
   font-size: 1rem;
   line-height: 1.5rem;
@@ -655,14 +689,14 @@ video {
   color: rgb(156 163 175 / var(--tw-text-opacity));
 }
 
-.text-white {
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
-}
-
 .text-red-700 {
   --tw-text-opacity: 1;
   color: rgb(185 28 28 / var(--tw-text-opacity));
+}
+
+.text-white {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
 .mix-blend-multiply {
@@ -692,8 +726,18 @@ video {
   src: url('HankenGrotesk.ttf') format('truetype');
 }
 
+@font-face {
+  font-family: 'Modelo';
+
+  src: url('../Modelo/Modelo-Regular.otf') format('truetype');
+}
+
 body {
   font-family: Roboto;
+}
+
+.header-text {
+  font-family: Modelo;
 }
 
 .single {
@@ -749,17 +793,12 @@ body {
   margin: 24px 0px;
 }
 
-.hover\:bg-red-800:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(153 27 27 / var(--tw-bg-opacity));
-}
-
-.hover\:bg-red-200:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(254 202 202 / var(--tw-bg-opacity));
-}
-
 .hover\:bg-red-100:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(254 226 226 / var(--tw-bg-opacity));
+}
+
+.hover\:bg-red-800:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(153 27 27 / var(--tw-bg-opacity));
 }

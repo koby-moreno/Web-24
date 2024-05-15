@@ -6,10 +6,19 @@
     font-family: 'HankenGrotesk';
     src: url('HankenGrotesk.ttf') format('truetype');
    }
+
+   @font-face {
+    font-family: 'Modelo';
+    src: url('../Modelo/Modelo-Regular.otf') format('truetype');
+   }
    
    
    body {
        font-family: Roboto;
+   }
+
+   .header-text {
+    font-family: Modelo;
    }
 
    .single {
