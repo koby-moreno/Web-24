@@ -598,6 +598,10 @@ video {
   width: 100vw;
 }
 
+.max-w-4xl {
+  max-width: 56rem;
+}
+
 .flex-col {
   flex-direction: column;
 }
@@ -626,6 +630,18 @@ video {
 
 .gap-y-2 {
   row-gap: 0.5rem;
+}
+
+.gap-y-4 {
+  row-gap: 1rem;
+}
+
+.gap-y-8 {
+  row-gap: 2rem;
+}
+
+.gap-y-12 {
+  row-gap: 3rem;
 }
 
 .overflow-hidden {
@@ -680,8 +696,33 @@ video {
   line-height: 1.75rem;
 }
 
+.text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
 .font-medium {
   font-weight: 500;
+}
+
+.font-light {
+  font-weight: 300;
+}
+
+.font-normal {
+  font-weight: 400;
+}
+
+.leading-5 {
+  line-height: 1.25rem;
+}
+
+.leading-7 {
+  line-height: 1.75rem;
+}
+
+.leading-8 {
+  line-height: 2rem;
 }
 
 .text-gray-400 {
