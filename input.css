@@ -12,6 +12,9 @@
     src: url('../Modelo/Modelo-Regular.otf') format('truetype');
    }
    
+   .mono {
+    font-family: Roboto Mono;
+   }
    
    body {
        font-family: Roboto;
@@ -74,6 +77,9 @@
    
    .intro-section{
        font-size: 64px;
+       background-image: radial-gradient(lightgray 1.5px, transparent 0);
+       background-size: 40px 40px;
+       background-position: -20px -20px;
    }
    
    .intro-text {
