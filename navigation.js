@@ -8,7 +8,11 @@ function makeButton(project) {
     const navButton = document.createElement('template');
     
     navButton.innerHTML = `
-    <div class="fixed mix-blend-multiply top-4 right-16 flex gap-x-2 justify-end">
+    <div class="fixed mix-blend-multiply top-4 flex gap-x-2 justify-between margins-x w-screen">
+    <div class="header-text mix-blend-multiply text-red-700 text-3xl">
+    koby moreno
+    </div>
+    <div class="flex gap-x-2">
     ${primaryBtn}
       <button>
         <div class="shadow-button shadow-red-700 px-4 py-2 hover:bg-red-100 text-base text-red-700">
@@ -35,9 +39,6 @@ function makeButton(project) {
             </div>
         </a>
       </div>
-
-      <div class="fixed left-4 top-4 header-text mix-blend-multiply text-red-700 text-3xl">
-      koby moreno
       </div>
 
     `;

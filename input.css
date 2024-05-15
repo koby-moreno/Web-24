@@ -67,6 +67,10 @@
    .margins {
        padding: 80px 80px 80px 104px;
    }
+
+   .margins-x {
+    padding: 0px 80px 0px 104px;
+   }
    
    .intro-section{
        font-size: 64px;
