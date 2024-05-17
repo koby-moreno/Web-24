@@ -18,6 +18,7 @@
    
    body {
        font-family: 'Switzer', sans-serif;
+       /* font-family: 'Satoshi', sans-serif; */
    }
 
    .header-text {
@@ -76,7 +77,8 @@
    }
    
    .intro-section{
-       font-size: 64px;
+       font-size: 56px;
+       font-weight: 500;
        background-image: radial-gradient(lightgray 1.5px, transparent 0);
        background-size: 40px 40px;
        background-position: -20px -20px;

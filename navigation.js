@@ -9,11 +9,11 @@ let links = [
 ];
 
 function primaryBtn(name, destination) {
-  return `<a href="${destination}"><button><div class="px-4 py-2 bg-red-700 hover:bg-red-800 text-base text-white">${name}</div></button></a>`
+  return `<a href="${destination}"><button><div class="px-4 py-2 bg-red-700 hover:bg-red-800 font-medium text-base text-white">${name}</div></button></a>`
 };
 
 function secondaryBtn(name, destination) {
-  return `<a href="${destination}"><button><div class="shadow-button shadow-red-700 px-4 py-2 hover:bg-red-100 text-base text-red-700">${name}</div></button></a>`
+  return `<a href="${destination}"><button><div class="shadow-button shadow-red-700 px-4 py-2 hover:bg-red-100 font-medium text-base text-red-700">${name}</div></button></a>`
 };
 
 
