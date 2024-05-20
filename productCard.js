@@ -4,7 +4,8 @@ let projects = [
     name: "Insights Builder",
     company: "Foursquare",
     image: "insights.png",
-    imageClass:"single"
+    imageClass:"single",
+    destination:"projects.html"
 },
 {
   name: "Projects Portal",
@@ -12,7 +13,8 @@ let projects = [
   image: "projects3.png",
   secondImage:"projects1.png",
   imageClass:"double",
-  secondImageClass:"double-bg"
+  secondImageClass:"double-bg",
+  destination:"projects.html"
 },
 {
   name: "Lookout",
@@ -20,13 +22,15 @@ let projects = [
   image: "dormdesign2.png",
   secondImage:"dormdesign1.png",
   imageClass:"double",
-  secondImageClass:"double-bg"
+  secondImageClass:"double-bg",
+  destination:"projects.html"
 },
 {
   name: "Banyan",
   company: "Fathom",
   image: "banyan.png",
-  imageClass:"single"
+  imageClass:"single",
+  destination:"projects.html"
 }
 
 ]
@@ -45,7 +49,7 @@ const projectCard = document.createElement('template');
 if(project.imageClass == "single"){
 
 projectCard.innerHTML = `
-	<div class="projectCard bg-white mt-8">
+<a href="${project.destination}" class="bg-white projectCard mt-8">
 	<div class="top-card h-80 bg-gray-100 overflow-hidden flex justify-center relative items-center">
   <img class="${project.imageClass} rounded shadow-image" src="images/${project.image}">
 	</div>
@@ -53,12 +57,12 @@ projectCard.innerHTML = `
   <p class="text-base text-gray-400">${project.company}</p>
    <h1 class="font-medium text-xl black">${project.name}</h1>
   </div>
-  </div>
+  </a>
 `;
 }
 else {
   projectCard.innerHTML = `
-	<div class="projectCard bg-white mt-8">
+  <a href="${project.destination}" class="bg-white projectCard mt-8">
 	<div class="top-card h-80 bg-gray-100 overflow-hidden flex justify-center relative items-center">
   <img class="${project.secondImageClass} rounded shadow-image" src="images/${project.secondImage}">
   <img class="${project.imageClass} rounded shadow-image" src="images/${project.image}">
@@ -67,7 +71,7 @@ else {
   <p class="text-base text-gray-400">${project.company}</p>
    <h1 class="font-medium text-xl black">${project.name}</h1>
   </div>
-  </div>
+  </a>
 `;
 }
 

@@ -22,8 +22,11 @@ function generateBtn1() {
   if (pageId == "about"){
     return secondaryBtn("Work","index.html");
   }
-  else {
+  else if (pageId == "index"){
     return primaryBtn("Work","index.html");
+  }
+  else {
+    return secondaryBtn("Work","index.html");
   }
 };
 
@@ -31,6 +34,9 @@ function generateBtn2() {
 
   if (pageId == "about"){
     return primaryBtn("About","about.html");
+  }
+  else if (pageId == "index"){
+    return secondaryBtn("About","about.html");
   }
   else {
     return secondaryBtn("About","about.html");
