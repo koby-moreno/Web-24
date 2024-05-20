@@ -88,12 +88,33 @@
        margin: 24px 0px;
    }
 
+   @media (max-width:1024px) {
+    .margins-x {
+        padding: 0px 40px 0px 40px;
+       }
+
+    .margins {
+        padding: 0px 40px 0px 40px;
+    }
+   }
+
    @media only screen and (max-device-width: 600px)  {
     .margins-x {
         padding: 0px 16px 0px 16px;
        }
 
+       
+
     .margins {
         padding: 16px;
+    }
+
+    .projectCard {
+        width: 100%;
+        border: 1px solid lightgray;
+    }
+
+    .projects-container {
+        gap: 16px;
     }
    }
