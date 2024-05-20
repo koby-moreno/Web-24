@@ -89,16 +89,35 @@
    }
 
    @media (max-width:1024px) {
+   
+    .intro-section{
+        font-size: 48px;
+    }
+
     .margins-x {
         padding: 0px 40px 0px 40px;
        }
 
     .margins {
-        padding: 0px 40px 0px 40px;
+        padding: 40px 40px 40px 40px;
     }
    }
 
-   @media only screen and (max-device-width: 600px)  {
+
+   @media (max-width:768px){
+    .projectCard {
+        width: 100%;
+    }
+   }
+
+
+   @media (max-width:640px) {
+
+    .intro-section{
+        font-size: 36px;
+    }
+
+
     .margins-x {
         padding: 0px 16px 0px 16px;
        }
@@ -106,7 +125,7 @@
        
 
     .margins {
-        padding: 16px;
+        padding: 48px 16px 48px 16px;
     }
 
     .projectCard {
@@ -115,6 +134,6 @@
     }
 
     .projects-container {
-        gap: 16px;
+        gap: 32px;
     }
    }

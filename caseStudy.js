@@ -72,7 +72,7 @@ const projectCard = document.createElement('template');
 
 
 projectCard.innerHTML = `
-	<div class="flex gap-x-8">
+	<div class="flex flex-col gap-y-3 md:flex-row md:gap-x-6">
     ${imageSelection(project.imageClass, project.image, project.image2)}
     <div class="flex flex-col shrink-0 gap-y-0.5 w-80">
         <div class="text-lg font-medium">${project.name}</div>

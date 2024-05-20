@@ -594,16 +594,8 @@ video {
   height: 2.5rem;
 }
 
-.h-64 {
-  height: 16rem;
-}
-
-.h-40 {
-  height: 10rem;
-}
-
-.h-56 {
-  height: 14rem;
+.h-72 {
+  height: 18rem;
 }
 
 .w-10 {
@@ -660,11 +652,6 @@ video {
        column-gap: 0.5rem;
 }
 
-.gap-x-8 {
-  -moz-column-gap: 2rem;
-       column-gap: 2rem;
-}
-
 .gap-y-0 {
   row-gap: 0px;
 }
@@ -679,6 +666,10 @@ video {
 
 .gap-y-2 {
   row-gap: 0.5rem;
+}
+
+.gap-y-3 {
+  row-gap: 0.75rem;
 }
 
 .gap-y-4 {
@@ -734,14 +725,13 @@ video {
   padding-top: 0.125rem;
 }
 
+.align-middle {
+  vertical-align: middle;
+}
+
 .text-2xl {
   font-size: 1.5rem;
   line-height: 2rem;
-}
-
-.text-3xl {
-  font-size: 1.875rem;
-  line-height: 2.25rem;
 }
 
 .text-4xl {
@@ -904,22 +894,36 @@ body {
 }
 
 @media (max-width:1024px) {
+  .intro-section{
+    font-size: 48px;
+  }
+
   .margins-x {
     padding: 0px 40px 0px 40px;
   }
 
   .margins {
-    padding: 0px 40px 0px 40px;
+    padding: 40px 40px 40px 40px;
   }
 }
 
-@media only screen and (max-device-width: 600px)  {
+@media (max-width:768px){
+  .projectCard {
+    width: 100%;
+  }
+}
+
+@media (max-width:640px) {
+  .intro-section{
+    font-size: 36px;
+  }
+
   .margins-x {
     padding: 0px 16px 0px 16px;
   }
 
   .margins {
-    padding: 16px;
+    padding: 48px 16px 48px 16px;
   }
 
   .projectCard {
@@ -928,7 +932,7 @@ body {
   }
 
   .projects-container {
-    gap: 16px;
+    gap: 32px;
   }
 }
 
@@ -942,13 +946,57 @@ body {
   background-color: rgb(153 27 27 / var(--tw-bg-opacity));
 }
 
-@media (min-width: 768px) {
-  .md\:h-64 {
+@media (max-width: 600px) {
+  .max-\[600px\]\:h-64 {
     height: 16rem;
+  }
+
+  .max-\[600px\]\:h-60 {
+    height: 15rem;
+  }
+
+  .max-\[600px\]\:h-56 {
+    height: 14rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .max-\[500px\]\:h-56 {
+    height: 14rem;
+  }
+
+  .max-\[500px\]\:h-52 {
+    height: 13rem;
+  }
+}
+
+@media (min-width: 640px) {
+  .sm\:h-40 {
+    height: 10rem;
+  }
+
+  .sm\:h-80 {
+    height: 20rem;
+  }
+
+  .sm\:text-3xl {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .md\:h-60 {
+    height: 15rem;
   }
 
   .md\:flex-row {
     flex-direction: row;
+  }
+
+  .md\:gap-x-6 {
+    -moz-column-gap: 1.5rem;
+         column-gap: 1.5rem;
   }
 
   .md\:gap-x-8 {

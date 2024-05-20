@@ -50,7 +50,7 @@ if(project.imageClass == "single"){
 
 projectCard.innerHTML = `
 <a href="${project.destination}" class="bg-white projectCard mt-8">
-	<div class="top-card h-56 md:h-64 xl:h-80 bg-gray-100 overflow-hidden flex justify-center relative items-center">
+	<div class="top-card max-[500px]:h-52 h-72 sm:h-80 md:h-60 xl:h-80 bg-gray-100 overflow-hidden flex justify-center relative items-center">
   <img class="${project.imageClass} rounded shadow-image" src="images/${project.image}">
 	</div>
 	<div class="p-4">
@@ -63,7 +63,7 @@ projectCard.innerHTML = `
 else {
   projectCard.innerHTML = `
   <a href="${project.destination}" class="bg-white projectCard mt-8">
-	<div class="top-card h-56 md:h-64 xl:h-80 bg-gray-100 overflow-hidden flex justify-center relative items-center">
+	<div class="top-card max-[500px]:h-52 h-72 sm:h-80 md:h-60 xl:h-80 bg-gray-100 overflow-hidden flex justify-center relative items-center">
   <img class="${project.secondImageClass} rounded shadow-image" src="images/${project.secondImage}">
   <img class="${project.imageClass} rounded shadow-image" src="images/${project.image}">
 	</div>
