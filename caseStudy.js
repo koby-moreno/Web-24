@@ -1,6 +1,11 @@
 
 let projects = [
     {
+        type: "heading",
+        name: "Overview"
+    },
+    {
+        type: "section",
         name: "Defining Scope",
         desc: "body text goes here this is the description for this seciton lets make this text really long and see if it will wrap or not",
         image: "before.png",
@@ -8,6 +13,11 @@ let projects = [
         imageClass:"slider"
     },
     {
+        type: "heading",
+        name: "Defining Scope"
+    },
+    {
+        type: "section",
         name: "Migrating Design Systems",
         desc: "body text goes here this is the description for this seciton lets make this text really long and see if it will wrap or not",
         image: "card_original.gif",
@@ -15,6 +25,7 @@ let projects = [
         imageClass:"single"
     },
   {
+    type: "section",
     name: "Section Title",
     desc: "body text goes here this is the description for this seciton lets make this text really long and see if it will wrap or not",
     image: "card_original.gif",
@@ -22,6 +33,7 @@ let projects = [
     imageClass:"double"
 },
 {
+    type: "section",
     name: "Section Title",
     desc: "body text goes here this is the description for this seciton",
     image: "all_card.png",
@@ -29,6 +41,7 @@ let projects = [
     imageClass:"single"
 },
 {
+    type: "section",
     name: "Section Title",
     desc: "body text goes here this is the description for this seciton",
     image: "placeholder.jpg",
@@ -36,6 +49,7 @@ let projects = [
     imageClass:"single"
 },
 {
+    type: "section",
     name: "Section Title",
     desc: "body text goes here this is the description for this seciton",
     image: "placeholder.jpg",
@@ -77,18 +91,22 @@ function makeCard(project) {
 const projectCard = document.createElement('template');
 
 
-
+if (project.type == "section"){
 projectCard.innerHTML = `
-	<div class="flex flex-col gap-y-3 md:flex-row md:gap-x-6 basis-full">
+	<div class="flex flex-col gap-y-4 md:flex-row md:gap-x-6 basis-full pt-6 pb-6">
     ${imageSelection(project.imageClass, project.image, project.image2)}
-    <div class="flex flex-col shrink-0 gap-y-0.5 w-80">
+    <div class="flex flex-col shrink-0 gap-y-0.5 md:w-60 lg:w-80">
         
         <div class="text-base font-light">${project.desc}</div>
     </div>
   </div>
 `;
+}
+else {
+    projectCard.innerHTML = `<div class="text-2xl pt-8">${project.name}</div>`
+}
 
-document.querySelector('.projects-container').appendChild(projectCard.content);
+document.querySelector('.casestudy-container').appendChild(projectCard.content);
 }
 
 projects.forEach((project) => 

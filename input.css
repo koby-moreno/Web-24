@@ -108,7 +108,7 @@
       appearance: none;
       width: 2px;
       height: 1000px;
-      background: lightgray;
+      background: rgb(234, 234, 234);
       cursor: pointer;
   }
 
