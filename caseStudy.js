@@ -8,7 +8,7 @@ let projects = [
     {
         type: "section",
         name: "Defining Scope",
-        desc: "body text goes here this is the description for this seciton lets make this text really long and see if it will wrap or not",
+        desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
         image: "before.png",
         image2: "after.png",
         imageClass:"slider"
@@ -20,7 +20,7 @@ let projects = [
     {
         type: "section",
         name: "Section Title",
-        desc: "body text goes here this is the description for this seciton",
+        desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
         image: "stakeholder_workshop.png",
         image2: "comp_anal.png",
         image3: "rice_framework.png",
@@ -81,7 +81,9 @@ function doubleImage(img, img2){
 };
 
 function sliderImage(img, img2){
-    return `<div class="aspect-ratio flex relative bg-gray-100 grow items-center justify-center overflow-hidden"><img class="slider-image shadow-image rounded" src="images/${img}"><img class="slider-image shadow-image rounded" id="clip" src="images/${img2}"><input type="range" min="0" max="100" value="35" class="slider" name='slider' id="slider"></div>`
+    return `<div class="aspect-ratio flex relative bg-gray-100 grow items-center justify-center overflow-hidden"><img class="slider-image shadow-image rounded" src="images/${img}"><img class="slider-image shadow-image rounded" id="clip" src="images/${img2}"><input type="range" min="0" max="100" value="35" class="slider" name='slider' id="slider"><div class='slider-button'><span class="material-symbols-outlined text-base text-red-700">
+    width
+    </span></div></div>`
 }
 
 function tripleStacked(img, img2){
@@ -142,7 +144,8 @@ $("#slider").on("input change", (e)=>{
     const sliderPos = e.target.value;
     console.log(sliderPos);
     // Update the width of the foreground image
-    $('#clip').css('clip-path', `polygon(0 0, ${sliderPos-((50-sliderPos)/9)}% 0, ${sliderPos-((50-sliderPos)/9)}% 100%, 0 100%)`)
+    $('#clip').css('clip-path', `polygon(0 0, ${sliderPos-((50-sliderPos)/9)}% 0, ${sliderPos-((50-sliderPos)/9)}% 100%, 0 100%)`);
+    $('.slider-button').css('left', `calc(${sliderPos}% - 12px)`)
   });
 
 // makeCard(portal);
