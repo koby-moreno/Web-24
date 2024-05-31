@@ -56,7 +56,7 @@
    }
    #clip {
     position: absolute;
-    clip-path: polygon(0 0, 33.3% 0, 33.3% 100%, 0 100%);
+    clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%);
     /* clip: shape(top, right, bottom, left); NB 'rect' is the only available option */
   }
    
@@ -92,7 +92,7 @@
     background-color: white;
     border: 2px solid rgb(225, 225, 225);
     border-radius: 50%;
-    left: calc(35% - 12px);
+    left: calc(50% - 12px);
     pointer-events: none;
    }
    
