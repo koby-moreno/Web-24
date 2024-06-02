@@ -30,7 +30,7 @@ let projects = [
   company: "Fathom",
   image: "banyan.png",
   imageClass:"single",
-  destination:"projects.html"
+  destination:"https://fathom.info/banyan/"
 }
 
 ]

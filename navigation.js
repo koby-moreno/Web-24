@@ -13,7 +13,7 @@ function primaryBtn(name, destination) {
 };
 
 function secondaryBtn(name, destination) {
-  return `<a href="${destination}"><button><div class="shadow-button shadow-red-700 px-4 py-2 hover:bg-red-100 font-medium text-base text-red-700">${name}</div></button></a>`
+  return `<a href="${destination}"><button><div class="shadow-button shadow-red-700 px-4 py-2 bg-white hover:bg-red-100 font-medium text-base text-red-700">${name}</div></button></a>`
 };
 
 
@@ -57,8 +57,8 @@ function makeButton(project) {
     const navButton = document.createElement('template');
     
     navButton.innerHTML = `
-    <div class="fixed mix-blend-multiply top-4 flex align-center gap-x-2 justify-between margins-x w-screen">
-    <div class="header-text mix-blend-multiply text-red-700 text-xl sm:text-3xl align-middle">
+    <div class="fixed top-4 flex align-center gap-x-2 justify-between margins-x w-screen">
+    <div class="header-text text-red-700 text-xl sm:text-3xl align-middle">
     ${titleName.toLowerCase()}
     </div>
     <div class="flex gap-x-2">
