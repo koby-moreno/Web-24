@@ -106,7 +106,7 @@ let projects = [
     type: "section",
     name: "",
     desc: "body text goes here this is the description for this seciton.  This description is going to be shorter. So there is more room",
-    image: "casemap_wireframe_trans.png",
+    image: "campus_diagram.png",
     image2: "",
     imageClass:"single"
 },
