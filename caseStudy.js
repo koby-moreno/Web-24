@@ -75,11 +75,39 @@ let projects = [
 },
 {
     type: "section",
+    name: "",
+    desc: "",
+    image: "lookout_computer_150.png",
+    image2: "scout.png",
+    imageClass:"double-stacked"
+},
+{
+    type: "heading",
+    name: ""
+},
+{
+    type: "section",
     name: "Section Title",
-    desc: "body text goes here this is the description for this seciton",
+    desc: "We first decided to build an interactive map to visualize the spatial distribution of the university's positive cases. For administrators, they were most interested in finding symptomatic students in locations with large numbers of positive cases, and being able to see these students' information in more detail.",
+    image: "casemap_wireframe_trans.png",
+    image2: "",
+    imageClass:"single"
+},
+{
+    type: "section",
+    name: "",
+    desc: "I used Google's geocoding API to convert addresses to coordinates and D3's embedded geographic functionality to draw the basemap",
     image: "casevibrance.mp4",
     image2: "",
     imageClass:"single-video"
+},
+{
+    type: "section",
+    name: "",
+    desc: "body text goes here this is the description for this seciton.  This description is going to be shorter. So there is more room",
+    image: "casemap_wireframe_trans.png",
+    image2: "",
+    imageClass:"single"
 },
 {
     type: "heading",
@@ -117,18 +145,10 @@ let projects = [
     type: "section",
     name: "Impact",
     desc: "Sentinel's work with Colorado Mesa University acted as a test-site for other campuses, communities, and municipalities to adopt. The dorm-maps visualization differentiated Fathom's work and was specifically featured in The New York Times.",
-    image: "lookout_nyt.png",
-    image2: "",
-    imageClass:"single"
-},
-{
-    type: "section",
-    name: "Impact",
-    desc: "Sentinel's work with Colorado Mesa University acted as a test-site for other campuses, communities, and municipalities to adopt. The dorm-maps visualization differentiated Fathom's work and was specifically featured in The New York Times.",
-    image: "NE_animation.gif",
-    image2: "",
-    imageClass:"single"
-},
+    image: "lookout_nyt_smaller.png",
+    image2: "NE_animation.gif",
+    imageClass:"double-stacked"
+}
 
 ]
 
