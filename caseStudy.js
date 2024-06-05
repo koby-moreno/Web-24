@@ -154,9 +154,7 @@ let projects = [
 
 
 function singleVideo(img) {
-    return `<div class="rounded-2xl border-solid aspect-ratio border-2 dark:border-zinc-800 border-gray-100 flex flex-col dark:bg-zinc-800 bg-gray-100 grow items-center justify-center"><video autoplay loop muted playsinline class="object-fit w-[90%] shadow-image rounded">
-    <source src="images/${img}">
-    </video></div>`
+    return `<div class="rounded-2xl border-solid aspect-ratio border-2 dark:border-zinc-800 border-gray-100 flex flex-col dark:bg-zinc-800 bg-gray-100 grow items-center justify-center"><video class="h-auto min-h-20 w-[90%] shadow-image rounded" src="images/${img}" autoplay loop muted playsinline><source src="images/${img}" type="video/webm">Your browser does not support the video tag.</video></div>`
    };
 
 function singleImage(img) {
