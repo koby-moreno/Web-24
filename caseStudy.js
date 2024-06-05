@@ -89,7 +89,7 @@ let projects = [
     type: "section",
     name: "Section Title",
     desc: "body text goes here this is the description for this seciton",
-    image: "dorms_wireframe.png",
+    image: "dorms_wireframe_trans.png",
     image2: "",
     imageClass:"single"
 },
@@ -118,6 +118,14 @@ let projects = [
     name: "Impact",
     desc: "Sentinel's work with Colorado Mesa University acted as a test-site for other campuses, communities, and municipalities to adopt. The dorm-maps visualization differentiated Fathom's work and was specifically featured in The New York Times.",
     image: "lookout_nyt.png",
+    image2: "",
+    imageClass:"single"
+},
+{
+    type: "section",
+    name: "Impact",
+    desc: "Sentinel's work with Colorado Mesa University acted as a test-site for other campuses, communities, and municipalities to adopt. The dorm-maps visualization differentiated Fathom's work and was specifically featured in The New York Times.",
+    image: "NE_animation.gif",
     image2: "",
     imageClass:"single"
 },

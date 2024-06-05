@@ -591,6 +591,10 @@ video {
   margin-bottom: 2%;
 }
 
+.mb-\[15\%\] {
+  margin-bottom: 15%;
+}
+
 .mb-\[25\%\] {
   margin-bottom: 25%;
 }
@@ -599,24 +603,12 @@ video {
   margin-top: 2rem;
 }
 
-.mt-\[25\%\] {
-  margin-top: 25%;
-}
-
-.mb-\[20\%\] {
-  margin-bottom: 20%;
-}
-
-.mt-\[20\%\] {
-  margin-top: 20%;
-}
-
-.mb-\[15\%\] {
-  margin-bottom: 15%;
-}
-
 .mt-\[15\%\] {
   margin-top: 15%;
+}
+
+.mt-\[25\%\] {
+  margin-top: 25%;
 }
 
 .flex {
@@ -651,20 +643,16 @@ video {
   height: auto;
 }
 
-.h-\[50\%\] {
-  height: 50%;
-}
-
-.h-\[40\%\] {
-  height: 40%;
-}
-
 .w-10 {
   width: 2.5rem;
 }
 
 .w-72 {
   width: 18rem;
+}
+
+.w-\[55\%\] {
+  width: 55%;
 }
 
 .w-\[80\%\] {
@@ -681,14 +669,6 @@ video {
 
 .w-screen {
   width: 100vw;
-}
-
-.w-\[50\%\] {
-  width: 50%;
-}
-
-.w-\[55\%\] {
-  width: 55%;
 }
 
 .min-w-32 {
@@ -779,10 +759,6 @@ video {
 
 .gap-y-6 {
   row-gap: 1.5rem;
-}
-
-.gap-y-8 {
-  row-gap: 2rem;
 }
 
 .overflow-hidden {
@@ -1019,7 +995,7 @@ body {
 }
 
 .aspect-ratio {
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 4 / 2.75;
 }
 
 .slider-button {
@@ -1205,42 +1181,17 @@ body {
   }
 }
 
-.dark\:border-zinc-700:where(.dark, .dark *) {
-  --tw-border-opacity: 1;
-  border-color: rgb(63 63 70 / var(--tw-border-opacity));
-}
-
 .dark\:border-zinc-800:where(.dark, .dark *) {
   --tw-border-opacity: 1;
   border-color: rgb(39 39 42 / var(--tw-border-opacity));
 }
 
-.dark\:bg-slate-700:where(.dark, .dark *) {
+.dark\:bg-zinc-800:where(.dark, .dark *) {
   --tw-bg-opacity: 1;
-  background-color: rgb(51 65 85 / var(--tw-bg-opacity));
-}
-
-.dark\:bg-slate-800:where(.dark, .dark *) {
-  --tw-bg-opacity: 1;
-  background-color: rgb(30 41 59 / var(--tw-bg-opacity));
-}
-
-.dark\:bg-slate-900:where(.dark, .dark *) {
-  --tw-bg-opacity: 1;
-  background-color: rgb(15 23 42 / var(--tw-bg-opacity));
+  background-color: rgb(39 39 42 / var(--tw-bg-opacity));
 }
 
 .dark\:bg-zinc-900:where(.dark, .dark *) {
   --tw-bg-opacity: 1;
   background-color: rgb(24 24 27 / var(--tw-bg-opacity));
-}
-
-.dark\:bg-zinc-700:where(.dark, .dark *) {
-  --tw-bg-opacity: 1;
-  background-color: rgb(63 63 70 / var(--tw-bg-opacity));
-}
-
-.dark\:bg-zinc-800:where(.dark, .dark *) {
-  --tw-bg-opacity: 1;
-  background-color: rgb(39 39 42 / var(--tw-bg-opacity));
 }
