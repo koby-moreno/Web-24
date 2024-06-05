@@ -570,12 +570,20 @@ video {
   bottom: 1rem;
 }
 
+.bottom-auto {
+  bottom: auto;
+}
+
 .left-4 {
   left: 1rem;
 }
 
 .left-\[5\%\] {
   left: 5%;
+}
+
+.right-\[-85\%\] {
+  right: -85%;
 }
 
 .right-\[5\%\] {
@@ -611,12 +619,20 @@ video {
   margin-top: 25%;
 }
 
+.block {
+  display: block;
+}
+
 .flex {
   display: flex;
 }
 
 .aspect-\[2\/3\] {
   aspect-ratio: 2/3;
+}
+
+.aspect-\[3\/4\] {
+  aspect-ratio: 3/4;
 }
 
 .h-0 {
@@ -635,8 +651,16 @@ video {
   height: 18rem;
 }
 
+.h-\[100\%\] {
+  height: 100%;
+}
+
 .h-\[33\%\] {
   height: 33%;
+}
+
+.h-\[80\%\] {
+  height: 80%;
 }
 
 .h-auto {
@@ -653,6 +677,10 @@ video {
 
 .w-72 {
   width: 18rem;
+}
+
+.w-\[100\%\] {
+  width: 100%;
 }
 
 .w-\[55\%\] {
@@ -805,12 +833,9 @@ video {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
-.bg-none {
-  background-image: none;
-}
-
-.bg-gradient-to-t {
-  background-image: linear-gradient(to top, var(--tw-gradient-stops));
+.object-cover {
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .p-4 {
@@ -904,6 +929,16 @@ video {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
+.opacity-50 {
+  opacity: 0.5;
+}
+
+.shadow {
+  --tw-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
 .shadow-button {
   --tw-shadow: 0px 0px 0px 2px inset;
   --tw-shadow-colored: inset 0px 0px 0px 2px var(--tw-shadow-color);
@@ -925,6 +960,15 @@ video {
 .shadow-red-700 {
   --tw-shadow-color: #b91c1c;
   --tw-shadow: var(--tw-shadow-colored);
+}
+
+.blur-md {
+  --tw-blur: blur(12px);
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+
+img {
+  max-width: none;
 }
 
 @font-face {
@@ -1080,7 +1124,7 @@ body {
   }
 
   .margins {
-    padding: 40px 40px 40px 40px;
+    padding: 80px 40px 80px 40px;
   }
 }
 
@@ -1130,6 +1174,14 @@ body {
 }
 
 @media (min-width: 640px) {
+  .sm\:right-\[-25\%\] {
+    right: -25%;
+  }
+
+  .sm\:aspect-\[4\/3\] {
+    aspect-ratio: 4/3;
+  }
+
   .sm\:h-80 {
     height: 20rem;
   }
@@ -1141,12 +1193,32 @@ body {
 }
 
 @media (min-width: 768px) {
+  .md\:bottom-\[-40\%\] {
+    bottom: -40%;
+  }
+
+  .md\:right-\[auto\] {
+    right: auto;
+  }
+
+  .md\:aspect-\[4\/1\.5\] {
+    aspect-ratio: 4/1.5;
+  }
+
   .md\:h-60 {
     height: 15rem;
   }
 
+  .md\:h-auto {
+    height: auto;
+  }
+
   .md\:w-60 {
     width: 15rem;
+  }
+
+  .md\:w-\[70\%\] {
+    width: 70%;
   }
 
   .md\:flex-row {

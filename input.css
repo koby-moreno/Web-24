@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+img {
+    max-width: none;
+}
+
 @font-face {
     font-family: 'HankenGrotesk';
     src: url('HankenGrotesk.ttf') format('truetype');
@@ -153,7 +157,7 @@
        }
 
     .margins {
-        padding: 40px 40px 40px 40px;
+        padding: 80px 40px 80px 40px;
     }
    }
 

@@ -79,7 +79,8 @@ let projects = [
     desc: "",
     image: "lookout_computer_150.png",
     image2: "scout.png",
-    imageClass:"double-stacked"
+    imageClass:"double-stacked",
+    shadow: ""
 },
 {
     type: "heading",
@@ -127,7 +128,8 @@ let projects = [
     desc: "",
     image: "dormdesign1.png",
     image2: "dormdesign2.png",
-    imageClass:"double-stacked"
+    imageClass:"double-stacked",
+    shadow: "shadow-image"
 },
 {
     type: "section",
@@ -147,7 +149,8 @@ let projects = [
     desc: "Sentinel's work with Colorado Mesa University acted as a test-site for other campuses, communities, and municipalities to adopt. The dorm-maps visualization differentiated Fathom's work and was specifically featured in The New York Times.",
     image: "lookout_nyt_smaller.png",
     image2: "NE_animation.gif",
-    imageClass:"double-stacked"
+    imageClass:"double-stacked",
+    shadow: "shadow-image"
 }
 
 ]
@@ -171,8 +174,8 @@ function sliderImage(img, img2){
     </span></div></div>`
 }
 
-function doubleStacked(img, img2){
-    return `<div class="rounded-2xl border-solid border-2 border-gray-100 aspect-ratio flex relative bg-gray-100 grow items-center justify-center overflow-hidden"><img class="absolute shadow-image-light left-[5%] mb-[15%] w-[55%] rounded h-auto" src="images/${img}"><img class="absolute shadow-image-light right-[5%] mt-[15%] w-[55%] rounded h-auto" src="images/${img2}"></div>`
+function doubleStacked(img, img2, shadow){
+    return `<div class="rounded-2xl border-solid border-2 border-gray-100 aspect-ratio flex relative bg-gray-100 grow items-center justify-center overflow-hidden"><img class="absolute ${shadow} left-[5%] mb-[15%] w-[55%] rounded h-auto" src="images/${img}"><img class="absolute ${shadow} right-[5%] mt-[15%] w-[55%] rounded h-auto" src="images/${img2}"></div>`
 }
 
 function tripleStacked(img, img2){
@@ -183,7 +186,7 @@ function tripleOverlay(img, img2, img3){
     return `<div class="rounded-2xl border-solid border-2 border-gray-100 aspect-ratio flex relative bg-gray-100 grow items-center justify-center overflow-hidden"><div class="flex flex-col w-[80%]"><img class="shadow-image-light rounded my-[2%]" src="images/${img}"><img class="shadow-image-light rounded my-[2%]" src="images/${img2}"><img class="shadow-image-light rounded my-[2%]" src="images/${img3}"></div></div>`
 }
 
-function imageSelection(c, img, img2, img3) {
+function imageSelection(c, img, img2, img3, shadow) {
     if (c == "single") {
         return singleImage(img);
     }
@@ -194,7 +197,7 @@ function imageSelection(c, img, img2, img3) {
      return doubleImage(img, img2);
     }
     else if (c == "double-stacked"){
-        return doubleStacked(img, img2);
+        return doubleStacked(img, img2, shadow);
        }
     else if (c == "triple-stacked"){
      return tripleStacked(img, img2);
@@ -216,7 +219,7 @@ if (project.type == "section"){
 projectCard.innerHTML = `
 	<div class="flex flex-col-reverse gap-y-4 md:flex-row md:gap-x-6 basis-full">
 
-    ${imageSelection(project.imageClass, project.image, project.image2, project.image3)}
+    ${imageSelection(project.imageClass, project.image, project.image2, project.image3, project.shadow)}
 
     <div class="flex flex-col shrink-0 gap-y-0.5 md:w-60 lg:w-80">
     <div class="text-lg font-medium">${project.name}</div>
