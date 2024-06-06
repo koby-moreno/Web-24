@@ -23,7 +23,7 @@ let projects = [
   secondImage:"dormdesign1.png",
   imageClass:"double",
   secondImageClass:"double-bg",
-  destination:"projects.html"
+  destination:"lookout.html"
 },
 {
   name: "Banyan",

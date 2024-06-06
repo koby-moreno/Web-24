@@ -19,10 +19,16 @@ img {
    .mono {
     font-family: Roboto Mono;
    }
+
    
    body {
        font-family: 'Switzer', sans-serif;
        /* font-family: 'Satoshi', sans-serif; */
+   }
+
+   .tag {
+    padding: 4px 12px;
+    white-space: nowrap;
    }
 
    .header-text {

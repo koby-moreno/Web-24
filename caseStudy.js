@@ -2,11 +2,92 @@
 
 var mode = localStorage.getItem("mode");
 var root = document.getElementsByTagName( 'html' )[0];
+let id = document.getElementsByTagName("body")[0].id;
 
 
 root.classList.add(mode);
 
-
+let lookout = [
+    {
+        type: "section",
+        name: "Overview",
+        desc: "The description is going here btw",
+        image: "lookout_computer_150.png",
+        image2: "scout.png",
+        imageClass:"double-stacked",
+        shadow: ""
+    },
+    {
+        type: "heading",
+        name: ""
+    },
+    {
+        type: "section",
+        name: "Section Title",
+        desc: "We first decided to build an interactive map to visualize the spatial distribution of the university's positive cases. For administrators, they were most interested in finding symptomatic students in locations with large numbers of positive cases, and being able to see these students' information in more detail.",
+        image: "casemap_wireframe_trans.png",
+        image2: "",
+        imageClass:"single"
+    },
+    {
+        type: "section",
+        name: "",
+        desc: "I used Google's geocoding API to convert addresses to coordinates and D3's embedded geographic functionality to draw the basemap",
+        image: "casevibrance.mp4",
+        image2: "",
+        imageClass:"single-video"
+    },
+    {
+        type: "section",
+        name: "",
+        desc: "body text goes here this is the description for this seciton.  This description is going to be shorter. So there is more room",
+        image: "campus_diagram.png",
+        image2: "",
+        imageClass:"single"
+    },
+    {
+        type: "heading",
+        name: ""
+    },
+    {
+        type: "section",
+        name: "Section Title",
+        desc: "body text goes here this is the description for this seciton",
+        image: "dorms_wireframe_trans.png",
+        image2: "",
+        imageClass:"single"
+    },
+    {
+        type: "section",
+        name: "",
+        desc: "",
+        image: "dormdesign1.png",
+        image2: "dormdesign2.png",
+        imageClass:"double-stacked",
+        shadow: "shadow-image"
+    },
+    {
+        type: "section",
+        name: "",
+        desc: "To build the dorm views I used PDFs of CMU's campus map and dormitory floorplans to create custom axonometric SVGs that could be brought into HTML. Creating the SVG's required a careful layer naming system that later allowed me to link the data to these drawings via mavily name in Javascript.",
+        image: "dormsfinal.mp4",
+        image2: "",
+        imageClass:"single-video"
+    },
+    {
+        type: "heading",
+        name: ""
+    },
+    {
+        type: "section",
+        name: "Impact",
+        desc: "Sentinel's work with Colorado Mesa University acted as a test-site for other campuses, communities, and municipalities to adopt. The dorm-maps visualization differentiated Fathom's work and was specifically featured in The New York Times.",
+        image: "lookout_nyt_smaller.png",
+        image2: "NE_animation.gif",
+        imageClass:"double-stacked",
+        shadow: "shadow-image"
+    }
+]
 
 let projects = [
 
@@ -73,85 +154,7 @@ let projects = [
     image2: "",
     imageClass:"single"
 },
-{
-    type: "section",
-    name: "",
-    desc: "",
-    image: "lookout_computer_150.png",
-    image2: "scout.png",
-    imageClass:"double-stacked",
-    shadow: ""
-},
-{
-    type: "heading",
-    name: ""
-},
-{
-    type: "section",
-    name: "Section Title",
-    desc: "We first decided to build an interactive map to visualize the spatial distribution of the university's positive cases. For administrators, they were most interested in finding symptomatic students in locations with large numbers of positive cases, and being able to see these students' information in more detail.",
-    image: "casemap_wireframe_trans.png",
-    image2: "",
-    imageClass:"single"
-},
-{
-    type: "section",
-    name: "",
-    desc: "I used Google's geocoding API to convert addresses to coordinates and D3's embedded geographic functionality to draw the basemap",
-    image: "casevibrance.mp4",
-    image2: "",
-    imageClass:"single-video"
-},
-{
-    type: "section",
-    name: "",
-    desc: "body text goes here this is the description for this seciton.  This description is going to be shorter. So there is more room",
-    image: "campus_diagram.png",
-    image2: "",
-    imageClass:"single"
-},
-{
-    type: "heading",
-    name: ""
-},
-{
-    type: "section",
-    name: "Section Title",
-    desc: "body text goes here this is the description for this seciton",
-    image: "dorms_wireframe_trans.png",
-    image2: "",
-    imageClass:"single"
-},
-{
-    type: "section",
-    name: "",
-    desc: "",
-    image: "dormdesign1.png",
-    image2: "dormdesign2.png",
-    imageClass:"double-stacked",
-    shadow: "shadow-image"
-},
-{
-    type: "section",
-    name: "",
-    desc: "To build the dorm views I used PDFs of CMU's campus map and dormitory floorplans to create custom axonometric SVGs that could be brought into HTML. Creating the SVG's required a careful layer naming system that later allowed me to link the data to these drawings via mavily name in Javascript.",
-    image: "dormsfinal.mp4",
-    image2: "",
-    imageClass:"single-video"
-},
-{
-    type: "heading",
-    name: ""
-},
-{
-    type: "section",
-    name: "Impact",
-    desc: "Sentinel's work with Colorado Mesa University acted as a test-site for other campuses, communities, and municipalities to adopt. The dorm-maps visualization differentiated Fathom's work and was specifically featured in The New York Times.",
-    image: "lookout_nyt_smaller.png",
-    image2: "NE_animation.gif",
-    imageClass:"double-stacked",
-    shadow: "shadow-image"
-}
+
 
 ]
 
@@ -236,9 +239,19 @@ else {
 document.querySelector('.casestudy-container').appendChild(projectCard.content);
 }
 
-projects.forEach((project) => 
-  makeCard(project)
-);
+
+if (id == "projects"){
+    projects.forEach((project) => 
+        makeCard(project)
+      );
+}
+else {
+    lookout.forEach((project) => 
+        makeCard(project)
+      );
+}
+
+
 
 
 $("#slider").on("input change", (e)=>{
