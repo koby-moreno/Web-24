@@ -121,25 +121,33 @@ let projects = [
         name: "Designing Resilient Architecture",
         desc: "body text goes here this is the description for this seciton lets make this text really long and see if it will wrap or not",
         image: "wireframe_1.png",
-        image2: "wireframe_3.png",
+        image2: "wireframe_2.png",
         image3: "wireframe_3.png",
         imageClass:"single"
+    },
+    {
+        type: "heading",
+        name: ""
     },
     {
         type: "section",
         name: "Migrating Design Systems",
         desc: "body text goes here this is the description for this seciton lets make this text really long and see if it will wrap or not",
         image: "wireframe_1.png",
-        image2: "wireframe_3.png",
+        image2: "wireframe_2.png",
         image3: "wireframe_3.png",
         imageClass:"triple-stacked"
+    },
+    {
+        type: "heading",
+        name: ""
     },
   {
     type: "section",
     name: "Section Title",
     desc: "body text goes here this is the description for this seciton lets make this text really long and see if it will wrap or not",
-    image: "card_original.gif",
-    image2: "card_edit.gif",
+    image: "card_original_trans.gif",
+    image2: "card_edit_trans.gif",
     imageClass:"double"
 },
 {
@@ -168,7 +176,7 @@ function singleImage(img) {
 };
 
 function doubleImage(img, img2){
-    return `<div class="rounded-2xl border-solid border-2 border-gray-100 flex flex-col gap-y-2 lg:flex-row lg:gap-x-2"><div class="flex items-center justify-center flex-1 bg-gray-100 aspect-[2/3]"><img class="w-[90%] h-auto" src="images/${img}"></div><div class="flex items-center justify-center flex-1 aspect-[2/3] bg-gray-100"><img class="rounded" src="images/${img2}"></div></div>`
+    return `<div class="aspect-ratio overflow-hidden gap-y-2 flex flex-col gap-y-2"><div class="relative rounded-2xl flex items-center justify-center flex-1 bg-gray-100"><img class="w-[60%] h-auto" src="images/${img}"><div class="absolute left-[5%] top-[10%] text-gray-400">Original</div></div><div class="relative rounded-2xl flex items-center justify-center flex-1 bg-gray-100"><img class="rounded w-[60%] h-auto" src="images/${img2}"><div class="absolute left-[5%] top-[10%] text-gray-400">Revised</div></div></div>`
 };
 
 function sliderImage(img, img2){
@@ -181,8 +189,8 @@ function doubleStacked(img, img2, shadow){
     return `<div class="rounded-2xl border-solid border-2 border-gray-100 aspect-ratio flex relative bg-gray-100 grow items-center justify-center overflow-hidden"><img class="absolute ${shadow} left-[5%] mb-[15%] w-[55%] rounded h-auto" src="images/${img}"><img class="absolute ${shadow} right-[5%] mt-[15%] w-[55%] rounded h-auto" src="images/${img2}"></div>`
 }
 
-function tripleStacked(img, img2){
-    return `<div class="rounded-2xl border-solid border-2 border-gray-100 aspect-ratio flex relative bg-gray-100 grow items-center justify-center overflow-hidden"><img class="absolute shadow-image-light left-[5%] mb-[25%] h-[33%] rounded w-auto" src="images/${img}"><img class="absolute shadow-image-light h-[33%] rounded w-auto" src="images/${img}"><img class="absolute right-[5%] mt-[25%] shadow-image-light h-[33%] w-auto rounded" src="images/${img2}"></div>`
+function tripleStacked(img, img2, img3){
+    return `<div class="rounded-2xl border-solid border-2 border-gray-100 aspect-ratio flex relative bg-gray-100 grow items-center justify-center overflow-hidden"><img class="absolute shadow-image-light left-[5%] mb-[25%] h-[33%] rounded w-auto" src="images/${img}"><img class="absolute shadow-image-light h-[33%] rounded w-auto" src="images/${img2}"><img class="absolute right-[5%] mt-[25%] shadow-image-light h-[33%] w-auto rounded" src="images/${img3}"></div>`
 }
 
 function tripleOverlay(img, img2, img3){
@@ -203,7 +211,7 @@ function imageSelection(c, img, img2, img3, shadow) {
         return doubleStacked(img, img2, shadow);
        }
     else if (c == "triple-stacked"){
-     return tripleStacked(img, img2);
+     return tripleStacked(img, img2, img3);
     }
     else if (c == "triple-overlay"){
         return tripleOverlay(img, img2, img3);
