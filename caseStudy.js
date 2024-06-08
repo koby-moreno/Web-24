@@ -131,6 +131,19 @@ let projects = [
     },
     {
         type: "section",
+        name: "Defining Scope",
+        desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        image: "",
+        image2: "textguide.png",
+        image3: "colorguide.png",
+        imageClass:"triple-overlay"
+    },
+    {
+        type: "heading",
+        name: ""
+    },
+    {
+        type: "section",
         name: "Migrating Design Systems",
         desc: "body text goes here this is the description for this seciton lets make this text really long and see if it will wrap or not",
         image: "wireframe_1.png",
