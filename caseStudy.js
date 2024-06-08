@@ -133,10 +133,10 @@ let projects = [
         type: "section",
         name: "Defining Scope",
         desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-        image: "",
-        image2: "textguide.png",
+        image: "textguide.png",
+        image2: "colorguide.png",
         image3: "colorguide.png",
-        imageClass:"triple-overlay"
+        imageClass:"double-overlay"
     },
     {
         type: "heading",
@@ -210,6 +210,10 @@ function tripleOverlay(img, img2, img3){
     return `<div class="rounded-2xl border-solid border-2 border-gray-100 aspect-ratio flex relative bg-gray-100 grow items-center justify-center overflow-hidden"><div class="flex flex-col w-[80%]"><img class="shadow-image-light rounded my-[2%]" src="images/${img}"><img class="shadow-image-light rounded my-[2%]" src="images/${img2}"><img class="shadow-image-light rounded my-[2%]" src="images/${img3}"></div></div>`
 }
 
+function doubleOverlay(img, img2){
+    return `<div class="rounded-2xl border-solid border-2 border-gray-100 aspect-ratio flex relative bg-gray-100 grow items-center justify-center overflow-hidden"><div class="flex flex-col w-[80%]"><img class="shadow-image-light rounded my-[2%]" src="images/${img}"><img class="shadow-image-light rounded my-[2%]" src="images/${img2}"></div></div>`
+}
+
 function imageSelection(c, img, img2, img3, shadow) {
     if (c == "single") {
         return singleImage(img);
@@ -228,6 +232,9 @@ function imageSelection(c, img, img2, img3, shadow) {
     }
     else if (c == "triple-overlay"){
         return tripleOverlay(img, img2, img3);
+       }
+       else if (c == "double-overlay"){
+        return doubleOverlay(img, img2);
        }
     else {
         return sliderImage(img, img2);
