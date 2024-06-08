@@ -164,16 +164,16 @@ let projects = [
     imageClass:"double"
 },
 {
-    type: "heading",
-    name: "Additional Scope"
-},
-{
     type: "section",
     name: "Section Title",
     desc: "body text goes here this is the description for this seciton",
-    image: "all_card.png",
+    image: "all_card_trans.png",
     image2: "",
     imageClass:"single"
+},
+{
+    type: "heading",
+    name: "Additional Scope"
 },
 {
     type: "section",
@@ -202,7 +202,7 @@ function doubleImage(img, img2){
 };
 
 function sliderImage(img, img2){
-    return `<div class="rounded-2xl border-solid border-2 border-gray-100 aspect-ratio flex relative bg-gray-100 grow items-center justify-center overflow-hidden"><img class="slider-image shadow-image rounded" src="images/${img}"><img class="slider-image shadow-image rounded" id="clip" src="images/${img2}"><input type="range" min="0" max="100" value="50" class="slider" name='slider' id="slider"><div class='slider-button'><span class="material-symbols-outlined text-base text-red-700">
+    return `<div class="aspect-ratio flex relative w-[100%] h-auto items-center justify-center overflow-hidden"><div class="rounded-2xl border-solid border-2 border-gray-200 aspect-ratio flex absolute bg-gray-200 grow items-center justify-center overflow-hidden w-[100%] h-auto"><img class="slider-image shadow-image rounded" src="images/${img}"></div><div class="rounded-2xl border-solid border-2 border-gray-100 aspect-ratio flex absolute bg-gray-100 grow items-center justify-center overflow-hidden w-[100%] h-auto" id="clip"><img class="slider-image shadow-image rounded" src="images/${img2}"></div><input type="range" min="0" max="100" value="66" class="slider" name='slider' id="slider"><div class='slider-button'><span class="material-symbols-outlined text-base text-red-700">
     width
     </span></div></div>`
 }
@@ -295,7 +295,7 @@ $("#slider").on("input change", (e)=>{
     const sliderPos = e.target.value;
     console.log(sliderPos);
     // Update the width of the foreground image
-    $('#clip').css('clip-path', `polygon(0 0, ${sliderPos-((50-sliderPos)/9)}% 0, ${sliderPos-((50-sliderPos)/9)}% 100%, 0 100%)`);
+    $('#clip').css('clip-path', `polygon(0 0, ${sliderPos}% 0, ${sliderPos}% 100%, 0 100%)`);
     $('.slider-button').css('left', `calc(${sliderPos}% - 12px)`)
   });
 
