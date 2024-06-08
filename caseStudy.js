@@ -89,6 +89,19 @@ let lookout = [
     }
 ]
 
+
+let insights = [
+    {
+        type: "section",
+        name: "Overview",
+        desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        image: "studio_dm.png",
+        image2: "studio_lm.png",
+        imageClass:"slider"
+    },
+]
+
+
 let projects = [
 
     {
@@ -279,6 +292,11 @@ document.querySelector('.casestudy-container').appendChild(projectCard.content);
 
 if (id == "projects"){
     projects.forEach((project) => 
+        makeCard(project)
+      );
+}
+else if (id == "insights"){
+    insights.forEach((project) => 
         makeCard(project)
       );
 }

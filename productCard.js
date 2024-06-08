@@ -1,11 +1,12 @@
 
+
 let projects = [
   {
     name: "Insights Builder",
     company: "Foursquare",
     image: "insights.png",
     imageClass:"single",
-    destination:"projects.html"
+    destination:"insights.html"
 },
 {
   name: "Projects Portal",
