@@ -120,7 +120,7 @@ let projects = [
         type: "section",
         name: "Designing Resilient Architecture",
         desc: "body text goes here this is the description for this seciton lets make this text really long and see if it will wrap or not",
-        image: "wireframe_1.png",
+        image: "IA_diagram.gif",
         image2: "wireframe_2.png",
         image3: "wireframe_3.png",
         imageClass:"single"
