@@ -93,6 +93,14 @@ let lookout = [
 let insights = [
     {
         type: "section",
+        name: "Layout Changes",
+        desc: "To build the dorm views I used PDFs of CMU's campus map and dormitory floorplans to create custom axonometric SVGs that could be brought into HTML. Creating the SVG's required a careful layer naming system that later allowed me to link the data to these drawings via mavily name in Javascript.",
+        image: "ib_layoutchanges.mp4",
+        image2: "",
+        imageClass:"single-video"
+    },
+    {
+        type: "section",
         name: "Overview",
         desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
         image: "studio_dm.png",
