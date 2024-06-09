@@ -93,6 +93,32 @@ let lookout = [
 let insights = [
     {
         type: "section",
+        name: "Competitive Analysis",
+        desc: "The description goes here",
+        image: "ib_comp_1.png",
+        image2: "ib_comp_2.png",
+        imageClass:"double",
+        shadow: ""
+    },
+    {
+        type: "heading",
+        name: ""
+    },
+    {
+        type: "section",
+        name: "Competitive Analysis",
+        desc: "The description goes here",
+        image: "ib_layout_1.png",
+        image2: "ib_layout_2.png",
+        imageClass:"double-overlay",
+        shadow: ""
+    },
+    {
+        type: "heading",
+        name: ""
+    },
+    {
+        type: "section",
         name: "Layout Changes",
         desc: "To build the dorm views I used PDFs of CMU's campus map and dormitory floorplans to create custom axonometric SVGs that could be brought into HTML. Creating the SVG's required a careful layer naming system that later allowed me to link the data to these drawings via mavily name in Javascript.",
         image: "ib_layoutchanges.mp4",
@@ -240,8 +266,8 @@ function tripleOverlay(img, img2, img3){
     return `<div class="rounded-2xl border-solid border-2 border-gray-100 aspect-ratio flex relative bg-gray-100 grow items-center justify-center overflow-hidden"><div class="flex flex-col w-[80%]"><img class="shadow-image-light rounded my-[2%]" src="images/${img}"><img class="shadow-image-light rounded my-[2%]" src="images/${img2}"><img class="shadow-image-light rounded my-[2%]" src="images/${img3}"></div></div>`
 }
 
-function doubleOverlay(img, img2){
-    return `<div class="rounded-2xl border-solid border-2 border-gray-100 aspect-ratio flex relative bg-gray-100 grow items-center justify-center overflow-hidden"><div class="flex flex-col w-[80%]"><img class="shadow-image-light rounded my-[2%]" src="images/${img}"><img class="shadow-image-light rounded my-[2%]" src="images/${img2}"></div></div>`
+function doubleOverlay(img, img2, shadow){
+    return `<div class="rounded-2xl border-solid border-2 border-gray-100 aspect-ratio flex relative bg-gray-100 grow items-center justify-center overflow-hidden"><div class="flex flex-col w-[80%]"><img class="${shadow} rounded my-[2%]" src="images/${img}"><img class="${shadow} rounded my-[2%]" src="images/${img2}"></div></div>`
 }
 
 function imageSelection(c, img, img2, img3, shadow) {
@@ -264,7 +290,7 @@ function imageSelection(c, img, img2, img3, shadow) {
         return tripleOverlay(img, img2, img3);
        }
        else if (c == "double-overlay"){
-        return doubleOverlay(img, img2);
+        return doubleOverlay(img, img2, shadow);
        }
     else {
         return sliderImage(img, img2);
