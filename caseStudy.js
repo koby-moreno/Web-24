@@ -131,6 +131,18 @@ let insights = [
     },
     {
         type: "section",
+        name: "Title Goes Here",
+        desc: "body text goes here this is the description for this seciton",
+        image: "ib_edit_flow.gif",
+        image2: "",
+        imageClass:"single"
+    },
+    {
+        type: "heading",
+        name: ""
+    },
+    {
+        type: "section",
         name: "Layout Changes",
         desc: "To build the dorm views I used PDFs of CMU's campus map and dormitory floorplans to create custom axonometric SVGs that could be brought into HTML. Creating the SVG's required a careful layer naming system that later allowed me to link the data to these drawings via mavily name in Javascript.",
         image: "ib_layoutchanges.mp4",
