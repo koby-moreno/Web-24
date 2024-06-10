@@ -63,8 +63,7 @@ let lookout = [
         desc: "",
         image: "dormdesign1.png",
         image2: "dormdesign2.png",
-        imageClass:"double-stacked",
-        shadow: "shadow-image"
+        imageClass:"double-stacked"
     },
     {
         type: "section",
@@ -93,12 +92,25 @@ let lookout = [
 let insights = [
     {
         type: "section",
+        name: "Defining Scope",
+        desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        image: "ib_findings_matrix.png",
+        image2: "ib_milestones.png",
+        imageClass:"double-overlay",
+        shadow: "shadow-image-light"
+    },
+    {
+        type: "heading",
+        name: ""
+    },
+    {
+        type: "section",
         name: "Competitive Analysis",
         desc: "The description goes here",
         image: "ib_comp_1.png",
         image2: "ib_comp_2.png",
         imageClass:"double",
-        shadow: ""
+        shadow: "shadow-image"
     },
     {
         type: "heading",
@@ -127,7 +139,7 @@ let insights = [
     },
     {
         type: "section",
-        name: "Section Title",
+        name: "",
         desc: "body text goes here this is the description for this seciton",
         image: "ib_colorguide.png",
         image2: "",
@@ -135,7 +147,7 @@ let insights = [
     },
     {
         type: "section",
-        name: "Overview",
+        name: "",
         desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
         image: "studio_dm.png",
         image2: "studio_lm.png",
@@ -249,7 +261,7 @@ function singleVideo(img) {
    };
 
 function singleImage(img) {
- return `<div class="rounded-2xl border-solid aspect-ratio border-2 dark:border-zinc-800 border-gray-100 flex flex-col dark:bg-zinc-800 bg-gray-100 overflow-hidden items-center justify-center"><img class="w-[90%] rounded" src="images/${img}"></div>`
+ return `<div class="rounded-2xl border-solid aspect-ratio border-2 dark:border-zinc-800 border-gray-100 flex flex-col dark:bg-zinc-800 bg-gray-100 grow overflow-hidden items-center justify-center"><img class="w-[90%] rounded" src="images/${img}"></div>`
 };
 
 function doubleImage(img, img2){
