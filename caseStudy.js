@@ -92,6 +92,19 @@ let lookout = [
 let insights = [
     {
         type: "section",
+        name: "Migrating Design Systems",
+        desc: "body text goes here this is the description for this seciton lets make this text really long and see if it will wrap or not",
+        image: "ib_maps_page.png",
+        image2: "ib_studio_page.png",
+        image3: "insights.png",
+        imageClass:"triple-stacked"
+    },
+    {
+        type: "heading",
+        name: ""
+    },
+    {
+        type: "section",
         name: "Defining Scope",
         desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
         image: "ib_findings_matrix.png",
@@ -136,6 +149,15 @@ let insights = [
         image: "ib_edit_flow.gif",
         image2: "",
         imageClass:"single"
+    },
+    {
+        type: "section",
+        name: "Title Goes Here",
+        desc: "body text goes here this is the description for this seciton",
+        image: "ib_edit_panels.png",
+        image2: "ib_edit.gif",
+        imageClass:"double-stacked",
+        shadow: ""
     },
     {
         type: "heading",
@@ -273,8 +295,8 @@ function singleVideo(img) {
     return `<div class="rounded-2xl border-solid aspect-ratio border-2 dark:border-zinc-800 border-gray-100 flex flex-col dark:bg-zinc-800 bg-gray-100 grow items-center justify-center"><video class="h-auto min-h-20 w-[90%] shadow-image rounded" src="images/${img}" autoplay loop muted playsinline><source src="images/${img}" type="video/webm">Your browser does not support the video tag.</video></div>`
    };
 
-function singleImage(img) {
- return `<div class="rounded-2xl border-solid aspect-ratio border-2 dark:border-zinc-800 border-gray-100 flex flex-col dark:bg-zinc-800 bg-gray-100 grow overflow-hidden items-center justify-center"><img class="w-[90%] rounded" src="images/${img}"></div>`
+function singleImage(img, shadow) {
+ return `<div class="rounded-2xl border-solid aspect-ratio border-2 dark:border-zinc-800 border-gray-100 flex flex-col dark:bg-zinc-800 bg-gray-100 grow overflow-hidden items-center justify-center"><img class="${shadow} w-[90%] rounded" src="images/${img}"></div>`
 };
 
 function doubleImage(img, img2){
@@ -305,7 +327,7 @@ function doubleOverlay(img, img2, shadow){
 
 function imageSelection(c, img, img2, img3, shadow) {
     if (c == "single") {
-        return singleImage(img);
+        return singleImage(img, shadow);
     }
     else if (c == "single-video"){
         return singleVideo(img);
