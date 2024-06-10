@@ -107,10 +107,10 @@ let insights = [
         type: "section",
         name: "Competitive Analysis",
         desc: "The description goes here",
-        image: "ib_comp_1.png",
-        image2: "ib_comp_2.png",
-        imageClass:"double",
-        shadow: "shadow-image"
+        image: "ib_layout_white_2.png",
+        image2: "ib_layout_white_1.png",
+        imageClass:"double-overlay",
+        shadow: "shadow-image-light"
     },
     {
         type: "heading",
@@ -215,7 +215,8 @@ let projects = [
         image: "textguide.png",
         image2: "colorguide.png",
         image3: "colorguide.png",
-        imageClass:"double-overlay"
+        imageClass:"double-overlay",
+        shadow: "shadow-image-light"
     },
     {
         type: "heading",
