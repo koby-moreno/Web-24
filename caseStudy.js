@@ -127,6 +127,14 @@ let insights = [
     },
     {
         type: "section",
+        name: "Section Title",
+        desc: "body text goes here this is the description for this seciton",
+        image: "ib_colorguide.png",
+        image2: "",
+        imageClass:"single"
+    },
+    {
+        type: "section",
         name: "Overview",
         desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
         image: "studio_dm.png",
@@ -241,7 +249,7 @@ function singleVideo(img) {
    };
 
 function singleImage(img) {
- return `<div class="rounded-2xl border-solid aspect-ratio border-2 dark:border-zinc-800 border-gray-100 flex flex-col dark:bg-zinc-800 bg-gray-100 grow items-center justify-center"><img class="w-[90%] rounded" src="images/${img}"></div>`
+ return `<div class="rounded-2xl border-solid aspect-ratio border-2 dark:border-zinc-800 border-gray-100 flex flex-col dark:bg-zinc-800 bg-gray-100 overflow-hidden items-center justify-center"><img class="w-[90%] rounded" src="images/${img}"></div>`
 };
 
 function doubleImage(img, img2){
