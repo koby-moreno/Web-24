@@ -97,7 +97,8 @@ let insights = [
         image: "ib_maps_page.png",
         image2: "ib_studio_page.png",
         image3: "insights.png",
-        imageClass:"triple-stacked"
+        imageClass:"triple-stacked",
+        height: "h-[43%]"
     },
     {
         type: "heading",
@@ -157,7 +158,18 @@ let insights = [
         image: "ib_edit_panels.png",
         image2: "ib_edit.gif",
         imageClass:"double-stacked",
-        shadow: ""
+        shadow: "",
+        shadow2: "shadow-image"
+    },
+    {
+        type: "section",
+        name: "Title Goes Here",
+        desc: "body text goes here this is the description for this seciton",
+        image: "ib_autopopulate.png",
+        image2: "ib_edit.gif",
+        imageClass:"double-stacked",
+        shadow: "",
+        shadow2: "shadow-image"
     },
     {
         type: "heading",
@@ -185,7 +197,9 @@ let insights = [
         desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
         image: "studio_dm.png",
         image2: "studio_lm.png",
-        imageClass:"slider"
+        imageClass:"slider",
+        bg2: "bg-zinc-700",
+        border2: "border-zinc-700"
     },
 ]
 
@@ -251,7 +265,8 @@ let projects = [
         image: "wireframe_1.png",
         image2: "wireframe_2.png",
         image3: "wireframe_3.png",
-        imageClass:"triple-stacked"
+        imageClass:"triple-stacked",
+        height: "h-[33%]"
     },
     {
         type: "heading",
@@ -303,18 +318,18 @@ function doubleImage(img, img2){
     return `<div class="aspect-ratio overflow-hidden gap-y-2 flex flex-col gap-y-2"><div class="relative rounded-2xl flex items-center justify-center flex-1 bg-gray-100"><img class="w-[60%] h-auto" src="images/${img}"><div class="absolute left-[5%] top-[10%] text-gray-400">Original</div></div><div class="relative rounded-2xl flex items-center justify-center flex-1 bg-gray-100"><img class="rounded w-[60%] h-auto" src="images/${img2}"><div class="absolute left-[5%] top-[10%] text-gray-400">Revised</div></div></div>`
 };
 
-function sliderImage(img, img2){
-    return `<div class="aspect-ratio flex relative w-[100%] h-auto items-center justify-center overflow-hidden"><div class="rounded-2xl border-solid border-2 border-gray-200 aspect-ratio flex absolute bg-gray-200 grow items-center justify-center overflow-hidden w-[100%] h-auto"><img class="slider-image shadow-image rounded" src="images/${img}"></div><div class="rounded-2xl border-solid border-2 border-gray-100 aspect-ratio flex absolute bg-gray-100 grow items-center justify-center overflow-hidden w-[100%] h-auto" id="clip"><img class="slider-image shadow-image rounded" src="images/${img2}"></div><input type="range" min="0" max="100" value="66" class="slider" name='slider' id="slider"><div class='slider-button'><span class="material-symbols-outlined text-base text-red-700">
+function sliderImage(img, img2, bg2, border2){
+    return `<div class="aspect-ratio flex relative w-[100%] h-auto items-center justify-center overflow-hidden"><div class="rounded-2xl border-solid border-2 ${border2} aspect-ratio flex absolute ${bg2} grow items-center justify-center overflow-hidden w-[100%] h-auto"><img class="slider-image shadow-image rounded" src="images/${img}"></div><div class="rounded-2xl border-solid border-2 border-gray-100 aspect-ratio flex absolute bg-gray-100 grow items-center justify-center overflow-hidden w-[100%] h-auto" id="clip"><img class="slider-image shadow-image rounded" src="images/${img2}"></div><input type="range" min="0" max="100" value="66" class="slider" name='slider' id="slider"><div class='slider-button'><span class="material-symbols-outlined text-base text-red-700">
     width
     </span></div></div>`
 }
 
-function doubleStacked(img, img2, shadow){
-    return `<div class="rounded-2xl border-solid border-2 border-gray-100 aspect-ratio flex relative bg-gray-100 grow items-center justify-center overflow-hidden"><img class="absolute ${shadow} left-[5%] mb-[15%] w-[55%] rounded h-auto" src="images/${img}"><img class="absolute ${shadow} right-[5%] mt-[15%] w-[55%] rounded h-auto" src="images/${img2}"></div>`
+function doubleStacked(img, img2, shadow, shadow2){
+    return `<div class="rounded-2xl border-solid border-2 border-gray-100 aspect-ratio flex relative bg-gray-100 grow items-center justify-center overflow-hidden"><img class="absolute ${shadow} left-[5%] mb-[15%] w-[55%] rounded h-auto" src="images/${img}"><img class="absolute ${shadow2} right-[5%] mt-[15%] w-[55%] rounded h-auto" src="images/${img2}"></div>`
 }
 
-function tripleStacked(img, img2, img3){
-    return `<div class="rounded-2xl border-solid border-2 border-gray-100 aspect-ratio flex relative bg-gray-100 grow items-center justify-center overflow-hidden"><img class="absolute shadow-image-light left-[5%] mb-[25%] h-[33%] rounded w-auto" src="images/${img}"><img class="absolute shadow-image-light h-[33%] rounded w-auto" src="images/${img2}"><img class="absolute right-[5%] mt-[25%] shadow-image-light h-[33%] w-auto rounded" src="images/${img3}"></div>`
+function tripleStacked(img, img2, img3, height){
+    return `<div class="rounded-2xl border-solid border-2 border-gray-100 aspect-ratio flex relative bg-gray-100 grow items-center justify-center overflow-hidden"><img class="absolute shadow-image-light left-[5%] mb-[25%] ${height} rounded w-auto" src="images/${img}"><img class="absolute shadow-image-light ${height} rounded w-auto" src="images/${img2}"><img class="absolute right-[5%] mt-[25%] shadow-image-light ${height} w-auto rounded" src="images/${img3}"></div>`
 }
 
 function tripleOverlay(img, img2, img3){
@@ -325,7 +340,7 @@ function doubleOverlay(img, img2, shadow){
     return `<div class="rounded-2xl border-solid border-2 border-gray-100 aspect-ratio flex relative bg-gray-100 grow items-center justify-center overflow-hidden"><div class="flex flex-col w-[80%]"><img class="${shadow} rounded my-[2%]" src="images/${img}"><img class="${shadow} rounded my-[2%]" src="images/${img2}"></div></div>`
 }
 
-function imageSelection(c, img, img2, img3, shadow) {
+function imageSelection(c, img, img2, img3, shadow, shadow2, bg2, border2, height) {
     if (c == "single") {
         return singleImage(img, shadow);
     }
@@ -336,10 +351,10 @@ function imageSelection(c, img, img2, img3, shadow) {
      return doubleImage(img, img2);
     }
     else if (c == "double-stacked"){
-        return doubleStacked(img, img2, shadow);
+        return doubleStacked(img, img2, shadow, shadow2);
        }
     else if (c == "triple-stacked"){
-     return tripleStacked(img, img2, img3);
+     return tripleStacked(img, img2, img3, height);
     }
     else if (c == "triple-overlay"){
         return tripleOverlay(img, img2, img3);
@@ -348,7 +363,7 @@ function imageSelection(c, img, img2, img3, shadow) {
         return doubleOverlay(img, img2, shadow);
        }
     else {
-        return sliderImage(img, img2);
+        return sliderImage(img, img2, bg2, border2);
     }
 };
 
@@ -361,7 +376,7 @@ if (project.type == "section"){
 projectCard.innerHTML = `
 	<div class="flex flex-col-reverse gap-y-4 md:flex-row md:gap-x-6 basis-full">
 
-    ${imageSelection(project.imageClass, project.image, project.image2, project.image3, project.shadow)}
+    ${imageSelection(project.imageClass, project.image, project.image2, project.image3, project.shadow, project.shadow2, project.bg2, project.border2, project.height)}
 
     <div class="flex flex-col shrink-0 gap-y-0.5 md:w-60 lg:w-80">
     <div class="text-lg font-medium">${project.name}</div>
