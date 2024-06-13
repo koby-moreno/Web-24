@@ -57,7 +57,8 @@ function makeButton(project) {
     const navButton = document.createElement('template');
     
     navButton.innerHTML = `
-    <div class="fixed top-4 flex align-center gap-x-2 justify-between margins-x w-screen">
+    <div class="flex justify-center fixed top-4 w-screen">
+    <div class="flex align-center gap-x-2 justify-between margins-x w-[100%] max-w-[1440px]">
     <div class="header-text text-red-700 text-xl sm:text-3xl align-middle">
     ${titleName.toLowerCase()}
     </div>
@@ -65,12 +66,14 @@ function makeButton(project) {
 ${generateBtn1()}
 ${generateBtn2()}
       </div>
+      </div>
+      </div>
       <div class="fixed left-4 bottom-4 flex flex-col gap-y-2">
         ${tertiaryButton('LI', links[0])}
         ${tertiaryButton('CV', links[1])}
         ${tertiaryButton(email, links[2])}
       </div>
-      </div>
+ 
 
     `;
     
