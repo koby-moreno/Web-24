@@ -162,16 +162,6 @@ let insights = [
         shadow2: "shadow-image"
     },
     {
-        type: "section",
-        name: "Title Goes Here",
-        desc: "body text goes here this is the description for this seciton",
-        image: "ib_autopopulate.png",
-        image2: "ib_edit.gif",
-        imageClass:"double-stacked",
-        shadow: "",
-        shadow2: "shadow-image"
-    },
-    {
         type: "heading",
         name: ""
     },
@@ -201,6 +191,18 @@ let insights = [
         bg2: "bg-zinc-700",
         border2: "border-zinc-700"
     },
+    {
+        type: "heading",
+        name: ""
+    },
+    {
+        type: "section",
+        name: "Final Design",
+        desc: "body text goes here this is the description for this seciton",
+        image: "https://player.vimeo.com/video/955267218?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
+        image2: "",
+        imageClass:"vimeo"
+    },
 ]
 
 
@@ -212,7 +214,9 @@ let projects = [
         desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
         image: "before.png",
         image2: "after.png",
-        imageClass:"slider"
+        imageClass:"slider",
+        bg2: "bg-gray-200",
+        border2: "border-gray-200"
     },
     {
         type: "heading",
@@ -282,8 +286,8 @@ let projects = [
 },
 {
     type: "section",
-    name: "Section Title",
-    desc: "body text goes here this is the description for this seciton",
+    name: "",
+    desc: "",
     image: "all_card_trans.png",
     image2: "",
     imageClass:"single"
@@ -305,6 +309,11 @@ let projects = [
 
 ]
 
+
+function vimeo(img) {
+    return `<div class="rounded-2xl relative border-solid aspect-ratio border-2 border-gray-100 flex bg-gray-100 grow items-center justify-center"><div style="padding:56.3% 0 0 0;position:absolute;" class="w-[90%] h-auto rounded shadow-image overflow-hidden"><iframe src="${img}" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="End_to_End_UX"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+    </div>`
+}
 
 function singleVideo(img) {
     return `<div class="rounded-2xl border-solid aspect-ratio border-2 dark:border-zinc-800 border-gray-100 flex flex-col dark:bg-zinc-800 bg-gray-100 grow items-center justify-center"><video class="h-auto min-h-20 w-[90%] shadow-image rounded" src="images/${img}" autoplay loop muted playsinline><source src="images/${img}" type="video/webm">Your browser does not support the video tag.</video></div>`
@@ -361,6 +370,9 @@ function imageSelection(c, img, img2, img3, shadow, shadow2, bg2, border2, heigh
        }
        else if (c == "double-overlay"){
         return doubleOverlay(img, img2, shadow);
+       }
+       else if (c == "vimeo"){
+        return vimeo(img);
        }
     else {
         return sliderImage(img, img2, bg2, border2);
