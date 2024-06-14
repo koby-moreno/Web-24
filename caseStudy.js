@@ -18,7 +18,7 @@ let lookout = [
         shadow: ""
     },
     {
-        type: "heading",
+        type: "divider",
         name: ""
     },
     {
@@ -46,7 +46,7 @@ let lookout = [
         imageClass:"single"
     },
     {
-        type: "heading",
+        type: "divider",
         name: ""
     },
     {
@@ -74,7 +74,7 @@ let lookout = [
         imageClass:"single-video"
     },
     {
-        type: "heading",
+        type: "divider",
         name: ""
     },
     {
@@ -101,7 +101,7 @@ let insights = [
         height: "h-[43%]"
     },
     {
-        type: "heading",
+        type: "divider",
         name: ""
     },
     {
@@ -114,7 +114,7 @@ let insights = [
         shadow: "shadow-image-light"
     },
     {
-        type: "heading",
+        type: "divider",
         name: ""
     },
     {
@@ -127,7 +127,7 @@ let insights = [
         shadow: "shadow-image-light"
     },
     {
-        type: "heading",
+        type: "divider",
         name: ""
     },
     {
@@ -140,7 +140,7 @@ let insights = [
         shadow: ""
     },
     {
-        type: "heading",
+        type: "divider",
         name: ""
     },
     {
@@ -162,7 +162,7 @@ let insights = [
         shadow2: "shadow-image"
     },
     {
-        type: "heading",
+        type: "divider",
         name: ""
     },
     {
@@ -192,11 +192,11 @@ let insights = [
         border2: "border-zinc-700"
     },
     {
-        type: "heading",
+        type: "divider",
         name: ""
     },
     {
-        type: "section",
+        type: "section-notext",
         name: "Final Design",
         desc: "body text goes here this is the description for this seciton",
         image: "https://player.vimeo.com/video/955267218?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
@@ -219,7 +219,7 @@ let projects = [
         border2: "border-gray-200"
     },
     {
-        type: "heading",
+        type: "divider",
         name: ""
     },
     {
@@ -232,7 +232,7 @@ let projects = [
         imageClass:"triple-overlay"
     },
     {
-        type: "heading",
+        type: "divider",
         name: ""
     },
     {
@@ -245,7 +245,7 @@ let projects = [
         imageClass:"single"
     },
     {
-        type: "heading",
+        type: "divider",
         name: ""
     },
     {
@@ -259,7 +259,7 @@ let projects = [
         shadow: "shadow-image-light"
     },
     {
-        type: "heading",
+        type: "divider",
         name: ""
     },
     {
@@ -273,7 +273,7 @@ let projects = [
         height: "h-[33%]"
     },
     {
-        type: "heading",
+        type: "divider",
         name: ""
     },
   {
@@ -293,7 +293,7 @@ let projects = [
     imageClass:"single"
 },
 {
-    type: "heading",
+    type: "divider",
     name: ""
 },
 {
@@ -318,7 +318,7 @@ let projects = [
 
 
 function vimeo(img) {
-    return `<div class="rounded-2xl relative border-solid aspect-ratio border-2 border-gray-100 flex bg-gray-100 grow items-center justify-center"><div style="padding:56.3% 0 0 0;position:absolute;" class="w-[90%] h-auto rounded shadow-image overflow-hidden"><iframe src="${img}" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="End_to_End_UX"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+    return `<div class="rounded-2xl relative border-solid aspect-ratio border-2 border-gray-100 flex bg-gray-100 grow items-center justify-center"><img class="block h-[100%] w-[100%] object-cover opacity-50 blur-md" src="images/insights.png"><div style="padding:43.8% 0 0 0;position:absolute;" class="w-[70%] h-auto rounded shadow-image overflow-hidden"><iframe src="${img}" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="End_to_End_UX"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
     </div>`
 }
 
@@ -405,8 +405,14 @@ projectCard.innerHTML = `
   </div>
 `;
 }
-else {
+else if (project.type == "divider") {
     projectCard.innerHTML = `<div class="text-2xl pt-16">${project.name}</div>`
+}
+else {
+    projectCard.innerHTML =
+    `<div class="flex flex-col-reverse gap-y-4 md:flex-row md:gap-x-6 basis-full">
+    ${imageSelection(project.imageClass, project.image, project.image2, project.image3, project.shadow, project.shadow2, project.bg2, project.border2, project.height)}
+  </div>`
 }
 
 document.querySelector('.casestudy-container').appendChild(projectCard.content);
