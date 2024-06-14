@@ -294,7 +294,14 @@ let projects = [
 },
 {
     type: "heading",
-    name: "Additional Scope"
+    name: ""
+},
+{
+    type: "section",
+    name: "Designing Resilient Architecture",
+    desc: "body text goes here this is the description for this seciton lets make this text really long and see if it will wrap or not",
+    image: "disclosure.gif",
+    imageClass:"single"
 },
 {
     type: "section",
