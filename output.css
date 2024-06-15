@@ -917,6 +917,14 @@ video {
   padding-top: 24px;
 }
 
+.pt-\[43\.8\%\] {
+  padding-top: 43.8%;
+}
+
+.pt-\[56\.3\%\] {
+  padding-top: 56.3%;
+}
+
 .align-middle {
   vertical-align: middle;
 }
@@ -1308,6 +1316,10 @@ body {
   .md\:gap-x-8 {
     -moz-column-gap: 2rem;
          column-gap: 2rem;
+  }
+
+  .md\:pt-\[43\.8\%\] {
+    padding-top: 43.8%;
   }
 }
 
