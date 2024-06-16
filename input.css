@@ -152,6 +152,37 @@ img {
        margin: 24px 0px;
    }
 
+   .line1 {
+    stroke-dasharray: calc(2*100vw + 2*100vh);
+    stroke-dashoffset: 0;
+    animation: dash 2s linear infinite;
+  }
+
+  .line2 {
+    stroke-dasharray: calc(2*100vw + 2*100vh);
+    stroke-dashoffset: calc(2*100vw + 2*100vh);
+    animation: dash2 2s linear infinite;
+  }
+
+  @keyframes dash {
+    from {
+      stroke-dashoffset: calc(2*100vw + 2*100vh);
+    }
+    to {
+      stroke-dashoffset: calc((2*100vw + 2*100vh)/10);
+    }
+  }
+
+  @keyframes dash2 {
+    from {
+      stroke-dashoffset: calc((2*100vw + 2*100vh) - ((2*100vw + 2*100vh)/10));
+    }
+    to {
+      stroke-dashoffset: 0;
+    }
+  }
+
+
    @media (max-width:1024px) {
    
     .intro-section{
