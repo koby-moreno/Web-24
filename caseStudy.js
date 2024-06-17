@@ -487,9 +487,9 @@ else if (project.type == "text"){
 else if (project.type == "buttons"){
     projectCard.innerHTML = `
     <div class="flex justify-between">
-    <a href="${project.destination1}">
+    <a class="hidden sm:flex" href="${project.destination1}">
         <button>
-            <div class="rounded-md flex gap-x-2 px-4 py-2 bg-gray-700 hover:bg-gray-800 font-medium text-base text-white">
+            <div class="rounded-md flex gap-x-2 px-4 py-2 bg-gray-600 hover:bg-gray-700 font-medium text-base text-white">
                 <span class="material-symbols-outlined font-semibold text-base">
                     arrow_back
                 </span>
@@ -497,9 +497,9 @@ else if (project.type == "buttons"){
             </div>
         </button>
     </a>
-    <a href="${project.destination2}">
-    <button>
-        <div class="rounded-md flex gap-x-2 px-4 py-2 bg-gray-700 hover:bg-gray-800 font-medium text-base text-white">
+    <a class="flex grow sm:grow-0" href="${project.destination2}">
+    <button class="flex grow">
+        <div class="grow justify-center rounded-md flex gap-x-2 px-4 py-2 bg-gray-600 hover:bg-gray-700 font-medium text-base text-white">
             <span>${project.name2}</span>
             <span class="material-symbols-outlined font-semibold text-base">
                 arrow_forward
