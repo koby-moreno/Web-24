@@ -9,11 +9,11 @@ let links = [
 ];
 
 function primaryBtn(name, destination) {
-  return `<a href="${destination}"><button><div class="px-4 py-2 bg-red-700 hover:bg-red-800 font-medium text-base text-white">${name}</div></button></a>`
+  return `<a href="${destination}"><button><div class="rounded-md px-4 py-2 bg-red-700 hover:bg-red-800 font-medium text-base text-white">${name}</div></button></a>`
 };
 
 function secondaryBtn(name, destination) {
-  return `<a href="${destination}"><button><div class="shadow-button shadow-red-700 px-4 py-2 bg-white hover:bg-red-100 font-medium text-base text-red-700">${name}</div></button></a>`
+  return `<a href="${destination}"><button><div class="rounded-md shadow-button shadow-red-700 px-4 py-2 bg-white hover:bg-red-100 font-medium text-base text-red-700">${name}</div></button></a>`
 };
 
 
@@ -49,7 +49,7 @@ console.log(titleName);
 let email = '<span class="material-symbols-outlined">mail</span>';
 
 function tertiaryButton(text, link) {
-  return `<a href="${link}"><div class="w-10 h-10 flex justify-center items-center text-base font-medium text-red-700 hover:bg-red-100">${text}</div></a>`
+  return `<a href="${link}"><div class="rounded-md w-10 h-10 flex justify-center items-center text-base font-medium text-red-700 hover:bg-red-100">${text}</div></a>`
 };
 
 function makeButton(project) {

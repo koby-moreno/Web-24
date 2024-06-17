@@ -85,6 +85,17 @@ let lookout = [
         image2: "NE_animation.gif",
         imageClass:"double-stacked",
         shadow: "shadow-image"
+    },
+    {
+        type: "divider",
+        name: ""
+    },
+    {
+        type: "buttons",
+        destination1: "projects.html",
+        name1: "Projects Portal",
+        destination2: "insights.html",
+        name2: "Insights Builder"
     }
 ]
 
@@ -478,7 +489,7 @@ else if (project.type == "buttons"){
     <div class="flex justify-between">
     <a href="${project.destination1}">
         <button>
-            <div class="flex gap-x-2 px-4 py-2 bg-gray-700 hover:bg-gray-800 font-medium text-base text-white">
+            <div class="rounded-md flex gap-x-2 px-4 py-2 bg-gray-700 hover:bg-gray-800 font-medium text-base text-white">
                 <span class="material-symbols-outlined font-semibold text-base">
                     arrow_back
                 </span>
@@ -488,7 +499,7 @@ else if (project.type == "buttons"){
     </a>
     <a href="${project.destination2}">
     <button>
-        <div class="flex gap-x-2 px-4 py-2 bg-gray-700 hover:bg-gray-800 font-medium text-base text-white">
+        <div class="rounded-md flex gap-x-2 px-4 py-2 bg-gray-700 hover:bg-gray-800 font-medium text-base text-white">
             <span>${project.name2}</span>
             <span class="material-symbols-outlined font-semibold text-base">
                 arrow_forward
