@@ -207,10 +207,6 @@ let insights = [
         name: ""
     },
     {
-        type: "divider",
-        name: ""
-    },
-    {
         type: "text",
         name: "Impact",
         desc:"",
@@ -227,6 +223,13 @@ let insights = [
     {
         type: "divider",
         name: ""
+    },
+    {
+        type: "buttons",
+        destination1: "lookout.html",
+        name1: "Lookout",
+        destination2: "projects.html",
+        name2: "Projects Portal"
     },
 ]
 
@@ -437,8 +440,9 @@ else if (project.type == "text"){
 
     projectCard.innerHTML = `
 
-    <div class="flex flex-col-reverse gap-y-4 md:flex-row md:gap-x-6 justify-center items-center basis-full">
-    <div class="w-[100%] flex flex-col lg:flex-row lg:gap-x-20 gap-y-12">
+    <div class="flex flex-col gap-y-10  basis-full">
+    <div class="text-2xl">${project.name}</div>
+    <div class="w-[100%] flex flex-col lg:flex-row lg:gap-x-20 gap-y-10">
     <div class="flex lg:flex-col gap-x-4 lg:gap-y-2 basis-0 grow">
         <span class="material-symbols-outlined text-3xl">
             ${project.icon1}
@@ -468,6 +472,33 @@ else if (project.type == "text"){
 </div>
     </div>
     </div>`;
+}
+else if (project.type == "buttons"){
+    projectCard.innerHTML = `
+    <div class="flex justify-between">
+    <a href="${project.destination1}">
+        <button>
+            <div class="flex gap-x-2 px-4 py-2 bg-gray-700 hover:bg-gray-800 font-medium text-base text-white">
+                <span class="material-symbols-outlined font-semibold text-base">
+                    arrow_back
+                </span>
+                <span>${project.name1}</span>
+            </div>
+        </button>
+    </a>
+    <a href="${project.destination2}">
+    <button>
+        <div class="flex gap-x-2 px-4 py-2 bg-gray-700 hover:bg-gray-800 font-medium text-base text-white">
+            <span>${project.name2}</span>
+            <span class="material-symbols-outlined font-semibold text-base">
+                arrow_forward
+            </span>
+        </div>
+    </button>
+</a>
+        
+    </div>
+    `
 }
 else {
     projectCard.innerHTML =

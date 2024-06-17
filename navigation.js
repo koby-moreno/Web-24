@@ -68,7 +68,7 @@ ${generateBtn2()}
       </div>
       </div>
       </div>
-      <div class="fixed left-4 bottom-4 flex flex-col gap-y-2">
+      <div class="fixed left-4 bottom-4 flex gap-x-2 md:left-8 lg:left-4 lg:flex-col lg:gap-y-2">
         ${tertiaryButton('LI', links[0])}
         ${tertiaryButton('CV', links[1])}
         ${tertiaryButton(email, links[2])}
