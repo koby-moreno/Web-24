@@ -202,6 +202,32 @@ let insights = [
         image2: "",
         imageClass:"vimeo"
     },
+    {
+        type: "divider",
+        name: ""
+    },
+    {
+        type: "divider",
+        name: ""
+    },
+    {
+        type: "text",
+        name: "Impact",
+        desc:"",
+        icon1: "palette",
+        header1: "Informing Cupcake 2.0",
+        desc1: "Served as a design system audit, outlining next-steps and best practices for data-analytics dashboards and dark-mode theming",
+        icon2: "subdirectory_arrow_right",
+        header2: "Setting Product Direction",
+        desc2:"Design articulated the complexity and efforts entailed in pursuing this concept as a user-facing product, assisting in strategic conversations amongst leadership",
+        icon3: "request_quote",
+        header3: "Cross-Contributing",
+        desc3: "Ensured high-priority revenue-dependent deadlines were met while reducing design and engineering workloads"
+    },
+    {
+        type: "divider",
+        name: ""
+    },
 ]
 
 
@@ -406,6 +432,42 @@ projectCard.innerHTML = `
 }
 else if (project.type == "divider") {
     projectCard.innerHTML = `<div class="text-2xl pt-16">${project.name}</div>`
+}
+else if (project.type == "text"){
+
+    projectCard.innerHTML = `
+
+    <div class="flex flex-col-reverse gap-y-4 md:flex-row md:gap-x-6 justify-center items-center basis-full">
+    <div class="w-[100%] flex flex-col lg:flex-row lg:gap-x-20 gap-y-12">
+    <div class="flex lg:flex-col gap-x-4 lg:gap-y-2 basis-0 grow">
+        <span class="material-symbols-outlined text-3xl">
+            ${project.icon1}
+        </span>
+        <div class="flex flex-col gap-y-2">
+            <div class="text-xl">${project.header1}</div>
+            <div class="text-base font-light text-gray-900 max-w-[600px]">${project.desc1}</div>
+        </div>
+    </div>
+    <div class="flex lg:flex-col gap-x-4 lg:gap-y-2 basis-0 grow">
+        <span class="material-symbols-outlined text-3xl">
+            ${project.icon2}
+        </span>
+        <div class="flex flex-col gap-y-2">
+            <div class="text-xl">${project.header2}</div>
+            <div class="text-base font-light text-gray-900 max-w-[600px]">${project.desc2}</div>
+        </div>
+    </div>
+    <div class="flex lg:flex-col gap-x-4 lg:gap-y-2 basis-0 grow">
+        <span class="material-symbols-outlined text-3xl">
+            ${project.icon3}
+        </span>
+    <div class="flex flex-col gap-y-2">
+        <div class="text-xl">${project.header3}</div>
+        <div class="text-base font-light text-gray-900 max-w-[600px]">${project.desc3}</div>
+    </div>
+</div>
+    </div>
+    </div>`;
 }
 else {
     projectCard.innerHTML =
