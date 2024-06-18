@@ -351,6 +351,17 @@ let projects = [
     image3: "colorguide.png",
     imageClass:"double-overlay"
 },
+{
+    type: "divider",
+    name: ""
+},
+{
+    type: "buttons",
+    destination1: "insights.html",
+    name1: "Insights Builder",
+    destination2: "lookout.html",
+    name2: "Lookout"
+},
 
 
 ]
@@ -451,11 +462,11 @@ else if (project.type == "text"){
 
     projectCard.innerHTML = `
 
-    <div class="flex flex-col gap-y-10  basis-full">
+    <div class="flex flex-col gap-y-10  basis-full lg:py-12 xl:py-24">
     <div class="text-2xl">${project.name}</div>
     <div class="w-[100%] flex flex-col lg:flex-row lg:gap-x-20 gap-y-10">
     <div class="flex lg:flex-col gap-x-4 lg:gap-y-2 basis-0 grow">
-        <span class="material-symbols-outlined text-3xl">
+        <span class="material-symbols-outlined text-2xl lg:text-3xl">
             ${project.icon1}
         </span>
         <div class="flex flex-col gap-y-2">
@@ -464,7 +475,7 @@ else if (project.type == "text"){
         </div>
     </div>
     <div class="flex lg:flex-col gap-x-4 lg:gap-y-2 basis-0 grow">
-        <span class="material-symbols-outlined text-3xl">
+        <span class="material-symbols-outlined text-2xl lg:text-3xl">
             ${project.icon2}
         </span>
         <div class="flex flex-col gap-y-2">
@@ -473,7 +484,7 @@ else if (project.type == "text"){
         </div>
     </div>
     <div class="flex lg:flex-col gap-x-4 lg:gap-y-2 basis-0 grow">
-        <span class="material-symbols-outlined text-3xl">
+        <span class="material-symbols-outlined text-2xl lg:text-3xl">
             ${project.icon3}
         </span>
     <div class="flex flex-col gap-y-2">
