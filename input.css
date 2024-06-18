@@ -20,6 +20,9 @@ img {
     font-family: Roboto Mono;
    }
 
+   .globe {
+    
+   }
    
    body {
        font-family: 'Switzer', sans-serif;
@@ -141,15 +144,25 @@ img {
   }
    
    .intro-section{
-       font-size: 56px;
+       font-size: 40px;
        font-weight: 500;
-       background-image: radial-gradient(lightgray 1.5px, transparent 0);
+       /* background-image: radial-gradient(lightgray 1.5px, transparent 0); */
        background-size: 40px 40px;
        background-position: -20px -20px;
    }
    
+#globe-paths {
+    stroke-width: 3px;
+    stroke: lightgray;
+    stroke: rgb(185 28 28);
+    stroke-dasharray: 200 500;
+    stroke-dashoffset: 0;
+    animation: dash 20s linear infinite;
+}
+
    .intro-text {
        margin: 24px 0px;
+       max-width: 700px;
    }
 
    .line1 {
@@ -157,6 +170,7 @@ img {
     stroke-dashoffset: 0;
     animation: dash 2s linear infinite;
   }
+
 
   .line2 {
     stroke-dasharray: calc(2*100vw + 2*100vh);

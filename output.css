@@ -574,6 +574,10 @@ video {
   bottom: 1rem;
 }
 
+.bottom-\[-200px\] {
+  bottom: -200px;
+}
+
 .bottom-auto {
   bottom: auto;
 }
@@ -598,6 +602,10 @@ video {
   right: -85%;
 }
 
+.right-\[0px\] {
+  right: 0px;
+}
+
 .right-\[5\%\] {
   right: 5%;
 }
@@ -612,6 +620,34 @@ video {
 
 .top-\[10\%\] {
   top: 10%;
+}
+
+.right-\[-200px\] {
+  right: -200px;
+}
+
+.right-\[-300px\] {
+  right: -300px;
+}
+
+.right-\[-330px\] {
+  right: -330px;
+}
+
+.right-\[-350px\] {
+  right: -350px;
+}
+
+.z-0 {
+  z-index: 0;
+}
+
+.z-10 {
+  z-index: 10;
+}
+
+.-z-10 {
+  z-index: -10;
 }
 
 .my-\[2\%\] {
@@ -699,6 +735,14 @@ video {
   min-height: 5rem;
 }
 
+.min-h-\[600px\] {
+  min-height: 600px;
+}
+
+.min-h-\[800px\] {
+  min-height: 800px;
+}
+
 .w-10 {
   width: 2.5rem;
 }
@@ -717,6 +761,10 @@ video {
 
 .w-\[60\%\] {
   width: 60%;
+}
+
+.w-\[700px\] {
+  width: 700px;
 }
 
 .w-\[80\%\] {
@@ -987,6 +1035,11 @@ video {
   line-height: 2.5rem;
 }
 
+.text-5xl {
+  font-size: 3rem;
+  line-height: 1;
+}
+
 .text-base {
   font-size: 1rem;
   line-height: 1.5rem;
@@ -1020,6 +1073,10 @@ video {
 
 .leading-8 {
   line-height: 2rem;
+}
+
+.leading-snug {
+  line-height: 1.375;
 }
 
 .text-gray-400 {
@@ -1127,6 +1184,9 @@ img {
 
 .mono {
   font-family: Roboto Mono;
+}
+
+.globe {
 }
 
 body {
@@ -1250,15 +1310,25 @@ body {
 }
 
 .intro-section{
-  font-size: 56px;
+  font-size: 40px;
   font-weight: 500;
-  background-image: radial-gradient(lightgray 1.5px, transparent 0);
+  /* background-image: radial-gradient(lightgray 1.5px, transparent 0); */
   background-size: 40px 40px;
   background-position: -20px -20px;
 }
 
+#globe-paths {
+  stroke-width: 3px;
+  stroke: lightgray;
+  stroke: rgb(185 28 28);
+  stroke-dasharray: 200 500;
+  stroke-dashoffset: 0;
+  animation: dash 20s linear infinite;
+}
+
 .intro-text {
   margin: 24px 0px;
+  max-width: 700px;
 }
 
 .line1 {
@@ -1378,6 +1448,10 @@ body {
     height: 20rem;
   }
 
+  .sm\:min-h-\[600px\] {
+    min-height: 600px;
+  }
+
   .sm\:grow-0 {
     flex-grow: 0;
   }
@@ -1403,6 +1477,10 @@ body {
 
   .md\:right-\[auto\] {
     right: auto;
+  }
+
+  .md\:right-\[0px\] {
+    right: 0px;
   }
 
   .md\:aspect-\[4\/1\.5\] {
@@ -1441,6 +1519,15 @@ body {
 
   .md\:pt-\[43\.8\%\] {
     padding-top: 43.8%;
+  }
+
+  .md\:text-5xl {
+    font-size: 3rem;
+    line-height: 1;
+  }
+
+  .md\:leading-snug {
+    line-height: 1.375;
   }
 }
 
