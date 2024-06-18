@@ -1280,9 +1280,7 @@ body {
   cursor: col-resize;
 }
 
-.intro-section{
-  font-size: 40px;
-  font-weight: 500;
+.dot-bg{
   background-image: radial-gradient(lightgray 1.25px, transparent 0);
   background-size: 20px 20px;
   background-position: -20px -20px;
@@ -1422,6 +1420,10 @@ body {
 
   .sm\:grow-0 {
     flex-grow: 0;
+  }
+
+  .sm\:justify-start {
+    justify-content: flex-start;
   }
 
   .sm\:text-3xl {

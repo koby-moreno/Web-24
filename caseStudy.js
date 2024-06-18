@@ -500,7 +500,7 @@ else if (project.type == "buttons"){
     <div class="flex justify-between">
     <a class="hidden sm:flex" href="${project.destination1}">
         <button>
-            <div class="rounded-md flex gap-x-2 px-4 py-2 bg-gray-600 hover:bg-gray-700 font-medium text-base text-white">
+            <div class="rounded-md flex gap-x-2 px-4 py-2 shadow-button shadow-red-700 hover:bg-red-100 bg-white font-medium text-base text-red-700">
                 <span class="material-symbols-outlined font-semibold text-base">
                     arrow_back
                 </span>
@@ -510,7 +510,7 @@ else if (project.type == "buttons"){
     </a>
     <a class="flex grow sm:grow-0" href="${project.destination2}">
     <button class="flex grow">
-        <div class="grow justify-center rounded-md flex gap-x-2 px-4 py-2 bg-gray-600 hover:bg-gray-700 font-medium text-base text-white">
+        <div class="grow justify-center rounded-md flex gap-x-2 px-4 py-2 bg-red-700 hover:bg-red-800 font-medium text-base text-white">
             <span>${project.name2}</span>
             <span class="material-symbols-outlined font-semibold text-base">
                 arrow_forward
