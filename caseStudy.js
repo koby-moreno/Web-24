@@ -11,7 +11,7 @@ let lookout = [
     {
         type: "section",
         name: "Overview",
-        desc: "The description is going here btw",
+        desc: "Lookout is the primary dashboard component for Sentinel -- a larger effort for communities to better monitor and act on infectious disease outbreaks. Colorado Mesa University is Sentinel's first test site. Students use Scout to report symptoms and check into events while administrators use Lookout to access this data.",
         image: "lookout_computer_150.png",
         image2: "scout.png",
         imageClass:"double-stacked",
@@ -40,7 +40,7 @@ let lookout = [
     {
         type: "section",
         name: "",
-        desc: "body text goes here this is the description for this seciton.  This description is going to be shorter. So there is more room",
+        desc: "Showing the case map to administrators, they were primarily interested in cases that clustered on main campus, as students living off campus were out of their jurisdictional control. With this knowledge, we decided to explore a spatial visualization at this smaller scale.",
         image: "campus_diagram.png",
         image2: "",
         imageClass:"single"
@@ -52,7 +52,7 @@ let lookout = [
     {
         type: "section",
         name: "Section Title",
-        desc: "body text goes here this is the description for this seciton",
+        desc: "At CMU, students are grouped into one or more mavilies, which include living clusters, in-person classes, sports teams, and performing arts groups. Administrators find the mavilies most useful as they often point to sources of localized outbreaks and can be used to measure students' levels of probable interaction. These views allow admin to see if there are positive case trends within dorm floors and living mavilies, and investigate whether or not these patterns are related to other non-living mavilies.",
         image: "dorms_wireframe_trans.png",
         image2: "",
         imageClass:"single"

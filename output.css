@@ -919,11 +919,6 @@ video {
   background-color: rgb(229 231 235 / var(--tw-bg-opacity));
 }
 
-.bg-gray-600 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(75 85 99 / var(--tw-bg-opacity));
-}
-
 .bg-red-700 {
   --tw-bg-opacity: 1;
   background-color: rgb(185 28 28 / var(--tw-bg-opacity));
@@ -1296,6 +1291,16 @@ body {
   animation-direction: reverse;
 }
 
+.link {
+  border-bottom: 1.5px solid lightgray;
+  transition: border-color 0.3s;
+}
+
+.link:hover {
+  cursor: pointer;
+  border-color: rgb(220 38 38);
+}
+
 .intro-text {
   margin: 24px 0px;
   max-width: 800px;
@@ -1374,11 +1379,6 @@ body {
   .projects-container {
     gap: 32px;
   }
-}
-
-.hover\:bg-gray-700:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(55 65 81 / var(--tw-bg-opacity));
 }
 
 .hover\:bg-red-100:hover {

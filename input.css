@@ -159,6 +159,16 @@ img {
     animation-direction: reverse;
 }
 
+.link {
+    border-bottom: 1.5px solid lightgray;
+    transition: border-color 0.3s;
+}
+
+.link:hover {
+    cursor: pointer;
+    border-color: rgb(220 38 38);
+}
+
    .intro-text {
        margin: 24px 0px;
        max-width: 800px;

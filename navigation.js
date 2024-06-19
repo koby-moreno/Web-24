@@ -20,13 +20,13 @@ function secondaryBtn(name, destination) {
 function generateBtn1() {
 
   if (pageId == "about"){
-    return secondaryBtn("Work","index.html");
+    return secondaryBtn("Work","index.html#work-cont");
   }
   else if (pageId == "index"){
-    return primaryBtn("Work","index.html");
+    return primaryBtn("Work","index.html#work-cont");
   }
   else {
-    return secondaryBtn("Work","index.html");
+    return secondaryBtn("Work","index.html#work-cont");
   }
 };
 
