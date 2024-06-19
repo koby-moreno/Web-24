@@ -57,7 +57,7 @@ function makeButton(project) {
     const navButton = document.createElement('template');
     
     navButton.innerHTML = `
-    <div class="flex justify-center fixed top-4 w-screen nav">
+    <div class="flex justify-center fixed top-4 w-screen nav z-20">
     <div class="flex align-center gap-x-2 justify-between margins-x w-[100%] max-w-[1440px]">
     <div class="header-text text-red-700 text-xl sm:text-3xl align-middle">
     ${titleName.toLowerCase()}

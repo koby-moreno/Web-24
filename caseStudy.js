@@ -356,6 +356,24 @@ let projects = [
     name: ""
 },
 {
+    type: "text",
+    name: "Impact",
+    desc:"",
+    icon1: "palette",
+    header1: "Advancing our Design System",
+    desc1: "First product to integrate the new design system and validate its success, Assisted in library buildout and informed variant additions",
+    icon2: "hub",
+    header2: "Informing a Unified Platform",
+    desc2:"The concept of projects file management and permissions was shared internally and inspired unification efforts by product leaders",
+    icon3: "request_quote",
+    header3: "Customer Retention",
+    desc3: "Highest paying customer contract renewals were dependent on Projects feature completion"
+},
+{
+type: "divider",
+name: ""
+},
+{
     type: "buttons",
     destination1: "insights.html",
     name1: "Insights Builder",
@@ -510,7 +528,7 @@ else if (project.type == "buttons"){
     </a>
     <a class="flex grow sm:grow-0" href="${project.destination2}">
     <button class="flex grow">
-        <div class="grow justify-center rounded-md flex gap-x-2 px-4 py-2 bg-red-700 hover:bg-red-800 font-medium text-base text-white">
+        <div class="grow justify-center rounded-md flex gap-x-2 px-4 py-2 shadow-button shadow-red-700 hover:bg-red-100 bg-white font-medium text-base text-red-700">
             <span>${project.name2}</span>
             <span class="material-symbols-outlined font-semibold text-base">
                 arrow_forward
