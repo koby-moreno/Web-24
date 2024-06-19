@@ -169,6 +169,10 @@ img {
     border-color: rgb(220 38 38);
 }
 
+.nav {
+    transition: opacity 300ms;
+}
+
    .intro-text {
        margin: 24px 0px;
        max-width: 800px;

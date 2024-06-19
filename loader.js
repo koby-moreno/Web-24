@@ -2,7 +2,11 @@ let width = window.innerWidth;
 let height = window.innerHeight;
 
 
+let nav = document.querySelectorAll('.nav');
 
+nav.forEach((nav) => {
+    nav.style.opacity = 0;
+})
 
 const loader = document.createElement('template');
 
@@ -29,6 +33,9 @@ window.addEventListener('load', function () {
 
 	setTimeout(function(){
 		document.querySelector('#loading-container').style.opacity = 0;
+        nav.forEach((nav) => {
+            nav.style.opacity = 1;
+        })
 
 // Remove listener to re-enable scroll
 window.removeEventListener('scroll', noScroll);
