@@ -104,7 +104,7 @@ let insights = [
     {
         type: "section",
         name: "Overview",
-        desc: "body text goes here this is the description for this seciton lets make this text really long and see if it will wrap or not",
+        desc: "Insights Builder began as an internal engineering proof-of-concept to create custom dashboards for existing customers. Potential customers showed interest in utilizing this as a self-service tool.  The Inter-American Development Bank (IADB) agreed to collaborate with us to evaluate and validate this concept's product potential.",
         image: "ib_maps_page.png",
         image2: "ib_studio_page.png",
         image3: "insights.png",
@@ -118,7 +118,7 @@ let insights = [
     {
         type: "section",
         name: "Defining Scope",
-        desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        desc: "I used customer call recordings to source themes and discover which topics required clarification or internal alignment.  My product manager and I used these findings to create user-stories and break them out into phases. We brought in our engineering lead to scope and prioritize the minimal viable product tasks.",
         image: "ib_findings_matrix.png",
         image2: "ib_milestones.png",
         imageClass:"double-overlay",
@@ -130,8 +130,8 @@ let insights = [
     },
     {
         type: "section",
-        name: "Competitive Analysis",
-        desc: "The description goes here",
+        name: "Leveraging Competitive Audits",
+        desc: "I established design principles that reinforce our users' core needs and assessed how other products’ design strategies align or depart from them. This helped inform where to spend design effort for the highest level of impact.",
         image: "ib_layout_white_2.png",
         image2: "ib_layout_white_1.png",
         imageClass:"double-overlay",
@@ -143,8 +143,8 @@ let insights = [
     },
     {
         type: "section",
-        name: "Title Goes Here",
-        desc: "body text goes here this is the description for this seciton",
+        name: "Chart Grid and Sizing",
+        desc: "Guidelines around responsive behavior, chart placement and sizing prevented chart UIs from breaking, reduced customization effort without compromising flexibilty, and minimized the number of edge-cases to design for.",
         image: "ib_grid.gif",
         image2: "",
         imageClass:"single"
