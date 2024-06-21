@@ -11,7 +11,7 @@ let lookout = [
     {
         type: "section",
         name: "Overview",
-        desc: "Lookout is the primary dashboard component for Sentinel -- a larger effort for communities to better monitor and act on infectious disease outbreaks. Colorado Mesa University is Sentinel's first test site. Students use Scout to report symptoms and check into events while administrators use Lookout to access this data.",
+        desc: "Lookout is the primary dashboard component for Sentinel -- a larger effort for communities to more confidently make decisions during active outbreaks. With Colorado Mesa University as Sentinel's first test site, students used Scout to report symptoms and check into events while administrators used Lookout to monitor this data.",
         image: "lookout_computer_150.png",
         image2: "scout.png",
         imageClass:"double-stacked",
@@ -40,7 +40,7 @@ let lookout = [
     {
         type: "section",
         name: "",
-        desc: "Showing the case map to administrators, they were primarily interested in cases that clustered on main campus, as students living off campus were out of their jurisdictional control. With this knowledge, we decided to explore a spatial visualization at this smaller scale.",
+        desc: "Showing the case map to administrators, they were primarily interested in cases that clustered on main campus, as students living off campus were out of their jurisdictional control. With this knowledge, we decided to explore the spatial visualization potential at this finer resolution.",
         image: "campus_diagram.png",
         image2: "",
         imageClass:"single"
@@ -68,7 +68,7 @@ let lookout = [
     {
         type: "section",
         name: "",
-        desc: "To build the dorm views I used PDFs of CMU's campus map and dormitory floorplans to create custom axonometric SVGs that could be brought into HTML. Creating the SVG's required a careful layer naming system that later allowed me to link the data to these drawings via mavily name in Javascript.",
+        desc: "To build the dorm views I used PDFs of CMU's campus map and dormitory floorplans to create custom axonometric SVGs that could be brought into HTML. Making the SVG's interactive required a layer naming system that enabled me to link the data via mavily name in Javascript.",
         image: "dormsfinal.mp4",
         image2: "",
         imageClass:"single-video"
@@ -80,7 +80,7 @@ let lookout = [
     {
         type: "section",
         name: "Impact",
-        desc: "Sentinel's work with Colorado Mesa University acted as a test-site for other campuses, communities, and municipalities to adopt. The dorm-maps visualization differentiated Fathom's work and was specifically featured in The New York Times.",
+        desc: "Sentinel's work with CMU allowed the university to return to in-person learning and created a framework for other campuses, communities, and municipalities to adopt. The spatial visualizations were most insightful and allowed the agency to market new offerings to current and prospective clients.",
         image: "lookout_nyt_smaller.png",
         image2: "NE_animation.gif",
         imageClass:"double-stacked",
@@ -103,7 +103,7 @@ let lookout = [
 let insights = [
     {
         type: "section",
-        name: "Migrating Design Systems",
+        name: "Overview",
         desc: "body text goes here this is the description for this seciton lets make this text really long and see if it will wrap or not",
         image: "ib_maps_page.png",
         image2: "ib_studio_page.png",
@@ -347,6 +347,17 @@ let projects = [
     name: ""
 },
 {
+    type: "section",
+    name: "Handoff",
+    desc: "Towards design completion, I led handoff and QA sessions with my engineering team to ensure spec documentation properly articulated areas most complex to them. I also used the design system migration as an opportunity to have my engineers cross-contribute to our component development efforts.",
+    image: "disclosure.gif",
+    imageClass:"single"
+},
+{
+    type: "divider",
+    name: ""
+},
+{
     type: "section-notext",
     name: "Final Design",
     desc: "body text goes here this is the description for this seciton",
@@ -364,13 +375,13 @@ let projects = [
     desc:"",
     icon1: "palette",
     header1: "Advancing our Design System",
-    desc1: "First product to integrate the new design system and validate its success, Assisted in library buildout and informed variant additions",
+    desc1: "Studio was the first product to integrate our new design system and validate its success. This feature also assisted in component library buildout and informed variant additions.",
     icon2: "hub",
     header2: "Informing a Unified Platform",
-    desc2:"The concept of projects file management and permissions was shared internally and inspired unification efforts by product leaders",
+    desc2:"Our research created a framework for a projects-based file-management and permissions system, which formed the basis for upcoming unification efforts by product leaders.",
     icon3: "request_quote",
     header3: "Customer Retention",
-    desc3: "Highest paying customer contract renewals were dependent on Projects feature completion"
+    desc3: "Our highest paying customer contract renewals were dependent on the Projects Portal feature completion."
 },
 {
 type: "divider",
