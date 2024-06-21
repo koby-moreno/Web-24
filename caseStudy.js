@@ -156,15 +156,15 @@ let insights = [
     {
         type: "section",
         name: "Title Goes Here",
-        desc: "body text goes here this is the description for this seciton",
+        desc: "Core user flows, such as editing or adding charts to the dashboard, were optimized to eliminate redundant interactions or unecessary feature capabilities.",
         image: "ib_edit_flow.gif",
         image2: "",
         imageClass:"single"
     },
     {
         type: "section",
-        name: "Title Goes Here",
-        desc: "body text goes here this is the description for this seciton",
+        name: "",
+        desc: "In order to accomodate different user preferences from our initial research, remaining features were reprioritized and partitioned into basic and advanced experiences.",
         image: "ib_edit_panels.png",
         image2: "ib_edit.gif",
         imageClass:"double-stacked",
