@@ -155,7 +155,7 @@ let insights = [
     },
     {
         type: "section",
-        name: "Title Goes Here",
+        name: "User Flow Simplification",
         desc: "Core user flows, such as editing or adding charts to the dashboard, were optimized to eliminate redundant interactions or unecessary feature capabilities.",
         image: "ib_edit_flow.gif",
         image2: "",
@@ -178,7 +178,7 @@ let insights = [
     {
         type: "section",
         name: "Layout Changes",
-        desc: "To build the dorm views I used PDFs of CMU's campus map and dormitory floorplans to create custom axonometric SVGs that could be brought into HTML. Creating the SVG's required a careful layer naming system that later allowed me to link the data to these drawings via mavily name in Javascript.",
+        desc: "Studio's mapping UI was using an outdated design system, which as an entry point to Insights Builder created an inconsistent end-to-end UX. I proposed using a singular navigation and toolbar which could accommodate both mapping and insights features.",
         image: "ib_layoutchanges.mp4",
         image2: "",
         imageClass:"single-video"
@@ -186,7 +186,7 @@ let insights = [
     {
         type: "section",
         name: "",
-        desc: "body text goes here this is the description for this seciton",
+        desc: "Studio's mapping UI did not use our new design system due to the absence of dark-mode theming. I identified gaps in our current design system to better understand the LOE required. I then documented proposed modifications to our color palette, components, and iconography as design system debt.",
         image: "ib_colorguide.png",
         image2: "",
         imageClass:"single"
@@ -194,7 +194,7 @@ let insights = [
     {
         type: "section",
         name: "",
-        desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        desc: "To garner internal support for our design system initiatives, I created mockups demonstrating how the mapping UI could appear with our new design system. These visuals effectively addressed concerns and generated enthusiasm around the prospect of theming within our products.",
         image: "studio_dm.png",
         image2: "studio_lm.png",
         imageClass:"slider",
