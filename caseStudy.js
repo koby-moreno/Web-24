@@ -277,7 +277,7 @@ let projects = [
     {
         type: "section",
         name: "Designing a Resilient IA",
-        desc: "With the addition of a Projects tab, we decided to consolidate 'Maps' and 'Datasets' into a singular 'Workspace' tab. This created a more a consistent navigation hierarchy and allowed the product to offer new asset types.",
+        desc: "With the addition of a Projects tab, we decided to consolidate 'Maps' and 'Datasets' into a singular 'Workspace' tab. This created a more a consistent navigation hierarchy and allowed the product to grow both immediately and long-term.",
         image: "IA_diagram.gif",
         image2: "wireframe_2.png",
         image3: "wireframe_3.png",
@@ -289,8 +289,8 @@ let projects = [
     },
     {
         type: "section",
-        name: "Defining Scope",
-        desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        name: "Design System Migration",
+        desc: "I aligned with my team on designing and building this feature with our newly-released unified design system.  Due to the large feature size, this increased efficiency and prevented future design and engineering debt.",
         image: "textguide.png",
         image2: "colorguide.png",
         image3: "colorguide.png",
@@ -303,8 +303,8 @@ let projects = [
     },
     {
         type: "section",
-        name: "Migrating Design Systems",
-        desc: "body text goes here this is the description for this seciton lets make this text really long and see if it will wrap or not",
+        name: "Layout",
+        desc: "In addition to using our design system's grid, I wanted the gradual discovery of information to be as intuitive as possible.  Our team landed on a UI layout that follows a natural reading progression by dividing the screen into vertical sections.",
         image: "wireframe_1.png",
         image2: "wireframe_2.png",
         image3: "wireframe_3.png",
@@ -317,8 +317,8 @@ let projects = [
     },
   {
     type: "section",
-    name: "Section Title",
-    desc: "body text goes here this is the description for this seciton lets make this text really long and see if it will wrap or not",
+    name: "Asset Cards",
+    desc: "The asset cards were reworked to accomodate bulk action interaction patterns to increase task efficiency.  Visual reinforcements for the interaction destinations and larger touchspaces also improved user confidence.",
     image: "card_original_trans.gif",
     image2: "card_edit_trans.gif",
     imageClass:"double"
@@ -326,7 +326,7 @@ let projects = [
 {
     type: "section",
     name: "",
-    desc: "",
+    desc: "Card design changes also ensured consistency among different asset types.",
     image: "all_card_trans.png",
     image2: "",
     imageClass:"single"
@@ -337,8 +337,8 @@ let projects = [
 },
 {
     type: "section",
-    name: "Designing Resilient Architecture",
-    desc: "body text goes here this is the description for this seciton lets make this text really long and see if it will wrap or not",
+    name: "Showing Metadata",
+    desc: "I conducted card-sorting activities with our technical and non-technical users to determine which metadata was most important to them by asset type.  This informed metadata priority for the list view responsive design and progressive disclosure user experience.",
     image: "disclosure.gif",
     imageClass:"single"
 },
