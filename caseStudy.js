@@ -250,7 +250,7 @@ let projects = [
     {
         type: "section",
         name: "Overview",
-        desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        desc: "Studio is used by developers and marketers in the geospatial, internet, avation, and public sector spaces. These customers create maps using their own data or data purchased from Foursquare. When collaborating on large initiatives, they needed ways to organize, package, and redistribute several maps and datasets at once.",
         image: "before.png",
         image2: "after.png",
         imageClass:"slider",
@@ -264,7 +264,7 @@ let projects = [
     {
         type: "section",
         name: "Defining Scope",
-        desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        desc: "User interviews and competitive analyses allowed us to discover internal knowledge gaps, structure system architecture to align with customer needs, and prioritize product requirements.",
         image: "stakeholder_workshop.png",
         image2: "comp_anal.png",
         image3: "rice_framework.png",
@@ -276,8 +276,8 @@ let projects = [
     },
     {
         type: "section",
-        name: "Designing Resilient Architecture",
-        desc: "body text goes here this is the description for this seciton lets make this text really long and see if it will wrap or not",
+        name: "Designing a Resilient IA",
+        desc: "With the addition of a Projects tab, we decided to consolidate 'Maps' and 'Datasets' into a singular 'Workspace' tab. This created a more a consistent navigation hierarchy and allowed the product to offer new asset types.",
         image: "IA_diagram.gif",
         image2: "wireframe_2.png",
         image3: "wireframe_3.png",
@@ -343,13 +343,16 @@ let projects = [
     imageClass:"single"
 },
 {
-    type: "section",
-    name: "Defining Scope",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-    image: "grid_system.gif",
-    image2: "listview.gif",
-    image3: "colorguide.png",
-    imageClass:"double-overlay"
+    type: "divider",
+    name: ""
+},
+{
+    type: "section-notext",
+    name: "Final Design",
+    desc: "body text goes here this is the description for this seciton",
+    image: "https://player.vimeo.com/video/955267218?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
+    image2: "",
+    imageClass:"vimeo"
 },
 {
     type: "divider",
