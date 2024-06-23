@@ -223,7 +223,7 @@ let insights = [
         name: "Final Design",
         desc: "body text goes here this is the description for this seciton",
         image: "https://player.vimeo.com/video/955267218?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        image2: "",
+        image2: "insights.png",
         imageClass:"vimeo"
     },
     {
@@ -375,7 +375,7 @@ let projects = [
     name: "Final Design",
     desc: "body text goes here this is the description for this seciton",
     image: "https:player.vimeo.com/video/966062413?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-    image2: "",
+    image2: "projects3.png",
     imageClass:"vimeo"
 },
 {
@@ -412,8 +412,8 @@ name: ""
 ]
 
 
-function vimeo(img) {
-    return `<div class="rounded-2xl relative border-solid aspect-ratio border-2 border-gray-100 flex bg-gray-100 grow items-center justify-center"><img class="block h-[100%] w-[100%] object-cover opacity-50 blur-md" src="images/insights.png"><div style="position:absolute;" class="w-[90%] md:w-[70%] pt-[56.3%] md:pt-[43.8%] h-auto rounded shadow-image overflow-hidden"><iframe src="${img}" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="End_to_End_UX"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+function vimeo(img, img2) {
+    return `<div class="rounded-2xl relative border-solid aspect-ratio border-2 border-gray-100 flex bg-gray-100 grow items-center justify-center"><img class="block h-[100%] w-[100%] object-cover opacity-50 blur-md" src="images/${img2}"><div style="position:absolute;" class="w-[90%] md:w-[70%] pt-[56.3%] md:pt-[43.8%] h-auto rounded shadow-image overflow-hidden"><iframe src="${img}" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="End_to_End_UX"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
     </div>`
 }
 
@@ -474,7 +474,7 @@ function imageSelection(c, img, img2, img3, shadow, shadow2, bg2, border2, heigh
         return doubleOverlay(img, img2, shadow);
        }
        else if (c == "vimeo"){
-        return vimeo(img);
+        return vimeo(img, img2);
        }
     else {
         return sliderImage(img, img2, bg2, border2);
