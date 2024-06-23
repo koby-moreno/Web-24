@@ -751,6 +751,10 @@ video {
   height: 550px;
 }
 
+.h-\[40\%\] {
+  height: 40%;
+}
+
 .min-h-20 {
   min-height: 5rem;
 }

@@ -23,7 +23,7 @@ let lookout = [
     },
     {
         type: "section",
-        name: "Section Title",
+        name: "Mapping the Data",
         desc: "We first decided to build an interactive map to visualize the spatial distribution of the university's positive cases. For administrators, they were most interested in finding symptomatic students in locations with large numbers of positive cases, and being able to see these students' information in more detail.",
         image: "casemap_wireframe_trans.png",
         image2: "",
@@ -51,7 +51,7 @@ let lookout = [
     },
     {
         type: "section",
-        name: "Section Title",
+        name: "Dorms Visualization",
         desc: "At CMU, students are grouped into one or more mavilies, which include living clusters, in-person classes, sports teams, and performing arts groups. Administrators find the mavilies most useful as they often point to sources of localized outbreaks and can be used to measure students' levels of probable interaction. These views allow admin to see if there are positive case trends within dorm floors and living mavilies, and investigate whether or not these patterns are related to other non-living mavilies.",
         image: "dorms_wireframe_trans.png",
         image2: "",
@@ -63,7 +63,9 @@ let lookout = [
         desc: "",
         image: "dormdesign1.png",
         image2: "dormdesign2.png",
-        imageClass:"double-stacked"
+        imageClass:"double-stacked",
+        shadow1: "shadow-image",
+        shadow2: "shadow-image"
     },
     {
         type: "section",
@@ -84,7 +86,8 @@ let lookout = [
         image: "lookout_nyt_smaller.png",
         image2: "NE_animation.gif",
         imageClass:"double-stacked",
-        shadow: "shadow-image"
+        shadow: "shadow-image",
+        shadow2: "shadow-image-light"
     },
     {
         type: "divider",
@@ -148,6 +151,16 @@ let insights = [
         image: "ib_grid.gif",
         image2: "",
         imageClass:"single"
+    },
+    {
+        type: "section",
+        name: "",
+        desc: "",
+        image: "chart_example_anno.png",
+        image2: "chart_example.png",
+        imageClass:"double-stacked",
+        shadow: "shadow-image-light",
+        shadow2: "shadow-image-light"
     },
     {
         type: "divider",
@@ -222,8 +235,8 @@ let insights = [
         name: "Impact",
         desc:"",
         icon1: "palette",
-        header1: "Informing Cupcake 2.0",
-        desc1: "Served as a design system audit, outlining next-steps and best practices for data-analytics dashboards and dark-mode theming",
+        header1: "Informing our Design System 2.0",
+        desc1: "Served as a design system audit, outlining best practices and next-steps for data-analytics dashboards and dark-mode theming",
         icon2: "subdirectory_arrow_right",
         header2: "Setting Product Direction",
         desc2:"Design articulated the complexity and efforts entailed in pursuing this concept as a user-facing product, assisting in strategic conversations amongst leadership",
