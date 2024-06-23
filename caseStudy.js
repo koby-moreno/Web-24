@@ -359,13 +359,13 @@ let projects = [
     type: "divider",
     name: ""
 },
-{
-    type: "section",
-    name: "Handoff",
-    desc: "Towards design completion, I led handoff and QA sessions with my engineering team to ensure spec documentation properly articulated areas most complex to them. I also used the design system migration as an opportunity to have my engineers cross-contribute to our component development efforts.",
-    image: "disclosure.gif",
-    imageClass:"single"
-},
+// {
+//     type: "section",
+//     name: "Handoff",
+//     desc: "Towards design completion, I led handoff and QA sessions with my engineering team to ensure spec documentation properly articulated areas most complex to them. I also used the design system migration as an opportunity to have my engineers cross-contribute to our component development efforts.",
+//     image: "disclosure.gif",
+//     imageClass:"single"
+// },
 {
     type: "divider",
     name: ""
@@ -374,7 +374,7 @@ let projects = [
     type: "section-notext",
     name: "Final Design",
     desc: "body text goes here this is the description for this seciton",
-    image: "https://player.vimeo.com/video/955267218?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
+    image: "https:player.vimeo.com/video/966062413?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
     image2: "",
     imageClass:"vimeo"
 },
