@@ -191,7 +191,7 @@ let insights = [
     {
         type: "section",
         name: "Layout Changes",
-        desc: "Studio's mapping UI was using an outdated design system, which as an entry point to Insights Builder created an inconsistent end-to-end UX. I proposed using a singular navigation and toolbar which could accommodate both mapping and insights features.",
+        desc: "Studio's mapping UI was using an outdated design system, which as an entry point to Insights Builder created an inconsistent end-to-end UX. I proposed using a singular navigation and toolbar which could house both mapping and insights features.",
         image: "ib_layoutchanges.mp4",
         image2: "",
         imageClass:"single-video"
