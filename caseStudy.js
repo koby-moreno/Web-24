@@ -24,7 +24,7 @@ let lookout = [
     {
         type: "section",
         name: "Mapping the Data",
-        desc: "We first decided to build an interactive map to visualize the spatial distribution of the university's positive cases. For administrators, they were most interested in finding symptomatic students in locations with large numbers of positive cases, and being able to see these students' information in more detail.",
+        desc: "We first decided to build an interactive map to visualize the spatial distribution of the university's positive cases. Administrators were most interested in finding symptomatic students in locations with large numbers of positive cases, and being able to see these students' information in more detail.",
         image: "casemap_wireframe_trans.png",
         image2: "",
         imageClass:"single"
@@ -40,7 +40,7 @@ let lookout = [
     {
         type: "section",
         name: "",
-        desc: "Showing the case map to administrators, they were primarily interested in cases that clustered on main campus, as students living off campus were out of their jurisdictional control. With this knowledge, we decided to explore the spatial visualization potential at this finer resolution.",
+        desc: "After viewing the case map, administrators were primarily interested in cases that clustered on main campus, as students living off campus were out of their jurisdictional control. With this knowledge, we decided to explore the spatial visualization potential at this finer resolution.",
         image: "campus_diagram.png",
         image2: "",
         imageClass:"single"
@@ -82,7 +82,7 @@ let lookout = [
     {
         type: "section",
         name: "Impact",
-        desc: "Sentinel's work with CMU allowed the university to return to in-person learning and created a framework for other campuses, communities, and municipalities to adopt. The spatial visualizations were most insightful and allowed the agency to market new offerings to current and prospective clients.",
+        desc: "Sentinel's work with CMU allowed the university to return to in-person learning and created a framework for other campuses, communities, and municipalities to adopt. The spatial visualizations were most insightful to university admin and allowed the agency to market new offerings to current and prospective clients.",
         image: "lookout_nyt_smaller.png",
         image2: "NE_animation.gif",
         imageClass:"double-stacked",
@@ -107,7 +107,7 @@ let insights = [
     {
         type: "section",
         name: "Overview",
-        desc: "Insights Builder began as an internal engineering proof-of-concept to create custom dashboards for existing customers. Potential customers showed interest in utilizing this as a self-service tool.  The Inter-American Development Bank (IADB) agreed to collaborate with us to evaluate and validate this concept's product potential.",
+        desc: "Insights Builder began as an internal engineering proof-of-concept to create custom dashboards for existing customers, many of which showed interest in utilizing this as a self-service tool.  The Inter-American Development Bank (IADB) agreed to collaborate with us to evaluate and validate this concept's product potential.",
         image: "ib_maps_page.png",
         image2: "ib_studio_page.png",
         image3: "insights.png",
@@ -121,7 +121,7 @@ let insights = [
     {
         type: "section",
         name: "Defining Scope",
-        desc: "I used customer call recordings to source themes and discover which topics required clarification or internal alignment.  My product manager and I used these findings to create user-stories and break them out into phases. We brought in our engineering lead to scope and prioritize the minimal viable product tasks.",
+        desc: "I used customer call recordings to source themes and discover which topics required clarification or internal alignment.  My product manager and I used these findings to create user-stories and break them out into phases, later bringing in our engineering lead to scope and prioritize them into minimal viable product tasks.",
         image: "ib_findings_matrix.png",
         image2: "ib_milestones.png",
         imageClass:"double-overlay",
@@ -168,7 +168,7 @@ let insights = [
     },
     {
         type: "section",
-        name: "User Flow Simplification",
+        name: "Reworking User Flows",
         desc: "Core user flows, such as editing or adding charts to the dashboard, were optimized to eliminate redundant interactions or unecessary feature capabilities.",
         image: "ib_edit_flow.gif",
         image2: "",
@@ -177,7 +177,7 @@ let insights = [
     {
         type: "section",
         name: "",
-        desc: "In order to accomodate different user preferences from our initial research, remaining features were reprioritized and partitioned into basic and advanced experiences.",
+        desc: "In order to accomodate different user preferences, remaining features were reprioritized and partitioned into basic and advanced experiences.",
         image: "ib_edit_panels.png",
         image2: "ib_edit.gif",
         imageClass:"double-stacked",
@@ -199,7 +199,7 @@ let insights = [
     {
         type: "section",
         name: "",
-        desc: "Studio's mapping UI did not use our new design system due to the absence of dark-mode theming. I identified gaps in our current design system to better understand the LOE required. I then documented proposed modifications to our color palette, components, and iconography as design system debt.",
+        desc: "Studio's mapping UI did not use our new design system due to the absence of dark-mode theming. I identified gaps in our current design system to better understand the LOE required and documented proposed modifications to our color palette, components, and iconography as design system debt.",
         image: "ib_colorguide.png",
         image2: "",
         imageClass:"single"
@@ -263,7 +263,7 @@ let projects = [
     {
         type: "section",
         name: "Overview",
-        desc: "Studio is used by developers and marketers in the geospatial, internet, avation, and public sector spaces. These customers create maps using their own data or data purchased from Foursquare. When collaborating on large initiatives, they needed ways to organize, package, and redistribute several maps and datasets at once.",
+        desc: "Studio is used by developers and marketers in the geospatial, internet, avation, and public sector spaces who create maps using their own data or data purchased from Foursquare. When collaborating on large initiatives, these users needed ways to organize, package, and redistribute several maps and datasets at once.",
         image: "before.png",
         image2: "after.png",
         imageClass:"slider",
@@ -277,7 +277,7 @@ let projects = [
     {
         type: "section",
         name: "Defining Scope",
-        desc: "User interviews and competitive analyses allowed us to discover internal knowledge gaps, structure system architecture to align with customer needs, and prioritize product requirements.",
+        desc: "User interviews and competitive analyses allowed us to discover internal knowledge gaps, structure system architecture to align with user needs, and prioritize product requirements.",
         image: "stakeholder_workshop.png",
         image2: "comp_anal.png",
         image3: "rice_framework.png",
@@ -290,7 +290,7 @@ let projects = [
     {
         type: "section",
         name: "Designing a Resilient IA",
-        desc: "With the addition of a Projects tab, we decided to consolidate 'Maps' and 'Datasets' into a singular 'Workspace' tab. This created a more a consistent navigation hierarchy and allowed the product to grow both immediately and long-term.",
+        desc: "With the addition of a Projects tab, we decided to consolidate 'Maps' and 'Datasets' into a singular 'Workspace' tab. This created a more a consistent navigation hierarchy and allowed the product to accommodate immediately and future feature additions.",
         image: "IA_diagram.gif",
         image2: "wireframe_2.png",
         image3: "wireframe_3.png",
@@ -339,7 +339,7 @@ let projects = [
 {
     type: "section",
     name: "",
-    desc: "Card design changes also ensured consistency among different asset types.",
+    desc: "These card design changes ensured consistency among different asset types.",
     image: "all_card_trans.png",
     image2: "",
     imageClass:"single"
