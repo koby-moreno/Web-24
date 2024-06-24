@@ -290,7 +290,7 @@ let projects = [
     {
         type: "section",
         name: "Designing a Resilient IA",
-        desc: "With the addition of a Projects tab, we decided to consolidate 'Maps' and 'Datasets' into a singular 'Workspace' tab. This created a more a consistent navigation hierarchy and allowed the product to accommodate immediately and future feature additions.",
+        desc: "With the addition of a Projects tab, we decided to consolidate 'Maps' and 'Datasets' into a singular 'Workspace' tab. This created a more a consistent navigation hierarchy and allowed the product to accommodate immediate and future feature additions.",
         image: "IA_diagram.gif",
         image2: "wireframe_2.png",
         image3: "wireframe_3.png",
