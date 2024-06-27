@@ -211,8 +211,9 @@ let insights = [
         image: "studio_dm.png",
         image2: "studio_lm.png",
         imageClass:"slider",
-        bg2: "bg-zinc-700",
-        border2: "border-zinc-700"
+        bg2: "bg-gray-200",
+        darkbg2: "dark-2",
+        border2: "border-gray-200"
     },
     {
         type: "divider",
@@ -268,7 +269,8 @@ let projects = [
         image2: "after.png",
         imageClass:"slider",
         bg2: "bg-gray-200",
-        border2: "border-gray-200"
+        darkbg2: "dark-2",
+        border2: "border-gray-200",
     },
     {
         type: "divider",
@@ -413,45 +415,56 @@ name: ""
 
 
 function vimeo(img, img2) {
-    return `<div class="rounded-2xl relative border-solid aspect-ratio border-2 border-gray-100 flex bg-gray-100 grow items-center justify-center"><img class="block h-[100%] w-[100%] object-cover opacity-50 blur-md" src="images/${img2}"><div style="position:absolute;" class="w-[90%] md:w-[70%] pt-[56.3%] md:pt-[43.8%] h-auto rounded shadow-image overflow-hidden"><iframe src="${img}" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="final"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+    return `<div class="rounded-2xl relative border-solid aspect-ratio border-2 border-gray-100 flex dark:border-dark-2 dark:bg-dark-2 bg-gray-100 grow items-center justify-center"><img class="block h-[100%] w-[100%] object-cover dark:opacity-20 opacity-50 blur-md" src="images/${img2}"><div style="position:absolute;" class="w-[90%] md:w-[70%] pt-[56.3%] md:pt-[43.8%] h-auto rounded dark:shadow-image-dm shadow-image overflow-hidden"><iframe src="${img}" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="final"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
     </div>`
 }
 
 function singleVideo(img) {
-    return `<div class="rounded-2xl border-solid aspect-ratio border-2 dark:border-zinc-800 border-gray-100 flex flex-col dark:bg-zinc-800 bg-gray-100 grow items-center justify-center"><video class="h-auto min-h-20 w-[90%] shadow-image rounded" src="images/${img}" autoplay loop muted playsinline><source src="images/${img}" type="video/webm">Your browser does not support the video tag.</video></div>`
+    return `<div class="dark:bg-dark-2 dark:border-dark-2 rounded-2xl border-solid aspect-ratio border-2  border-gray-100 flex flex-col  bg-gray-100 grow items-center justify-center"><video class="h-auto min-h-20 w-[90%] dark:shadow-image-dm shadow-image rounded" src="images/${img}" autoplay loop muted playsinline><source src="images/${img}" type="video/webm">Your browser does not support the video tag.</video></div>`
    };
 
 function singleImage(img, shadow) {
- return `<div class="rounded-2xl border-solid aspect-ratio border-2 dark:border-zinc-800 border-gray-100 flex flex-col dark:bg-zinc-800 bg-gray-100 grow overflow-hidden items-center justify-center"><img class="${shadow} w-[90%] rounded" src="images/${img}"></div>`
+ return `<div class="dark:bg-dark-2 dark:border-dark-2 rounded-2xl border-solid aspect-ratio border-2  border-gray-100 flex flex-col  bg-gray-100 grow overflow-hidden items-center justify-center"><img class="${shadow} dark:${shadow}-dm w-[90%] rounded" src="images/${img}"></div>`
 };
 
 function doubleImage(img, img2){
-    return `<div class="aspect-ratio overflow-hidden gap-y-2 flex flex-col gap-y-2"><div class="relative rounded-2xl flex items-center justify-center flex-1 bg-gray-100"><img class="w-[60%] h-auto" src="images/${img}"><div class="absolute left-[5%] top-[10%] text-gray-400">Original</div></div><div class="relative rounded-2xl flex items-center justify-center flex-1 bg-gray-100"><img class="rounded w-[60%] h-auto" src="images/${img2}"><div class="absolute left-[5%] top-[10%] text-gray-400">Revised</div></div></div>`
+    return `<div class="dark:bg-dark-2 dark:border-dark-2 aspect-ratio overflow-hidden gap-y-2 flex flex-col gap-y-2"><div class="relative rounded-2xl flex items-center justify-center flex-1 bg-gray-100"><img class="w-[60%] h-auto" src="images/${img}"><div class="absolute left-[5%] top-[10%] text-gray-400">Original</div></div><div class="relative rounded-2xl flex items-center justify-center flex-1 bg-gray-100"><img class="rounded w-[60%] h-auto" src="images/${img2}"><div class="absolute left-[5%] top-[10%] text-gray-400">Revised</div></div></div>`
 };
 
-function sliderImage(img, img2, bg2, border2){
-    return `<div class="aspect-ratio flex relative w-[100%] h-auto items-center justify-center overflow-hidden"><div class="rounded-2xl border-solid border-2 ${border2} aspect-ratio flex absolute ${bg2} grow items-center justify-center overflow-hidden w-[100%] h-auto"><img class="slider-image shadow-image rounded" src="images/${img}"></div><div class="rounded-2xl border-solid border-2 border-gray-100 aspect-ratio flex absolute bg-gray-100 grow items-center justify-center overflow-hidden w-[100%] h-auto" id="clip"><img class="slider-image shadow-image rounded" src="images/${img2}"></div><input type="range" min="0" max="100" value="66" class="slider" name='slider' id="slider"><div class='slider-button'><span class="material-symbols-outlined text-base text-red-700">
+function sliderImage(img, img2, bg2, darkbg2, border2){
+    return `<div class="aspect-ratio flex relative w-[100%] h-auto items-center justify-center overflow-hidden"><div class="rounded-2xl border-solid border-2 ${border2} dark:border-${darkbg2} aspect-ratio flex absolute ${bg2} dark:bg-${darkbg2} grow items-center justify-center overflow-hidden w-[100%] h-auto"><img class="slider-image dark:shadow-image-dm shadow-image rounded" src="images/${img}"></div><div class="rounded-2xl border-solid border-2 border-gray-100 dark:border-dark-3 dark:bg-dark-3 aspect-ratio flex absolute bg-gray-100 grow items-center justify-center overflow-hidden w-[100%] h-auto" id="clip"><img class="slider-image dark:shadow-image-dm shadow-image rounded" src="images/${img2}"></div>
+    <input type="range" min="0" max="100" value="66" class="slider bg-red" name='slider' id="slider"><div class='slider-button'><span class="material-symbols-outlined text-base dark:text-gray-100 text-red-700">
     width
     </span></div></div>`
 }
 
 function doubleStacked(img, img2, shadow, shadow2){
-    return `<div class="rounded-2xl border-solid border-2 border-gray-100 aspect-ratio flex relative bg-gray-100 grow items-center justify-center overflow-hidden"><img class="absolute ${shadow} left-[5%] mb-[15%] w-[55%] rounded h-auto" src="images/${img}"><img class="absolute ${shadow2} right-[5%] mt-[15%] w-[55%] rounded h-auto" src="images/${img2}"></div>`
+    return `<div class="dark:bg-dark-2 dark:border-dark-2 rounded-2xl border-solid border-2 border-gray-100 aspect-ratio flex relative bg-gray-100 grow items-center justify-center overflow-hidden"><img class="absolute ${shadow} dark:${shadow}-dm left-[5%] mb-[15%] w-[55%] rounded h-auto" src="images/${img}"><img class="absolute ${shadow2} dark:${shadow2}-dm right-[5%] mt-[15%] w-[55%] rounded h-auto" src="images/${img2}"></div>`
 }
 
 function tripleStacked(img, img2, img3, height){
-    return `<div class="rounded-2xl border-solid border-2 border-gray-100 aspect-ratio flex relative bg-gray-100 grow items-center justify-center overflow-hidden"><img class="absolute shadow-image-light left-[5%] mb-[25%] ${height} rounded w-auto" src="images/${img}"><img class="absolute shadow-image-light ${height} rounded w-auto" src="images/${img2}"><img class="absolute right-[5%] mt-[25%] shadow-image-light ${height} w-auto rounded" src="images/${img3}"></div>`
+    return `<div class="dark:bg-dark-2 dark:border-dark-2 rounded-2xl border-solid border-2 border-gray-100 aspect-ratio flex relative bg-gray-100 grow items-center justify-center overflow-hidden">
+    <img class="absolute dark:shadow-image-light-dm shadow-image-light left-[5%] mb-[25%] ${height} w-auto" src="images/${img}">
+    <img class="absolute dark:shadow-image-light-dm shadow-image-light ${height} w-auto" src="images/${img2}">
+    <img class="absolute right-[5%] mt-[25%] dark:shadow-image-light-dm shadow-image-light ${height} w-auto" src="images/${img3}">
+    </div>`
 }
 
 function tripleOverlay(img, img2, img3){
-    return `<div class="rounded-2xl border-solid border-2 border-gray-100 aspect-ratio flex relative bg-gray-100 grow items-center justify-center overflow-hidden"><div class="flex flex-col w-[80%]"><img class="shadow-image-light rounded my-[2%]" src="images/${img}"><img class="shadow-image-light rounded my-[2%]" src="images/${img2}"><img class="shadow-image-light rounded my-[2%]" src="images/${img3}"></div></div>`
+    return `<div class="dark:bg-dark-2 dark:border-dark-2 rounded-2xl border-solid border-2 border-gray-100 aspect-ratio flex relative bg-gray-100 grow items-center justify-center overflow-hidden"><div class="flex flex-col w-[80%]"><img class="shadow-image-light rounded my-[2%]" src="images/${img}"><img class="shadow-image-light rounded my-[2%]" src="images/${img2}"><img class="shadow-image-light rounded my-[2%]" src="images/${img3}"></div>
+    <div class="dark:bg-gradient-dm-top bg-gradient-top absolute w-[100%] h-[8%] top-[0px]"></div>
+    <div class="dark:bg-gradient-dm-bottom bg-gradient-bottom absolute w-[100%] h-[8%] bottom-[0px]"></div>
+    </div>`
 }
 
 function doubleOverlay(img, img2, shadow){
-    return `<div class="rounded-2xl border-solid border-2 border-gray-100 aspect-ratio flex relative bg-gray-100 grow items-center justify-center overflow-hidden"><div class="flex flex-col w-[80%]"><img class="${shadow} rounded my-[2%]" src="images/${img}"><img class="${shadow} rounded my-[2%]" src="images/${img2}"></div></div>`
+    return `<div class="dark:bg-dark-2 dark:border-dark-2 rounded-2xl border-solid border-2 border-gray-100 aspect-ratio flex relative bg-gray-100 grow items-center justify-center overflow-hidden"><div class="flex flex-col w-[80%]"><img class="${shadow} rounded my-[2%]" src="images/${img}"><img class="${shadow} rounded my-[2%]" src="images/${img2}"></div>
+    <div class="dark:bg-gradient-dm-top  bg-gradient-top absolute w-[100%] h-[8%] top-[0px]"></div>
+    <div class="dark:bg-gradient-dm-bottom bg-gradient-bottom absolute w-[100%] h-[8%] bottom-[0px]"></div>
+    </div>`
 }
 
-function imageSelection(c, img, img2, img3, shadow, shadow2, bg2, border2, height) {
+function imageSelection(c, img, img2, img3, shadow, shadow2, bg2, darkbg2, border2, height) {
     if (c == "single") {
         return singleImage(img, shadow);
     }
@@ -477,7 +490,7 @@ function imageSelection(c, img, img2, img3, shadow, shadow2, bg2, border2, heigh
         return vimeo(img, img2);
        }
     else {
-        return sliderImage(img, img2, bg2, border2);
+        return sliderImage(img, img2, bg2, darkbg2, border2);
     }
 };
 
@@ -490,11 +503,11 @@ if (project.type == "section"){
 projectCard.innerHTML = `
 	<div class="flex flex-col-reverse gap-y-4 md:flex-row md:gap-x-6 basis-full">
 
-    ${imageSelection(project.imageClass, project.image, project.image2, project.image3, project.shadow, project.shadow2, project.bg2, project.border2, project.height)}
+    ${imageSelection(project.imageClass, project.image, project.image2, project.image3, project.shadow, project.shadow2, project.bg2, project.darkbg2, project.border2, project.height)}
 
     <div class="flex flex-col shrink-0 gap-y-0.5 md:w-60 lg:w-80">
-    <div class="text-lg font-medium">${project.name}</div>
-    <div class="text-base text-gray-900 font-light">${project.desc}</div>
+    <div class="dark:text-zinc-100 text-lg font-medium">${project.name}</div>
+    <div class="dark:text-zinc-400 text-base text-gray-900 font-light">${project.desc}</div>
 </div>
 
   </div>
@@ -516,7 +529,7 @@ else if (project.type == "text"){
         </span>
         <div class="flex flex-col gap-y-2">
             <div class="text-xl">${project.header1}</div>
-            <div class="text-base font-light text-gray-900 max-w-[600px]">${project.desc1}</div>
+            <div class="dark:text-zinc-400 text-base font-light text-gray-900 max-w-[600px]">${project.desc1}</div>
         </div>
     </div>
     <div class="flex lg:flex-col gap-x-4 lg:gap-y-2 basis-0 grow">
@@ -525,7 +538,7 @@ else if (project.type == "text"){
         </span>
         <div class="flex flex-col gap-y-2">
             <div class="text-xl">${project.header2}</div>
-            <div class="text-base font-light text-gray-900 max-w-[600px]">${project.desc2}</div>
+            <div class="dark:text-zinc-400 text-base font-light text-gray-900 max-w-[600px]">${project.desc2}</div>
         </div>
     </div>
     <div class="flex lg:flex-col gap-x-4 lg:gap-y-2 basis-0 grow">
@@ -534,7 +547,7 @@ else if (project.type == "text"){
         </span>
     <div class="flex flex-col gap-y-2">
         <div class="text-xl">${project.header3}</div>
-        <div class="text-base font-light text-gray-900 max-w-[600px]">${project.desc3}</div>
+        <div class="dark:text-zinc-400 text-base font-light text-gray-900 max-w-[600px]">${project.desc3}</div>
     </div>
 </div>
     </div>
@@ -545,7 +558,7 @@ else if (project.type == "buttons"){
     <div class="flex justify-between">
     <a class="hidden sm:flex" href="${project.destination1}">
         <button>
-            <div class="rounded-md flex gap-x-2 px-4 py-2 shadow-button shadow-red-700 hover:bg-red-100 bg-white font-medium text-base text-red-700">
+            <div class="flex gap-x-2 px-4 py-2 rounded-md shadow-button dark:shadow-button-dm shadow-red-700 dark:shadow-red-400 dark:bg-dark-1 bg-white hover:bg-red-100 dark:hover:bg-dark-red-hover font-medium text-base text-red-700 dark:text-red-400">
                 <span class="material-symbols-outlined font-semibold text-base">
                     arrow_back
                 </span>
@@ -555,7 +568,7 @@ else if (project.type == "buttons"){
     </a>
     <a class="flex grow sm:grow-0" href="${project.destination2}">
     <button class="flex grow">
-        <div class="grow justify-center rounded-md flex gap-x-2 px-4 py-2 shadow-button shadow-red-700 hover:bg-red-100 bg-white font-medium text-base text-red-700">
+        <div class="grow justify-center rounded-md flex gap-x-2 px-4 py-2 shadow-button dark:shadow-button-dm shadow-red-700 dark:shadow-red-400 dark:bg-dark-1 bg-white hover:bg-red-100 dark:hover:bg-dark-red-hover font-medium text-base text-red-700 dark:text-red-400">
             <span>${project.name2}</span>
             <span class="material-symbols-outlined font-semibold text-base">
                 arrow_forward
