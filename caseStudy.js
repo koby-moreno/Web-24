@@ -25,9 +25,11 @@ let lookout = [
         type: "section",
         name: "Mapping the Data",
         desc: "We first decided to build an interactive map to visualize the spatial distribution of the university's positive cases. Administrators were most interested in finding symptomatic students in locations with large numbers of positive cases, and being able to see these students' information in more detail.",
-        image: "casemap_wireframe_trans.png",
-        image2: "",
-        imageClass:"single"
+        image: "casemap_wireframe.jpg",
+        shadow: "",
+        shadow2: "shadow-image",
+        imageClass:"single",
+        width:"w-[70%]"
     },
     {
         type: "section",
@@ -41,9 +43,11 @@ let lookout = [
         type: "section",
         name: "",
         desc: "After viewing the case map, administrators were primarily interested in cases that clustered on main campus, as students living off campus were out of their jurisdictional control. With this knowledge, we decided to explore the spatial visualization potential at this finer resolution.",
-        image: "campus_diagram.png",
-        image2: "",
-        imageClass:"single"
+        image: "campus_diagram.jpg",
+        shadow: "",
+        shadow2: "shadow-image",
+        imageClass:"single",
+        width:"w-[60%]"
     },
     {
         type: "divider",
@@ -53,9 +57,11 @@ let lookout = [
         type: "section",
         name: "Dorms Visualization",
         desc: "At CMU, students are grouped into one or more mavilies, which include living clusters, in-person classes, sports teams, and performing arts groups. Administrators find the mavilies most useful as they often point to sources of localized outbreaks and can be used to measure students' levels of probable interaction. These views allow admin to see if there are positive case trends within dorm floors and living mavilies, and investigate whether or not these patterns are related to other non-living mavilies.",
-        image: "dorms_wireframe_trans.png",
-        image2: "",
-        imageClass:"single"
+        image: "dorms_wireframe.jpg",
+        shadow: "",
+        shadow2: "shadow-image",
+        imageClass:"single",
+        width:"w-[90%]"
     },
     {
         type: "section",
@@ -200,9 +206,11 @@ let insights = [
         type: "section",
         name: "",
         desc: "Studio's mapping UI did not use our new design system due to the absence of dark-mode theming. I identified gaps in our current design system to better understand the LOE required and documented proposed modifications to our color palette, components, and iconography as design system debt.",
-        image: "ib_colorguide.png",
-        image2: "",
-        imageClass:"single"
+        image: "ib_colorguide.jpg",
+        shadow: "",
+        shadow2: "shadow-image",
+        imageClass:"single",
+        width:"w-[90%]"
     },
     {
         type: "section",
@@ -240,7 +248,7 @@ let insights = [
         desc1: "Served as a design system audit, outlining best practices and next-steps for data-analytics dashboards and dark-mode theming",
         icon2: "subdirectory_arrow_right",
         header2: "Setting Product Direction",
-        desc2:"Design articulated the complexity and efforts entailed in pursuing this concept as a user-facing product, assisting in strategic conversations amongst leadership",
+        desc2:"Design articulated the complexity and efforts entailed in pursuing this concept as a user-facing product, assisting in strategic conversations among leadership",
         icon3: "request_quote",
         header3: "Cross-Contributing",
         desc3: "Ensured high-priority revenue-dependent deadlines were met while reducing design and engineering workloads"
@@ -355,7 +363,10 @@ let projects = [
     name: "Showing Metadata",
     desc: "I conducted card-sorting activities with our technical and non-technical users to determine which metadata was most important to them by asset type.  This informed metadata priority for the list view responsive design and progressive disclosure user experience.",
     image: "disclosure.gif",
-    imageClass:"single"
+    shadow: "",
+    shadow2: "shadow-image",
+    imageClass:"single",
+    width:"w-[90%]"
 },
 {
     type: "divider",
@@ -423,12 +434,14 @@ function singleVideo(img) {
     return `<div class="dark:bg-dark-2 dark:border-dark-2 rounded-2xl border-solid aspect-ratio border-2  border-gray-100 flex flex-col  bg-gray-100 grow items-center justify-center"><video class="h-auto min-h-20 w-[90%] dark:shadow-image-dm shadow-image rounded" src="images/${img}" autoplay loop muted playsinline><source src="images/${img}" type="video/webm">Your browser does not support the video tag.</video></div>`
    };
 
-function singleImage(img, shadow) {
- return `<div class="dark:bg-dark-2 dark:border-dark-2 rounded-2xl border-solid aspect-ratio border-2  border-gray-100 flex flex-col  bg-gray-100 grow overflow-hidden items-center justify-center"><img class="${shadow} dark:${shadow}-dm w-[90%] rounded" src="images/${img}"></div>`
+function singleImage(img, shadow, shadow2, width) {
+ return `<div class="dark:bg-dark-2 dark:border-dark-2 rounded-2xl border-solid aspect-ratio border-2  border-gray-100 flex flex-col  bg-gray-100 grow overflow-hidden items-center justify-center">
+ <img class="${shadow} dark:${shadow2}-dm ${width} rounded" src="images/${img}">
+ </div>`
 };
 
 function doubleImage(img, img2){
-    return `<div class="dark:bg-dark-2 dark:border-dark-2 aspect-ratio overflow-hidden gap-y-2 flex flex-col gap-y-2"><div class="relative rounded-2xl flex items-center justify-center flex-1 bg-gray-100"><img class="w-[60%] h-auto" src="images/${img}"><div class="absolute left-[5%] top-[10%] text-gray-400">Original</div></div><div class="relative rounded-2xl flex items-center justify-center flex-1 bg-gray-100"><img class="rounded w-[60%] h-auto" src="images/${img2}"><div class="absolute left-[5%] top-[10%] text-gray-400">Revised</div></div></div>`
+    return `<div class="dark:bg-dark-2 dark:border-dark-2 aspect-ratio overflow-hidden gap-y-2 flex flex-col gap-y-2"><div class="relative rounded-2xl flex items-center justify-center flex-1 bg-gray-100"><img class="w-[60%] h-auto" src="images/${img}"><div class="absolute left-[5%] top-[10%] text-gray-400">Original</div></div><div class="relative rounded-2xl flex items-center justify-center flex-1 dark:bg-dark-2 bg-gray-100"><img class="rounded w-[60%] h-auto" src="images/${img2}"><div class="absolute left-[5%] top-[10%] text-gray-400">Revised</div></div></div>`
 };
 
 function sliderImage(img, img2, bg2, darkbg2, border2){
@@ -464,9 +477,9 @@ function doubleOverlay(img, img2, shadow){
     </div>`
 }
 
-function imageSelection(c, img, img2, img3, shadow, shadow2, bg2, darkbg2, border2, height) {
+function imageSelection(c, img, img2, img3, shadow, shadow2, bg2, darkbg2, border2, height, width) {
     if (c == "single") {
-        return singleImage(img, shadow);
+        return singleImage(img, shadow, shadow2, width);
     }
     else if (c == "single-video"){
         return singleVideo(img);
@@ -503,7 +516,7 @@ if (project.type == "section"){
 projectCard.innerHTML = `
 	<div class="flex flex-col-reverse gap-y-4 md:flex-row md:gap-x-6 basis-full">
 
-    ${imageSelection(project.imageClass, project.image, project.image2, project.image3, project.shadow, project.shadow2, project.bg2, project.darkbg2, project.border2, project.height)}
+    ${imageSelection(project.imageClass, project.image, project.image2, project.image3, project.shadow, project.shadow2, project.bg2, project.darkbg2, project.border2, project.height, project.width)}
 
     <div class="flex flex-col shrink-0 gap-y-0.5 md:w-60 lg:w-80">
     <div class="dark:text-zinc-100 text-lg font-medium">${project.name}</div>
@@ -583,7 +596,7 @@ else if (project.type == "buttons"){
 else {
     projectCard.innerHTML =
     `<div class="flex flex-col-reverse gap-y-4 md:flex-row md:gap-x-6 basis-full">
-    ${imageSelection(project.imageClass, project.image, project.image2, project.image3, project.shadow, project.shadow2, project.bg2, project.border2, project.height)}
+    ${imageSelection(project.imageClass, project.image, project.image2, project.image3, project.shadow, project.shadow2, project.bg2, project.border2, project.height, project.width)}
   </div>`
 }
 

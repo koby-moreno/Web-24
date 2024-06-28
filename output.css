@@ -787,6 +787,18 @@ video {
   width: 100vw;
 }
 
+.w-\[50\%\] {
+  width: 50%;
+}
+
+.w-\[70\%\] {
+  width: 70%;
+}
+
+.w-\[2px\] {
+  width: 2px;
+}
+
 .min-w-32 {
   min-width: 8rem;
 }
@@ -1622,8 +1634,16 @@ body {
     left: 1rem;
   }
 
+  .lg\:h-\[2px\] {
+    height: 2px;
+  }
+
   .lg\:w-80 {
     width: 20rem;
+  }
+
+  .lg\:w-\[auto\] {
+    width: auto;
   }
 
   .lg\:flex-row {
