@@ -155,8 +155,10 @@ let insights = [
         name: "Chart Grid and Sizing",
         desc: "Guidelines around responsive behavior, chart placement and sizing prevented chart UIs from breaking, reduced customization effort without compromising flexibilty, and minimized the number of edge-cases to design for.",
         image: "ib_grid.gif",
-        image2: "",
-        imageClass:"single"
+        shadow: "",
+        shadow2: "shadow-image",
+        imageClass:"single",
+        width:"w-[90%]"
     },
     {
         type: "section",
@@ -177,8 +179,10 @@ let insights = [
         name: "Reworking User Flows",
         desc: "Core user flows, such as editing or adding charts to the dashboard, were optimized to eliminate redundant interactions or unecessary feature capabilities.",
         image: "ib_edit_flow.gif",
-        image2: "",
-        imageClass:"single"
+        shadow: "",
+        shadow2: "shadow-image",
+        imageClass:"single",
+        width:"w-[90%]"
     },
     {
         type: "section",
@@ -302,9 +306,10 @@ let projects = [
         name: "Designing a Resilient IA",
         desc: "With the addition of a Projects tab, we decided to consolidate 'Maps' and 'Datasets' into a singular 'Workspace' tab. This created a more a consistent navigation hierarchy and allowed the product to accommodate immediate and future feature additions.",
         image: "IA_diagram.gif",
-        image2: "wireframe_2.png",
-        image3: "wireframe_3.png",
-        imageClass:"single"
+        shadow: "",
+        shadow2: "shadow-image",
+        imageClass:"single",
+        width:"w-[80%]"
     },
     {
         type: "divider",
@@ -431,7 +436,12 @@ function vimeo(img, img2) {
 }
 
 function singleVideo(img) {
-    return `<div class="dark:bg-dark-2 dark:border-dark-2 rounded-2xl border-solid aspect-ratio border-2  border-gray-100 flex flex-col  bg-gray-100 grow items-center justify-center"><video class="h-auto min-h-20 w-[90%] dark:shadow-image-dm shadow-image rounded" src="images/${img}" autoplay loop muted playsinline><source src="images/${img}" type="video/webm">Your browser does not support the video tag.</video></div>`
+    return `<div class="relative dark:bg-dark-2 dark:border-dark-2 rounded-2xl border-solid aspect-ratio border-2  border-gray-100 flex flex-col  bg-gray-100 grow items-center justify-center">
+    <div class="w-[90%] h-fit relative">
+    <div class="w-[100%] h-[100%] absolute dark:shadow-video-dm dark:shadow-dark-1 rounded"></div>
+    <video class="h-auto min-h-20 w-[100%] shadow-image dark:shadow-image-dm rounded" src="images/${img}" autoplay loop muted playsinline><source src="images/${img}" type="video/webm">Your browser does not support the video tag.</video>
+    </div>
+    </div>`
    };
 
 function singleImage(img, shadow, shadow2, width) {
@@ -445,8 +455,8 @@ function doubleImage(img, img2){
 };
 
 function sliderImage(img, img2, bg2, darkbg2, border2){
-    return `<div class="aspect-ratio flex relative w-[100%] h-auto items-center justify-center overflow-hidden"><div class="rounded-2xl border-solid border-2 ${border2} dark:border-${darkbg2} aspect-ratio flex absolute ${bg2} dark:bg-${darkbg2} grow items-center justify-center overflow-hidden w-[100%] h-auto"><img class="slider-image dark:shadow-image-dm shadow-image rounded" src="images/${img}"></div><div class="rounded-2xl border-solid border-2 border-gray-100 dark:border-dark-3 dark:bg-dark-3 aspect-ratio flex absolute bg-gray-100 grow items-center justify-center overflow-hidden w-[100%] h-auto" id="clip"><img class="slider-image dark:shadow-image-dm shadow-image rounded" src="images/${img2}"></div>
-    <input type="range" min="0" max="100" value="66" class="slider bg-red" name='slider' id="slider"><div class='slider-button'><span class="material-symbols-outlined text-base dark:text-gray-100 text-red-700">
+    return `<div class="aspect-ratio flex relative w-[100%] h-auto items-center justify-center overflow-hidden rounded-2xl"><div class="rounded-2xl border-solid border-2 ${border2} dark:border-${darkbg2} aspect-ratio flex absolute ${bg2} dark:bg-${darkbg2} grow items-center justify-center overflow-hidden w-[100%] h-auto"><img class="slider-image dark:shadow-image-dm shadow-image rounded" src="images/${img}"></div><div class="rounded-2xl border-solid border-2 border-gray-100 dark:border-dark-3 dark:bg-dark-3 aspect-ratio flex absolute bg-gray-100 grow items-center justify-center overflow-hidden w-[100%] h-auto" id="clip"><img class="slider-image dark:shadow-image-dm shadow-image rounded" src="images/${img2}"></div>
+    <input type="range" min="0" max="100" value="66" class="slider bg-red" name='slider' id="slider"><div class='slider-button'><span class="material-symbols-outlined text-lg dark:text-gray-100 text-red-700">
     width
     </span></div></div>`
 }
@@ -628,7 +638,7 @@ $("#slider").on("input change", (e)=>{
     console.log(sliderPos);
     // Update the width of the foreground image
     $('#clip').css('clip-path', `polygon(0 0, ${sliderPos}% 0, ${sliderPos}% 100%, 0 100%)`);
-    $('.slider-button').css('left', `calc(${sliderPos}% - 12px)`)
+    $('.slider-button').css('left', `calc(${sliderPos}% - 16px)`)
   });
 
 // makeCard(portal);

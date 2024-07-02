@@ -11,6 +11,7 @@ module.exports = {
         'image-light-dm': '0px 0px 16px -4px rgba(0, 0, 0, 0.5)',
         'button': '0px 0px 0px 2px inset',
         'button-dm': '0px 0px 0px 1.5px inset',
+        'video-dm': '0px 0px 0px 1px inset',
       },
       backgroundImage: {
         'dots-light': 'radial-gradient(lightgray 1.25px, transparent 0)',

@@ -97,8 +97,8 @@ img {
 
    .slider-button {
     position: absolute;
-    width: 24px;
-    height: 24px;
+    width: 32px;
+    height: 32px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -106,7 +106,7 @@ img {
     @apply bg-white dark:bg-dark-3 ;
     @apply border-gray-300 border-[2px] dark:border-zinc-600;
     border-radius: 50%;
-    left: calc(66% - 12px);
+    left: calc(66% - 16px);
     pointer-events: none;
    }
    
@@ -134,7 +134,7 @@ img {
     .slider::-webkit-slider-thumb {
       -webkit-appearance: none;
       appearance: none;
-      width: 2px;
+      width: 4px;
       height: 1000px;
       /* background: rgb(210, 210, 210); */
       @apply bg-gray-300 dark:bg-zinc-600;
@@ -162,13 +162,14 @@ img {
 }
 
 .link {
-    border-bottom: 1.5px solid lightgray;
+    border-bottom: 1.5px solid;
+    @apply border-gray-200 dark:border-dark-3;
     transition: border-color 0.3s;
 }
 
 .link:hover {
     cursor: pointer;
-    border-color: rgb(220 38 38);
+    @apply border-red-700 dark:border-red-400;
 }
 
 .nav {
@@ -254,7 +255,7 @@ img {
 
     .projectCard {
         width: 100%;
-        border: 1px solid rgb(229 231 235);
+        @apply border-gray-200 dark:border-dark-3;
     }
 
     .projects-container {

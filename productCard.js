@@ -50,7 +50,7 @@ const projectCard = document.createElement('template');
 if(project.imageClass == "single"){
 
 projectCard.innerHTML = `
-<a href="${project.destination}" class="dark:hover:shadow-image-dm hover:shadow-image-light hover:cursor-pointer hover:border hover:border-gray-200 dark:hover:border-dark-3 dark:bg-dark-1 bg-white projectCard mt-8">
+<a href="${project.destination}" class="hover:border-gray-200 dark:hover:shadow-image-dm hover:shadow-image-light hover:cursor-pointer hover:border dark:hover:border-dark-3 dark:bg-dark-1 bg-white projectCard mt-8">
 	<div class="top-card max-[500px]:h-52 h-72 sm:h-80 md:h-60 xl:h-80 dark:bg-dark-2 bg-gray-100 overflow-hidden flex justify-center relative items-center">
   <img class="${project.imageClass} rounded shadow-image" src="images/${project.image}">
 	</div>
