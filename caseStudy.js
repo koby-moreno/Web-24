@@ -455,7 +455,15 @@ function doubleImage(img, img2){
 };
 
 function sliderImage(img, img2, bg2, darkbg2, border2){
-    return `<div class="aspect-ratio flex relative w-[100%] h-auto items-center justify-center overflow-hidden rounded-2xl"><div class="rounded-2xl border-solid border-2 ${border2} dark:border-${darkbg2} aspect-ratio flex absolute ${bg2} dark:bg-${darkbg2} grow items-center justify-center overflow-hidden w-[100%] h-auto"><img class="slider-image dark:shadow-image-dm shadow-image rounded" src="images/${img}"></div><div class="rounded-2xl border-solid border-2 border-gray-100 dark:border-dark-3 dark:bg-dark-3 aspect-ratio flex absolute bg-gray-100 grow items-center justify-center overflow-hidden w-[100%] h-auto" id="clip"><img class="slider-image dark:shadow-image-dm shadow-image rounded" src="images/${img2}"></div>
+    return `<div class="aspect-ratio flex relative w-[100%] h-auto items-center justify-center overflow-hidden rounded-2xl">
+    <div class="rounded-2xl border-solid border-2 ${border2} dark:border-${darkbg2} aspect-ratio flex absolute ${bg2} dark:bg-${darkbg2} grow items-center justify-center overflow-hidden w-[100%] h-auto">
+    <img class="slider-image dark:shadow-image-dm shadow-image rounded" src="images/${img}">
+    <div class="text-sm absolute top-[3%] md:top-[5%] right-[6%] dark:text-gray-500 text-gray-400">Existing</div>
+    </div>
+    <div class="rounded-2xl border-solid border-2 border-gray-100 dark:border-dark-3 dark:bg-dark-3 aspect-ratio flex absolute bg-gray-100 grow items-center justify-center overflow-hidden w-[100%] h-auto" id="clip">
+    <img class="slider-image dark:shadow-image-dm shadow-image rounded" src="images/${img2}">
+    <div class="text-sm absolute top-[3%] md:top-[5%] left-[6%] dark:text-gray-500 text-gray-400">New</div>
+    </div>
     <input type="range" min="0" max="100" value="66" class="slider bg-red" name='slider' id="slider"><div class='slider-button'><span class="material-symbols-outlined text-lg dark:text-gray-100 text-red-700">
     width
     </span></div></div>`
