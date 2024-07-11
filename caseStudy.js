@@ -223,6 +223,8 @@ let insights = [
         image: "studio_dm.png",
         image2: "studio_lm.png",
         imageClass:"slider",
+        text1: "",
+        text2: "",
         bg2: "bg-gray-200",
         darkbg2: "dark-2",
         border2: "border-gray-200"
@@ -277,9 +279,11 @@ let projects = [
         type: "section",
         name: "Overview",
         desc: "Studio is used by developers and marketers in the geospatial, internet, avation, and public sector spaces who create maps using their own data or data purchased from Foursquare. When collaborating on large initiatives, these users needed ways to organize, package, and redistribute several maps and datasets at once.",
-        image: "before.png",
-        image2: "after.png",
         imageClass:"slider",
+        image: "before.png",
+        text1: "Existing",
+        text2: "New",
+        image2: "after.png",
         bg2: "bg-gray-200",
         darkbg2: "dark-2",
         border2: "border-gray-200",
@@ -354,10 +358,13 @@ let projects = [
 {
     type: "section",
     name: "",
-    desc: "These card design changes ensured consistency among different asset types.",
-    image: "all_card_trans.png",
+    desc: "These changes ensured consistency among different asset types.",
+    image: "all_card.jpg",
     image2: "",
-    imageClass:"single"
+    shadow: "",
+    shadow2: "shadow-image",
+    imageClass:"single",
+    width:"w-[90%]"
 },
 {
     type: "divider",
@@ -451,18 +458,23 @@ function singleImage(img, shadow, shadow2, width) {
 };
 
 function doubleImage(img, img2){
-    return `<div class="dark:bg-dark-2 dark:border-dark-2 aspect-ratio overflow-hidden gap-y-2 flex flex-col gap-y-2"><div class="relative rounded-2xl flex items-center justify-center flex-1 bg-gray-100"><img class="w-[60%] h-auto" src="images/${img}"><div class="absolute left-[5%] top-[10%] text-gray-400">Original</div></div><div class="relative rounded-2xl flex items-center justify-center flex-1 dark:bg-dark-2 bg-gray-100"><img class="rounded w-[60%] h-auto" src="images/${img2}"><div class="absolute left-[5%] top-[10%] text-gray-400">Revised</div></div></div>`
+    return `<div class="aspect-ratio overflow-hidden gap-y-2 flex flex-col gap-y-2">
+    <div class="relative rounded-2xl flex items-center justify-center flex-1 dark:bg-dark-2  bg-gray-100">
+    <img class="rounded w-[60%] h-auto" src="images/${img}"><div class="absolute left-[5%] top-[10%] text-gray-400">Original</div></div>
+    <div class="relative rounded-2xl flex items-center justify-center flex-1 dark:bg-dark-2 bg-gray-100">
+    <img class="rounded w-[60%] h-auto" src="images/${img2}"><div class="absolute left-[5%] top-[10%] text-gray-400">Revised</div></div>
+    </div>`
 };
 
-function sliderImage(img, img2, bg2, darkbg2, border2){
+function sliderImage(img, img2, bg2, darkbg2, border2, text1, text2){
     return `<div class="aspect-ratio flex relative w-[100%] h-auto items-center justify-center overflow-hidden rounded-2xl">
     <div class="rounded-2xl border-solid border-2 ${border2} dark:border-${darkbg2} aspect-ratio flex absolute ${bg2} dark:bg-${darkbg2} grow items-center justify-center overflow-hidden w-[100%] h-auto">
     <img class="slider-image dark:shadow-image-dm shadow-image rounded" src="images/${img}">
-    <div class="text-sm absolute top-[3%] md:top-[5%] right-[6%] dark:text-gray-500 text-gray-400">Existing</div>
+    <div class="text-sm absolute top-[3%] md:top-[5%] right-[6%] dark:text-gray-500 text-gray-400">${text1}</div>
     </div>
     <div class="rounded-2xl border-solid border-2 border-gray-100 dark:border-dark-3 dark:bg-dark-3 aspect-ratio flex absolute bg-gray-100 grow items-center justify-center overflow-hidden w-[100%] h-auto" id="clip">
     <img class="slider-image dark:shadow-image-dm shadow-image rounded" src="images/${img2}">
-    <div class="text-sm absolute top-[3%] md:top-[5%] left-[6%] dark:text-gray-500 text-gray-400">New</div>
+    <div class="text-sm absolute top-[3%] md:top-[5%] left-[6%] dark:text-gray-500 text-gray-400">${text2}</div>
     </div>
     <input type="range" min="0" max="100" value="66" class="slider bg-red" name='slider' id="slider"><div class='slider-button'><span class="material-symbols-outlined text-lg dark:text-gray-100 text-red-700">
     width
@@ -495,7 +507,7 @@ function doubleOverlay(img, img2, shadow){
     </div>`
 }
 
-function imageSelection(c, img, img2, img3, shadow, shadow2, bg2, darkbg2, border2, height, width) {
+function imageSelection(c, img, img2, img3, shadow, shadow2, bg2, darkbg2, border2, height, width, text1, text2) {
     if (c == "single") {
         return singleImage(img, shadow, shadow2, width);
     }
@@ -521,7 +533,7 @@ function imageSelection(c, img, img2, img3, shadow, shadow2, bg2, darkbg2, borde
         return vimeo(img, img2);
        }
     else {
-        return sliderImage(img, img2, bg2, darkbg2, border2);
+        return sliderImage(img, img2, bg2, darkbg2, border2, text1, text2);
     }
 };
 
@@ -534,7 +546,7 @@ if (project.type == "section"){
 projectCard.innerHTML = `
 	<div class="flex flex-col-reverse gap-y-4 md:flex-row md:gap-x-6 basis-full">
 
-    ${imageSelection(project.imageClass, project.image, project.image2, project.image3, project.shadow, project.shadow2, project.bg2, project.darkbg2, project.border2, project.height, project.width)}
+    ${imageSelection(project.imageClass, project.image, project.image2, project.image3, project.shadow, project.shadow2, project.bg2, project.darkbg2, project.border2, project.height, project.width, project.text1, project.text2)}
 
     <div class="flex flex-col shrink-0 gap-y-0.5 md:w-60 lg:w-80">
     <div class="dark:text-zinc-100 text-lg font-medium">${project.name}</div>
@@ -614,7 +626,7 @@ else if (project.type == "buttons"){
 else {
     projectCard.innerHTML =
     `<div class="flex flex-col-reverse gap-y-4 md:flex-row md:gap-x-6 basis-full">
-    ${imageSelection(project.imageClass, project.image, project.image2, project.image3, project.shadow, project.shadow2, project.bg2, project.border2, project.height, project.width)}
+    ${imageSelection(project.imageClass, project.image, project.image2, project.image3, project.shadow, project.shadow2, project.bg2, project.border2, project.height, project.width, project.text1, project.text2)}
   </div>`
 }
 
