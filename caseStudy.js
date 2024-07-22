@@ -127,7 +127,7 @@ let insights = [
     {
         type: "section",
         name: "Defining Scope",
-        desc: "I used customer call recordings to source themes and discover which topics required clarification or internal alignment.  My product manager and I used these findings to create user-stories and break them out into phases, later bringing in our engineering lead to scope and prioritize them into minimal viable product tasks.",
+        desc: "I used customer call recordings to discover feature themes, internal knowledge gaps, and user personas.  My product manager and I used these findings to create user-stories and break them out into phases, later bringing in our engineering lead to scope and prioritize them into minimal viable product tasks.",
         image: "ib_findings_matrix.png",
         image2: "ib_milestones.png",
         imageClass:"double-overlay",
