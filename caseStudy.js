@@ -438,7 +438,7 @@ name: ""
 
 
 function vimeo(img, img2) {
-    return `<div class="rounded-2xl relative border-solid aspect-ratio border-2 border-gray-100 flex dark:border-dark-2 dark:bg-dark-2 bg-gray-100 grow items-center justify-center"><img class="block h-[100%] w-[100%] object-cover dark:opacity-20 opacity-50 blur-md" src="images/${img2}"><div style="position:absolute;" class="w-[90%] md:w-[70%] pt-[56.3%] md:pt-[43.8%] h-auto rounded dark:shadow-image-dm shadow-image overflow-hidden"><iframe src="${img}" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="final"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+    return `<div class="rounded-2xl relative  aspect-ratio flex  dark:bg-dark-2 bg-gray-100 grow items-center justify-center overflow-hidden"><img class="block h-[100%] w-[100%] object-cover dark:opacity-20 opacity-50 blur-md" src="images/${img2}"><div style="position:absolute;" class="w-[90%] md:w-[70%] pt-[56.3%] md:pt-[43.8%] h-auto rounded dark:shadow-image-dm shadow-image overflow-hidden"><iframe src="${img}" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="final"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
     </div>`
 }
 
