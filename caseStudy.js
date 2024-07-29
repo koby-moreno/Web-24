@@ -650,7 +650,7 @@ else if (project.type == "metrics") {
     </div>
     <div class="flex lg:flex-col gap-x-3 lg:gap-y-3 items-center lg:items-start basis-0 grow pl-0 sm:pl-10 lg:pl-0">
         <div class="flex  items-end justify-center h-[70px] w-[140px] md:h-[90px] md:w-[180px]">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 304.41 152.03" class="overflow-visible">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 304.41 152.03" class="overflow-visible w-[inherit]">
                 <g id="background"><path class="cls-1 grey stroke-[6px] stroke-gray-200" d="m2,152C2,69.16,69.16,2,152,2s150,67.16,150,150"/></g>
                 <g id="data"><path style="stroke-dasharray:calc(${project.data1} * 3.142 * 1.4) calc(100 * 3.142 * 1.4); stroke-width:6px" class="cls-2 data" d="m2.41,152.03C2.41,69.19,69.57,2.03,152.41,2.03s150,67.16,150,150"/></g>
             </svg>
@@ -660,7 +660,7 @@ else if (project.type == "metrics") {
     </div>
     <div class="flex lg:flex-col gap-x-3 lg:gap-y-3 basis-0 grow items-center lg:items-start pl-0 sm:pl-10 lg:pl-0">
     <div class="flex  items-end justify-center h-[70px] w-[140px] md:h-[90px] md:w-[180px]">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 304.41 152.03" class="overflow-visible">
+        <svg  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 304.41 152.03" class="overflow-visible w-[inherit]">
             <g id="background"><path class="cls-1 grey stroke-gray-200 stroke-[6px]" d="m2,152C2,69.16,69.16,2,152,2s150,67.16,150,150"/></g>
             <g class="data"><path style="stroke-dasharray:calc(${project.data2} * 3.142 * 1.4) calc(100 * 3.142 * 1.4); stroke-width:6px;" class="cls-2 data" d="m2.41,152.03C2.41,69.19,69.57,2.03,152.41,2.03s150,67.16,150,150"/></g>
         </svg>
