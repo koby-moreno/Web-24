@@ -39,13 +39,14 @@ img {
   
   path.grey {
     fill:none;
+    @apply stroke-gray-200 dark:stroke-dark-3;
   }
   
   path.data {
     /* stroke-dasharray: calc(15 * 3.142 * 1.85) calc(100 * 3.142 * 1.85); */
     stroke-dashoffset: 0;
     fill:none;
-    @apply stroke-red-700;
+    @apply stroke-red-700 dark:stroke-red-400;
     /* adjust last number for variance */
   }
 
