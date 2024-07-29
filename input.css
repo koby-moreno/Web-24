@@ -29,6 +29,26 @@ img {
        /* font-family: 'Satoshi', sans-serif; */
    }
 
+   .circle {
+        height: 300px;
+        margin: auto;
+        display: block;
+   }
+
+
+  
+  path.grey {
+    fill:none;
+  }
+  
+  path.data {
+    /* stroke-dasharray: calc(15 * 3.142 * 1.85) calc(100 * 3.142 * 1.85); */
+    stroke-dashoffset: 0;
+    fill:none;
+    @apply stroke-red-700;
+    /* adjust last number for variance */
+  }
+
    .tag {
     padding: 4px 12px;
     white-space: nowrap;

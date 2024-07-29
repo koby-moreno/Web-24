@@ -246,6 +246,20 @@ let insights = [
         name: ""
     },
     {
+        type: "metrics",
+        name: "Assessment",
+        desc:"",
+        icon1: "straighten",
+        header1: "Measuring Success",
+        desc1: "Periodic 5-point scale ratings and qualitative feedback enabled us to benchmark design impact and product competitiveness",
+        icon2: "subdirectory_arrow_right",
+        data1: "44",
+        desc2:"Design articulated the complexity and efforts entailed in pursuing this concept as a user-facing product, assisting in strategic conversations among leadership",
+        icon3: "request_quote",
+        data2: "14",
+        desc3: "Ensured high-priority revenue-dependent deadlines were met while reducing design and engineering workloads"
+    },
+    {
         type: "text",
         name: "Impact",
         desc:"",
@@ -380,10 +394,7 @@ let projects = [
     imageClass:"single",
     width:"w-[90%]"
 },
-{
-    type: "divider",
-    name: ""
-},
+
 // {
 //     type: "section",
 //     name: "Handoff",
@@ -564,7 +575,7 @@ else if (project.type == "text"){
     projectCard.innerHTML = `
 
     <div class="flex flex-col gap-y-10  basis-full lg:py-12 xl:py-24">
-    <div class="text-2xl">${project.name}</div>
+    <div class="text-3xl">${project.name}</div>
     <div class="w-[100%] flex flex-col lg:flex-row lg:gap-x-20 gap-y-10">
     <div class="flex lg:flex-col gap-x-4 lg:gap-y-2 basis-0 grow">
         <span class="material-symbols-outlined text-2xl lg:text-3xl">
@@ -622,6 +633,44 @@ else if (project.type == "buttons"){
         
     </div>
     `
+}
+else if (project.type == "metrics") {
+    projectCard.innerHTML = `
+    <div class="flex flex-col gap-y-10  basis-full lg:py-12 xl:py-24 xl:pb-6 lg:pb-12 pb-16">
+    <div class="text-3xl">${project.name}</div>
+    <div class="w-[100%] flex flex-col lg:flex-row lg:gap-x-20 gap-y-10">
+    <div class="flex lg:flex-col gap-x-4 lg:gap-y-2 basis-0 grow">
+        <span class="material-symbols-outlined text-2xl lg:text-3xl">
+            ${project.icon1}
+        </span>
+        <div class="flex flex-col gap-y-2">
+            <div class="text-xl">${project.header1}</div>
+            <div class="dark:text-zinc-400 text-base font-light text-gray-900 max-w-[600px]">${project.desc1}</div>
+        </div>
+    </div>
+    <div class="flex lg:flex-col gap-x-3 lg:gap-y-3 items-center lg:items-start basis-0 grow pl-0 sm:pl-10 lg:pl-0">
+        <div class="flex  items-end justify-center h-[70px] w-[140px] md:h-[90px] md:w-[180px]">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 304.41 152.03" class="overflow-visible">
+                <g id="background"><path class="cls-1 grey stroke-[6px] stroke-gray-200" d="m2,152C2,69.16,69.16,2,152,2s150,67.16,150,150"/></g>
+                <g id="data"><path style="stroke-dasharray:calc(${project.data1} * 3.142 * 1.4) calc(100 * 3.142 * 1.4); stroke-width:6px" class="cls-2 data" d="m2.41,152.03C2.41,69.19,69.57,2.03,152.41,2.03s150,67.16,150,150"/></g>
+            </svg>
+            <div class="absolute text-4xl md:text-5xl text-red-700 py-2 mono">${project.data1}%</div>
+        </div>
+        <div class="font-light text-base basis-0 grow max-w-[330px]"><span class="font-bold">improvement in mean task efficiency</span> after design changes were made</div>
+    </div>
+    <div class="flex lg:flex-col gap-x-3 lg:gap-y-3 basis-0 grow items-center lg:items-start pl-0 sm:pl-10 lg:pl-0">
+    <div class="flex  items-end justify-center h-[70px] w-[140px] md:h-[90px] md:w-[180px]">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 304.41 152.03" class="overflow-visible">
+            <g id="background"><path class="cls-1 grey stroke-gray-200 stroke-[6px]" d="m2,152C2,69.16,69.16,2,152,2s150,67.16,150,150"/></g>
+            <g class="data"><path style="stroke-dasharray:calc(${project.data2} * 3.142 * 1.4) calc(100 * 3.142 * 1.4); stroke-width:6px;" class="cls-2 data" d="m2.41,152.03C2.41,69.19,69.57,2.03,152.41,2.03s150,67.16,150,150"/></g>
+        </svg>
+        <div class="absolute text-4xl md:text-5xl text-red-700 py-2 mono">${project.data2}%</div>
+    </div>
+    <div class="font-light text-base basis-0 grow max-w-[330px]"><span class="font-bold">improvement in task efficiency</span> compared to ArcGIS Insights</div>
+</div>
+
+    </div>
+    </div>`;
 }
 else {
     projectCard.innerHTML =
