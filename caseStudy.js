@@ -7,6 +7,86 @@ let id = document.getElementsByTagName("body")[0].id;
 
 root.classList.add(mode);
 
+let table = [
+    {
+        type: "section",
+        name: "Cells",
+        desc: "These changes ensured consistency among different asset types.",
+        image: "cells.png",
+        image2: "",
+        shadow: "",
+        shadow2: "shadow-image",
+        imageClass:"single",
+        width:"w-[80%]"
+    },
+    {
+        type: "section",
+        name: "Rows",
+        desc: "User interviews and competitive analyses allowed us to discover internal knowledge gaps, structure system architecture to align with user needs, and prioritize product requirements.",
+        image: "row_small.png",
+        image2: "row_data.png",
+        image3: "row_large.png",
+        imageClass:"triple-overlay",
+        pt: "pt-[20%]"
+    },
+    {
+        type: "section",
+        name: "Table Container",
+        desc: "User interviews and competitive analyses allowed us to discover internal knowledge gaps, structure system architecture to align with user needs, and prioritize product requirements.",
+        image4: "container_data_1.png",
+        image5: "container_small_1.png",
+        image6: "container_large_1.png",
+        image: "container_data_2.png",
+        image2: "container_small_2.png",
+        image3: "container_large_2.png",
+        imageClass:"triple-slider",
+        width: "w-[70%]"
+    },
+    {
+        type: "divider",
+        name: ""
+    },
+    {
+        type: "section",
+        name: "Overview",
+        desc: "Insights Builder began as an internal engineering proof-of-concept to create custom dashboards for existing customers, many of which showed interest in utilizing this as a self-service tool.  The Inter-American Development Bank (IADB) agreed to collaborate with us to evaluate and validate this concept's product potential.",
+        image: "table_moc1.png",
+        image2: "table_moc2.png",
+        image3: "table_moc3.png",
+        imageClass:"triple-stacked",
+        height: "h-[43%]"
+    },
+    {
+        type: "divider",
+        name: ""
+    },
+    {
+        type: "metrics",
+        name: "Assessment",
+        desc:"",
+        icon1: "straighten",
+        header1: "Measuring Success",
+        desc1: "Periodic 5-point scale ratings and qualitative feedback enabled us to benchmark design impact and product competitiveness",
+        icon2: "subdirectory_arrow_right",
+        data1: "55",
+        desc2:"Design articulated the complexity and efforts entailed in pursuing this concept as a user-facing product, assisting in strategic conversations among leadership",
+        icon3: "request_quote",
+        data2: "68",
+        desc3: "Ensured high-priority revenue-dependent deadlines were met while reducing design and engineering workloads"
+    },
+    {
+        type: "divider",
+        name: ""
+    },
+    {
+        type: "buttons",
+        destination1: "projects.html",
+        name1: "Projects Portal",
+        destination2: "insights.html",
+        name2: "Insights Builder"
+    }
+]
+
 let lookout = [
     {
         type: "section",
@@ -492,6 +572,27 @@ function sliderImage(img, img2, bg2, darkbg2, border2, text1, text2){
     </span></div></div>`
 }
 
+function tripleSlider(img, img2, img3, img4, img5, img6, width){
+    return `<div class="aspect-ratio-tall flex relative w-[100%] h-auto items-center justify-center overflow-hidden rounded-2xl">
+    <div class="rounded-2xl border-solid border-2  border-gray-100 dark:border-dark-2 aspect-ratio-tall flex absolute bg-gray-100 dark:bg-dark-2 grow items-center justify-center overflow-hidden w-[100%] h-auto">
+    <div class="flex flex-col ${width}">
+        <img class="shadow-image-light rounded my-[2%]" src="images/${img}">
+        <img class="shadow-image-light rounded my-[2%]" src="images/${img2}">
+        <img class="shadow-image-light rounded my-[2%]" src="images/${img3}">
+    </div>
+    </div>
+    <div class="rounded-2xl border-solid border-2 border-gray-100 dark:border-dark-3 dark:bg-dark-3 aspect-ratio-tall flex absolute bg-gray-100 grow items-center justify-center overflow-hidden w-[100%] h-auto" id="clip">
+    <div class="flex flex-col ${width}">
+    <img class="shadow-image-light rounded my-[2%]" src="images/${img4}">
+    <img class="shadow-image-light rounded my-[2%]" src="images/${img5}">
+    <img class="shadow-image-light rounded my-[2%]" src="images/${img6}">
+    </div>
+    </div>
+    <input type="range" min="0" max="100" value="66" class="slider bg-red" name='slider' id="slider"><div class='slider-button'><span class="material-symbols-outlined text-lg dark:text-gray-100 text-red-700">
+    width
+    </span></div></div>`
+}
+
 function doubleStacked(img, img2, shadow, shadow2){
     return `<div class="dark:bg-dark-2 dark:border-dark-2 rounded-2xl border-solid border-2 border-gray-100 aspect-ratio flex relative bg-gray-100 grow items-center justify-center overflow-hidden"><img class="absolute ${shadow} dark:${shadow}-dm left-[5%] mb-[15%] w-[55%] rounded h-auto" src="images/${img}"><img class="absolute ${shadow2} dark:${shadow2}-dm right-[5%] mt-[15%] w-[55%] rounded h-auto" src="images/${img2}"></div>`
 }
@@ -504,8 +605,13 @@ function tripleStacked(img, img2, img3, height){
     </div>`
 }
 
-function tripleOverlay(img, img2, img3){
-    return `<div class="dark:bg-dark-2 dark:border-dark-2 rounded-2xl border-solid border-2 border-gray-100 aspect-ratio flex relative bg-gray-100 grow items-center justify-center overflow-hidden"><div class="flex flex-col w-[80%]"><img class="shadow-image-light rounded my-[2%]" src="images/${img}"><img class="shadow-image-light rounded my-[2%]" src="images/${img2}"><img class="shadow-image-light rounded my-[2%]" src="images/${img3}"></div>
+function tripleOverlay(img, img2, img3, pt){
+    return `<div class="dark:bg-dark-2 dark:border-dark-2 rounded-2xl border-solid border-2 border-gray-100 aspect-ratio flex relative bg-gray-100 grow items-center justify-center overflow-hidden">
+    <div class="flex flex-col w-[80%] ${pt}">
+    <img class="shadow-image-light rounded my-[2%]" src="images/${img}">
+    <img class="shadow-image-light rounded my-[2%]" src="images/${img2}">
+    <img class="shadow-image-light rounded my-[2%]" src="images/${img3}">
+    </div>
     <div class="dark:bg-gradient-dm-top bg-gradient-top absolute w-[100%] h-[8%] top-[0px]"></div>
     <div class="dark:bg-gradient-dm-bottom bg-gradient-bottom absolute w-[100%] h-[8%] bottom-[0px]"></div>
     </div>`
@@ -518,7 +624,7 @@ function doubleOverlay(img, img2, shadow){
     </div>`
 }
 
-function imageSelection(c, img, img2, img3, shadow, shadow2, bg2, darkbg2, border2, height, width, text1, text2) {
+function imageSelection(c, img, img2, img3, shadow, shadow2, bg2, darkbg2, border2, height, width, text1, text2, pt, img4, img5, img6) {
     if (c == "single") {
         return singleImage(img, shadow, shadow2, width);
     }
@@ -535,13 +641,16 @@ function imageSelection(c, img, img2, img3, shadow, shadow2, bg2, darkbg2, borde
      return tripleStacked(img, img2, img3, height);
     }
     else if (c == "triple-overlay"){
-        return tripleOverlay(img, img2, img3);
+        return tripleOverlay(img, img2, img3, pt);
        }
        else if (c == "double-overlay"){
         return doubleOverlay(img, img2, shadow);
        }
        else if (c == "vimeo"){
         return vimeo(img, img2);
+       }
+       else if (c == "triple-slider"){
+        return tripleSlider(img, img2, img3, img4, img5, img6, width);
        }
     else {
         return sliderImage(img, img2, bg2, darkbg2, border2, text1, text2);
@@ -557,7 +666,7 @@ if (project.type == "section"){
 projectCard.innerHTML = `
 	<div class="flex flex-col-reverse gap-y-4 md:flex-row md:gap-x-6 basis-full">
 
-    ${imageSelection(project.imageClass, project.image, project.image2, project.image3, project.shadow, project.shadow2, project.bg2, project.darkbg2, project.border2, project.height, project.width, project.text1, project.text2)}
+    ${imageSelection(project.imageClass, project.image, project.image2, project.image3, project.shadow, project.shadow2, project.bg2, project.darkbg2, project.border2, project.height, project.width, project.text1, project.text2, project.pt, project.image4, project.image5, project.image6)}
 
     <div class="flex flex-col shrink-0 gap-y-0.5 md:w-60 lg:w-80">
     <div class="dark:text-zinc-100 text-lg font-medium">${project.name}</div>
@@ -675,7 +784,7 @@ else if (project.type == "metrics") {
 else {
     projectCard.innerHTML =
     `<div class="flex flex-col-reverse gap-y-4 md:flex-row md:gap-x-6 basis-full">
-    ${imageSelection(project.imageClass, project.image, project.image2, project.image3, project.shadow, project.shadow2, project.bg2, project.border2, project.height, project.width, project.text1, project.text2)}
+    ${imageSelection(project.imageClass, project.image, project.image2, project.image3, project.shadow, project.shadow2, project.bg2, project.border2, project.height, project.width, project.text1, project.text2, project.pt, project.image4, project.image5, project.image6)}
   </div>`
 }
 
@@ -690,6 +799,11 @@ if (id == "projects"){
 }
 else if (id == "insights"){
     insights.forEach((project) => 
+        makeCard(project)
+      );
+}
+else if (id == "table"){
+    table.forEach((project) => 
         makeCard(project)
       );
 }

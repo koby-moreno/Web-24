@@ -116,6 +116,10 @@ img {
     aspect-ratio: 4 / 2.75;
    }
 
+   .aspect-ratio-tall {
+    aspect-ratio: 4 / 3.5;
+   }
+
    .slider-button {
     position: absolute;
     width: 32px;

@@ -683,6 +683,10 @@ video {
   display: flex;
 }
 
+.table {
+  display: table;
+}
+
 .grid {
   display: grid;
 }
@@ -750,6 +754,14 @@ video {
 
 .h-screen {
   height: 100vh;
+}
+
+.h-\[40\%\] {
+  height: 40%;
+}
+
+.h-\[20\%\] {
+  height: 20%;
 }
 
 .min-h-20 {
@@ -1112,6 +1124,10 @@ video {
   padding-top: 56.3%;
 }
 
+.pt-\[20\%\] {
+  padding-top: 20%;
+}
+
 .align-middle {
   vertical-align: middle;
 }
@@ -1389,6 +1405,10 @@ path.data {
 
 .aspect-ratio {
   aspect-ratio: 4 / 2.75;
+}
+
+.aspect-ratio-tall {
+  aspect-ratio: 4 / 3.5;
 }
 
 .slider-button {
@@ -1700,6 +1720,34 @@ path.data {
     top: 5%;
   }
 
+  .md\:bottom-\[-10\%\] {
+    bottom: -10%;
+  }
+
+  .md\:bottom-\[-5\%\] {
+    bottom: -5%;
+  }
+
+  .md\:bottom-\[-30\%\] {
+    bottom: -30%;
+  }
+
+  .md\:bottom-\[30\%\] {
+    bottom: 30%;
+  }
+
+  .md\:bottom-\[10\%\] {
+    bottom: 10%;
+  }
+
+  .md\:bottom-\[15\%\] {
+    bottom: 15%;
+  }
+
+  .md\:bottom-\[20\%\] {
+    bottom: 20%;
+  }
+
   .md\:aspect-\[4\/1\.5\] {
     aspect-ratio: 4/1.5;
   }
@@ -1726,6 +1774,14 @@ path.data {
 
   .md\:w-\[70\%\] {
     width: 70%;
+  }
+
+  .md\:w-\[50\%\] {
+    width: 50%;
+  }
+
+  .md\:w-\[40\%\] {
+    width: 40%;
   }
 
   .md\:flex-row {
@@ -1922,6 +1978,11 @@ path.data {
   color: rgb(244 244 245 / var(--tw-text-opacity));
 }
 
+.dark\:text-zinc-200:where(.dark, .dark *) {
+  --tw-text-opacity: 1;
+  color: rgb(228 228 231 / var(--tw-text-opacity));
+}
+
 .dark\:text-zinc-300:where(.dark, .dark *) {
   --tw-text-opacity: 1;
   color: rgb(212 212 216 / var(--tw-text-opacity));
@@ -1935,11 +1996,6 @@ path.data {
 .dark\:text-zinc-500:where(.dark, .dark *) {
   --tw-text-opacity: 1;
   color: rgb(113 113 122 / var(--tw-text-opacity));
-}
-
-.dark\:text-zinc-200:where(.dark, .dark *) {
-  --tw-text-opacity: 1;
-  color: rgb(228 228 231 / var(--tw-text-opacity));
 }
 
 .dark\:opacity-20:where(.dark, .dark *) {
