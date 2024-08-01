@@ -48,6 +48,21 @@ let table = [
     },
     {
         type: "section",
+        name: "Interaction",
+        desc: "These changes ensured consistency among different asset types.",
+        image: "table.gif",
+        image2: "",
+        shadow: "",
+        shadow2: "shadow-image",
+        imageClass:"single",
+        width:"w-[90%]"
+    },
+    {
+        type: "divider",
+        name: ""
+    },
+    {
+        type: "section",
         name: "Overview",
         desc: "Insights Builder began as an internal engineering proof-of-concept to create custom dashboards for existing customers, many of which showed interest in utilizing this as a self-service tool.  The Inter-American Development Bank (IADB) agreed to collaborate with us to evaluate and validate this concept's product potential.",
         image: "table_moc1.png",
