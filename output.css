@@ -723,6 +723,10 @@ video {
   height: 33%;
 }
 
+.h-\[40\%\] {
+  height: 40%;
+}
+
 .h-\[43\%\] {
   height: 43%;
 }
@@ -754,14 +758,6 @@ video {
 
 .h-screen {
   height: 100vh;
-}
-
-.h-\[40\%\] {
-  height: 40%;
-}
-
-.h-\[20\%\] {
-  height: 20%;
 }
 
 .min-h-20 {
@@ -1116,16 +1112,16 @@ video {
   padding-top: 4rem;
 }
 
+.pt-\[20\%\] {
+  padding-top: 20%;
+}
+
 .pt-\[24px\] {
   padding-top: 24px;
 }
 
 .pt-\[56\.3\%\] {
   padding-top: 56.3%;
-}
-
-.pt-\[20\%\] {
-  padding-top: 20%;
 }
 
 .align-middle {
@@ -1407,6 +1403,10 @@ path.data {
   aspect-ratio: 4 / 2.75;
 }
 
+.aspect-ratio-short {
+  aspect-ratio: 4 / 2.25;
+}
+
 .aspect-ratio-tall {
   aspect-ratio: 4 / 3.5;
 }
@@ -1650,12 +1650,6 @@ path.data {
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
-@media (max-width: 500px) {
-  .max-\[500px\]\:h-52 {
-    height: 13rem;
-  }
-}
-
 @media (min-width: 640px) {
   .sm\:right-\[-15\%\] {
     right: -15%;
@@ -1671,10 +1665,6 @@ path.data {
 
   .sm\:aspect-\[4\/3\] {
     aspect-ratio: 4/3;
-  }
-
-  .sm\:h-80 {
-    height: 20rem;
   }
 
   .sm\:grow-0 {
@@ -1704,6 +1694,10 @@ path.data {
     bottom: -50%;
   }
 
+  .md\:bottom-\[20\%\] {
+    bottom: 20%;
+  }
+
   .md\:left-8 {
     left: 2rem;
   }
@@ -1720,40 +1714,8 @@ path.data {
     top: 5%;
   }
 
-  .md\:bottom-\[-10\%\] {
-    bottom: -10%;
-  }
-
-  .md\:bottom-\[-5\%\] {
-    bottom: -5%;
-  }
-
-  .md\:bottom-\[-30\%\] {
-    bottom: -30%;
-  }
-
-  .md\:bottom-\[30\%\] {
-    bottom: 30%;
-  }
-
-  .md\:bottom-\[10\%\] {
-    bottom: 10%;
-  }
-
-  .md\:bottom-\[15\%\] {
-    bottom: 15%;
-  }
-
-  .md\:bottom-\[20\%\] {
-    bottom: 20%;
-  }
-
   .md\:aspect-\[4\/1\.5\] {
     aspect-ratio: 4/1.5;
-  }
-
-  .md\:h-60 {
-    height: 15rem;
   }
 
   .md\:h-\[90px\] {
@@ -1772,16 +1734,12 @@ path.data {
     width: 180px;
   }
 
-  .md\:w-\[70\%\] {
-    width: 70%;
-  }
-
-  .md\:w-\[50\%\] {
-    width: 50%;
-  }
-
   .md\:w-\[40\%\] {
     width: 40%;
+  }
+
+  .md\:w-\[70\%\] {
+    width: 70%;
   }
 
   .md\:flex-row {
@@ -1880,10 +1838,6 @@ path.data {
 
   .xl\:right-\[60px\] {
     right: 60px;
-  }
-
-  .xl\:h-80 {
-    height: 20rem;
   }
 
   .xl\:py-24 {

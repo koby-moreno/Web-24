@@ -27,6 +27,13 @@ let projects = [
   destination:"lookout.html"
 },
 {
+  name: "Visualizing Vacancy",
+  company: "Medium - UX Collective",
+  image: "mobilemockup.png",
+  imageClass:"single",
+  destination:"https://medium.com/p/17b6f3b54679"
+},
+{
   name: "Banyan",
   company: "Fathom",
   image: "banyan.png",
@@ -51,7 +58,7 @@ if(project.imageClass == "single"){
 
 projectCard.innerHTML = `
 <a href="${project.destination}" class="hover:border-gray-200 dark:hover:shadow-image-dm hover:shadow-image-light hover:cursor-pointer hover:border dark:hover:border-dark-3 dark:bg-dark-1 bg-white projectCard mt-8">
-	<div class="top-card max-[500px]:h-52 h-72 sm:h-80 md:h-60 xl:h-80 dark:bg-dark-2 bg-gray-100 overflow-hidden flex justify-center relative items-center">
+	<div class="top-card aspect-ratio-short dark:bg-dark-2 bg-gray-100 overflow-hidden flex justify-center relative items-center">
   <img class="${project.imageClass} rounded shadow-image" src="images/${project.image}">
 	</div>
 	<div class="p-4">
@@ -64,7 +71,7 @@ projectCard.innerHTML = `
 else {
   projectCard.innerHTML = `
   <a href="${project.destination}" class="dark:hover:shadow-image-dm hover:shadow-image-light hover:cursor-pointer hover:border hover:border-gray-200 dark:hover:border-dark-3 dark:bg-dark-1 bg-white projectCard mt-8">
-	<div class="top-card max-[500px]:h-52 h-72 sm:h-80 md:h-60 xl:h-80 dark:bg-dark-2 bg-gray-100 overflow-hidden flex justify-center relative items-center">
+	<div class="top-card aspect-ratio-short dark:bg-dark-2 bg-gray-100 overflow-hidden flex justify-center relative items-center">
   <img class="${project.secondImageClass} rounded shadow-image" src="images/${project.secondImage}">
   <img class="${project.imageClass} rounded shadow-image" src="images/${project.image}">
 	</div>

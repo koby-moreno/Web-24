@@ -10,8 +10,8 @@ root.classList.add(mode);
 let table = [
     {
         type: "section",
-        name: "Cells",
-        desc: "These changes ensured consistency among different asset types.",
+        name: "Building the Table",
+        desc: "A table’s anatomy consists of three components: cells, rows, and table containers.  For each component we designed large, small, and data size-variants to map to our products’ table uses.",
         image: "cells.png",
         image2: "",
         shadow: "",
@@ -21,8 +21,8 @@ let table = [
     },
     {
         type: "section",
-        name: "Rows",
-        desc: "User interviews and competitive analyses allowed us to discover internal knowledge gaps, structure system architecture to align with user needs, and prioritize product requirements.",
+        name: "",
+        desc: "Designing cells as our core component allowed our designers and engineers to nest and build components in a modular fashion.  Rules and edge cases could then be outlined in documentation.",
         image: "row_small.png",
         image2: "row_data.png",
         image3: "row_large.png",
@@ -31,8 +31,8 @@ let table = [
     },
     {
         type: "section",
-        name: "Table Container",
-        desc: "User interviews and competitive analyses allowed us to discover internal knowledge gaps, structure system architecture to align with user needs, and prioritize product requirements.",
+        name: "",
+        desc: "Table containers were designed to use consistent padding and content placement while allowing a flexible range of features, such as primary and bulk actions, filters, search, and pagination.",
         image4: "container_data_1.png",
         image5: "container_small_1.png",
         image6: "container_large_1.png",
@@ -48,12 +48,12 @@ let table = [
     },
     {
         type: "section",
-        name: "Interaction",
-        desc: "These changes ensured consistency among different asset types.",
+        name: "",
+        desc: "Interactive prototypes helped the team establish additional standards around animation, tooltips, and empty states.",
         image: "table.gif",
         image2: "",
         shadow: "",
-        shadow2: "shadow-image",
+        shadow2: "",
         imageClass:"single",
         width:"w-[90%]"
     },
