@@ -95,10 +95,10 @@ let table = [
     },
     {
         type: "buttons",
-        destination1: "projects.html",
-        name1: "Projects Portal",
-        destination2: "insights.html",
-        name2: "Insights Builder"
+        destination1: "insights.html",
+        name1: "Insights Builder",
+        destination2: "projects.html",
+        name2: "Projects Portal"
     }
 ]
 
@@ -390,8 +390,8 @@ let projects = [
         desc: "Studio is used by developers and marketers in the geospatial, internet, avation, and public sector spaces who create maps using their own data or data purchased from Foursquare. When collaborating on large initiatives, these users needed ways to organize, package, and redistribute several maps and datasets at once.",
         imageClass:"slider",
         image: "before.png",
-        text1: "Existing",
-        text2: "New",
+        text1: "",
+        text2: "",
         image2: "after.png",
         bg2: "bg-gray-200",
         darkbg2: "dark-2",
