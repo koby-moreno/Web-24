@@ -15,15 +15,6 @@ let projects = [
     imageClass:"single",
     destination:"insights.html"
 },
-// {
-//   name: "Table Component",
-//   company: "Foursquare",
-//   image: "projects3.png",
-//   secondImage:"projects1.png",
-//   imageClass:"double",
-//   secondImageClass:"double-bg",
-//   destination:"table.html"
-// },
 {
   name: "Projects Portal",
   company: "Foursquare",
