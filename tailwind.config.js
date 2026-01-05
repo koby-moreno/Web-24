@@ -22,10 +22,10 @@ module.exports = {
         'gradient-dm-top': 'linear-gradient(0deg, rgba(35,40,50,0) 0%, rgba(35,40,50,1) 100%);'
       },
       colors: {
-        'dark-2': '#232832',
-        'dark-1': '#181a21',
-        'dark-3': '#353b49',
-        'dark-red-hover': '#421818'
+        "dark-2": '#232832',
+        "dark-1": '#181a21',
+        "dark-3": '#353b49',
+        "dark-red-hover": '#421818'
       }
     },
   },
