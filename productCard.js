@@ -4,7 +4,7 @@ let projects = [
   {
     name: "Audiences",
     company: "Clay",
-    image: "clay.png",
+    image: "clay2.png",
     imageClass:"noShadow",
     destination:"https://www.clay.com/audiences"
 },
