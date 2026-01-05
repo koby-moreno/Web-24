@@ -4,7 +4,7 @@ console.log(pageId);
 
 let links = [
   "https://www.linkedin.com/in/koby-moreno-096988a1/",
-  "https://drive.google.com/file/d/1eQKKu3h04G8tEOIo23trmIUpX-gZswWa/view?usp=sharing",
+  "https://drive.google.com/file/d/1m-xMb7g3cd_urffzhI-qOzY4dqdfv82Z/view?usp=sharing",
   "mailto:kobymoreno@gmail.com"
 ];
 
