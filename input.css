@@ -67,6 +67,10 @@ img {
     
    }
    
+   html, body {
+       overscroll-behavior: none;
+   }
+
    body {
        font-family: 'Switzer', sans-serif;
        /* font-family: 'Satoshi', sans-serif; */
@@ -116,6 +120,22 @@ img {
     white-space: nowrap;
    }
 
+   .card-badge {
+    background-color: rgba(229, 231, 235, 0.7);
+    color: #4b5563;
+    -webkit-backdrop-filter: blur(8px) saturate(140%);
+    backdrop-filter: blur(8px) saturate(140%);
+   }
+
+
+
+   @variant dark {
+    .card-badge {
+     background-color: rgba(53, 59, 73, 0.7);
+     color: #d4d4d8;
+    }
+   }
+
    .header-text {
     font-family: Modelo;
    }
@@ -129,7 +149,7 @@ img {
 
    .double {
     position: absolute;
-    bottom: 10%;
+    bottom: -4%;
     height: 65%;
     margin-left: 25%;
     width: auto;
@@ -137,7 +157,7 @@ img {
 
    .double-bg{
     position: absolute;
-    top: 10%;
+    top: 24%;
     height: 65%;
     margin-right: 25%;
     width: auto;

@@ -1,0 +1,12 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "site",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": ["-I", "-c","import functools, http.server as s; s.ThreadingHTTPServer(('127.0.0.1', 8127), functools.partial(s.SimpleHTTPRequestHandler, directory='/private/tmp/claude-501/-Users-kobymoreno-Documents-GitHub-Web-24/7ce500b7-0636-42a0-941b-4564d91098fe/scratchpad/site')).serve_forever()"],
+      "port": 8127,
+      "autoPort": false
+    }
+  ]
+}

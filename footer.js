@@ -14,7 +14,7 @@ function makeFooter() {
                     </span> 
                     <div class="text-base">K.Moreno</div>
                 </div>
-                <div class="text-base">Updated 01.26</div>
+                <div class="text-base">Updated 10.26</div>
             </div>
     
         </div>

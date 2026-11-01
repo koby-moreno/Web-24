@@ -282,7 +282,7 @@ let insights = [
     {
         type: "section",
         name: "",
-        desc: "In order to accomodate different user preferences, remaining features were reprioritized and partitioned into basic and advanced experiences.",
+        desc: "In order to accommodate different user preferences, remaining features were reprioritized and partitioned into basic and advanced experiences.",
         image: "ib_edit_panels.png",
         image2: "ib_edit.gif",
         imageClass:"double-stacked",
@@ -459,7 +459,7 @@ let projects = [
   {
     type: "section",
     name: "Asset Cards",
-    desc: "The asset cards were reworked to accomodate bulk action interaction patterns to increase task efficiency.  Visual reinforcements for the interaction destinations and larger touchspaces also improved user confidence.",
+    desc: "The asset cards were reworked to accommodate bulk action interaction patterns to increase task efficiency.  Visual reinforcements for the interaction destinations and larger touchspaces also improved user confidence.",
     image: "card_original_trans.gif",
     image2: "card_edit_trans.gif",
     imageClass:"double"
@@ -544,42 +544,42 @@ name: ""
 
 
 function vimeo(img, img2) {
-    return `<div class="rounded-2xl relative  aspect-ratio flex  dark:bg-dark-2 bg-gray-100 grow items-center justify-center overflow-hidden"><img class="block h-[100%] w-[100%] object-cover dark:opacity-20 opacity-50 blur-md" src="images/${img2}"><div style="position:absolute;" class="w-[90%] md:w-[70%] pt-[56.3%] md:pt-[43.8%] h-auto rounded dark:shadow-image-dm shadow-image overflow-hidden"><iframe src="${img}" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="final"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+    return `<div class="rounded-2xl relative  aspect-ratio flex  dark:bg-dark-2 bg-gray-100 grow items-center justify-center overflow-hidden"><img class="block h-[100%] w-[100%] object-cover dark:opacity-20 opacity-50 blur-md" src="images/${img2}"><div style="position:absolute;" class="w-[90%] md:w-[70%] pt-[56.3%] md:pt-[43.8%] h-auto rounded-md dark:shadow-image-dm shadow-image overflow-hidden"><iframe src="${img}" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="final"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
     </div>`
 }
 
 function singleVideo(img) {
     return `<div class="relative dark:bg-dark-2 dark:border-dark-2 rounded-2xl border-solid aspect-ratio border-2  border-gray-100 flex flex-col  bg-gray-100 grow items-center justify-center">
     <div class="w-[90%] h-fit relative">
-    <div class="w-[100%] h-[100%] absolute dark:shadow-video-dm dark:shadow-dark-1 rounded"></div>
-    <video class="h-auto min-h-20 w-[100%] shadow-image dark:shadow-image-dm rounded" src="images/${img}" autoplay loop muted playsinline><source src="images/${img}" type="video/webm">Your browser does not support the video tag.</video>
+    <div class="w-[100%] h-[100%] absolute dark:shadow-video-dm dark:shadow-dark-1 rounded-md"></div>
+    <video class="h-auto min-h-20 w-[100%] shadow-image dark:shadow-image-dm rounded-md" src="images/${img}" autoplay loop muted playsinline><source src="images/${img}" type="video/webm">Your browser does not support the video tag.</video>
     </div>
     </div>`
    };
 
 function singleImage(img, shadow, shadow2, width) {
  return `<div class="dark:bg-dark-2 dark:border-dark-2 rounded-2xl border-solid aspect-ratio border-2  border-gray-100 flex flex-col  bg-gray-100 grow overflow-hidden items-center justify-center">
- <img class="${shadow} dark:${shadow2}-dm ${width} rounded" src="images/${img}">
+ <img class="${shadow} dark:${shadow2}-dm ${width} rounded-md" src="images/${img}">
  </div>`
 };
 
 function doubleImage(img, img2){
     return `<div class="aspect-ratio overflow-hidden gap-y-2 flex flex-col gap-y-2">
     <div class="relative rounded-2xl flex items-center justify-center flex-1 dark:bg-dark-2  bg-gray-100">
-    <img class="rounded w-[60%] h-auto" src="images/${img}"><div class="absolute left-[5%] top-[10%] text-gray-400">Original</div></div>
+    <img class="rounded-md w-[60%] h-auto" src="images/${img}"><div class="absolute left-[5%] top-[10%] text-gray-400">Original</div></div>
     <div class="relative rounded-2xl flex items-center justify-center flex-1 dark:bg-dark-2 bg-gray-100">
-    <img class="rounded w-[60%] h-auto" src="images/${img2}"><div class="absolute left-[5%] top-[10%] text-gray-400">Revised</div></div>
+    <img class="rounded-md w-[60%] h-auto" src="images/${img2}"><div class="absolute left-[5%] top-[10%] text-gray-400">Revised</div></div>
     </div>`
 };
 
 function sliderImage(img, img2, bg2, darkbg2, border2, text1, text2){
     return `<div class="aspect-ratio flex relative w-[100%] h-auto items-center justify-center overflow-hidden rounded-2xl">
     <div class="rounded-2xl border-solid border-2 ${border2} dark:border-${darkbg2} aspect-ratio flex absolute ${bg2} dark:bg-${darkbg2} grow items-center justify-center overflow-hidden w-[100%] h-auto">
-    <img class="slider-image dark:shadow-image-dm shadow-image rounded" src="images/${img}">
+    <img class="slider-image dark:shadow-image-dm shadow-image rounded-md" src="images/${img}">
     <div class="text-sm absolute top-[3%] md:top-[5%] right-[6%] dark:text-gray-500 text-gray-400">${text1}</div>
     </div>
     <div class="rounded-2xl border-solid border-2 border-gray-100 dark:border-dark-3 dark:bg-dark-3 aspect-ratio flex absolute bg-gray-100 grow items-center justify-center overflow-hidden w-[100%] h-auto" id="clip">
-    <img class="slider-image dark:shadow-image-dm shadow-image rounded" src="images/${img2}">
+    <img class="slider-image dark:shadow-image-dm shadow-image rounded-md" src="images/${img2}">
     <div class="text-sm absolute top-[3%] md:top-[5%] left-[6%] dark:text-gray-500 text-gray-400">${text2}</div>
     </div>
     <input type="range" min="0" max="100" value="66" class="slider bg-red" name='slider' id="slider"><div class='slider-button'><span class="material-symbols-outlined text-lg dark:text-gray-100 text-red-700">
@@ -591,16 +591,16 @@ function tripleSlider(img, img2, img3, img4, img5, img6, width){
     return `<div class="aspect-ratio-tall flex relative w-[100%] h-auto items-center justify-center overflow-hidden rounded-2xl">
     <div class="rounded-2xl border-solid border-2  border-gray-100 dark:border-dark-2 aspect-ratio-tall flex absolute bg-gray-100 dark:bg-dark-2 grow items-center justify-center overflow-hidden w-[100%] h-auto">
     <div class="flex flex-col ${width}">
-        <img class="shadow-image-light rounded my-[2%]" src="images/${img}">
-        <img class="shadow-image-light rounded my-[2%]" src="images/${img2}">
-        <img class="shadow-image-light rounded my-[2%]" src="images/${img3}">
+        <img class="shadow-image-light rounded-md my-[2%]" src="images/${img}">
+        <img class="shadow-image-light rounded-md my-[2%]" src="images/${img2}">
+        <img class="shadow-image-light rounded-md my-[2%]" src="images/${img3}">
     </div>
     </div>
     <div class="rounded-2xl border-solid border-2 border-gray-100 dark:border-dark-3 dark:bg-dark-3 aspect-ratio-tall flex absolute bg-gray-100 grow items-center justify-center overflow-hidden w-[100%] h-auto" id="clip">
     <div class="flex flex-col ${width}">
-    <img class="shadow-image-light rounded my-[2%]" src="images/${img4}">
-    <img class="shadow-image-light rounded my-[2%]" src="images/${img5}">
-    <img class="shadow-image-light rounded my-[2%]" src="images/${img6}">
+    <img class="shadow-image-light rounded-md my-[2%]" src="images/${img4}">
+    <img class="shadow-image-light rounded-md my-[2%]" src="images/${img5}">
+    <img class="shadow-image-light rounded-md my-[2%]" src="images/${img6}">
     </div>
     </div>
     <input type="range" min="0" max="100" value="66" class="slider bg-red" name='slider' id="slider"><div class='slider-button'><span class="material-symbols-outlined text-lg dark:text-gray-100 text-red-700">
@@ -609,7 +609,7 @@ function tripleSlider(img, img2, img3, img4, img5, img6, width){
 }
 
 function doubleStacked(img, img2, shadow, shadow2){
-    return `<div class="dark:bg-dark-2 dark:border-dark-2 rounded-2xl border-solid border-2 border-gray-100 aspect-ratio flex relative bg-gray-100 grow items-center justify-center overflow-hidden"><img class="absolute ${shadow} dark:${shadow}-dm left-[5%] mb-[15%] w-[55%] rounded h-auto" src="images/${img}"><img class="absolute ${shadow2} dark:${shadow2}-dm right-[5%] mt-[15%] w-[55%] rounded h-auto" src="images/${img2}"></div>`
+    return `<div class="dark:bg-dark-2 dark:border-dark-2 rounded-2xl border-solid border-2 border-gray-100 aspect-ratio flex relative bg-gray-100 grow items-center justify-center overflow-hidden"><img class="absolute ${shadow} dark:${shadow}-dm left-[5%] mb-[15%] w-[55%] rounded-md h-auto" src="images/${img}"><img class="absolute ${shadow2} dark:${shadow2}-dm right-[5%] mt-[15%] w-[55%] rounded-md h-auto" src="images/${img2}"></div>`
 }
 
 function tripleStacked(img, img2, img3, height){
@@ -623,9 +623,9 @@ function tripleStacked(img, img2, img3, height){
 function tripleOverlay(img, img2, img3, pt){
     return `<div class="dark:bg-dark-2 dark:border-dark-2 rounded-2xl border-solid border-2 border-gray-100 aspect-ratio flex relative bg-gray-100 grow items-center justify-center overflow-hidden">
     <div class="flex flex-col w-[80%] ${pt}">
-    <img class="shadow-image-light rounded my-[2%]" src="images/${img}">
-    <img class="shadow-image-light rounded my-[2%]" src="images/${img2}">
-    <img class="shadow-image-light rounded my-[2%]" src="images/${img3}">
+    <img class="shadow-image-light rounded-md my-[2%]" src="images/${img}">
+    <img class="shadow-image-light rounded-md my-[2%]" src="images/${img2}">
+    <img class="shadow-image-light rounded-md my-[2%]" src="images/${img3}">
     </div>
     <div class="dark:bg-gradient-dm-top bg-gradient-top absolute w-[100%] h-[8%] top-[0px]"></div>
     <div class="dark:bg-gradient-dm-bottom bg-gradient-bottom absolute w-[100%] h-[8%] bottom-[0px]"></div>
@@ -633,7 +633,7 @@ function tripleOverlay(img, img2, img3, pt){
 }
 
 function doubleOverlay(img, img2, shadow){
-    return `<div class="dark:bg-dark-2 dark:border-dark-2 rounded-2xl border-solid border-2 border-gray-100 aspect-ratio flex relative bg-gray-100 grow items-center justify-center overflow-hidden"><div class="flex flex-col w-[80%]"><img class="${shadow} rounded my-[2%]" src="images/${img}"><img class="${shadow} rounded my-[2%]" src="images/${img2}"></div>
+    return `<div class="dark:bg-dark-2 dark:border-dark-2 rounded-2xl border-solid border-2 border-gray-100 aspect-ratio flex relative bg-gray-100 grow items-center justify-center overflow-hidden"><div class="flex flex-col w-[80%]"><img class="${shadow} rounded-md my-[2%]" src="images/${img}"><img class="${shadow} rounded-md my-[2%]" src="images/${img2}"></div>
     <div class="dark:bg-gradient-dm-top  bg-gradient-top absolute w-[100%] h-[8%] top-[0px]"></div>
     <div class="dark:bg-gradient-dm-bottom bg-gradient-bottom absolute w-[100%] h-[8%] bottom-[0px]"></div>
     </div>`
